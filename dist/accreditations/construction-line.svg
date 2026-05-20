@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="100" viewBox="0 0 220 100" role="img" aria-labelledby="title desc">
+  <title id="title">Construction Line logo</title>
+  <desc id="desc">Construction Line accreditation badge</desc>
+  <rect width="220" height="100" rx="14" fill="#ffffff"/>
+  <rect x="8" y="8" width="204" height="84" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <path d="M32 65h34V35H32v30zm7-7V42h20v16H39z" fill="#f59e0b"/>
+  <text x="78" y="48" fill="#0f172a" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="800">Construction</text>
+  <text x="78" y="70" fill="#475569" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="800">Line</text>
+</svg>
