@@ -43,8 +43,8 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="bg-gray-50 px-5 py-16 md:px-8 lg:px-10">
-      <div className="mx-auto max-w-[1180px]">
+    <section className="app-section bg-gray-50 py-16">
+      <div className="app-container">
         {/* TOP */}
         <div className="mb-14 text-center">
           <div className="mb-4 inline-flex items-center rounded-full bg-white px-4 py-1 text-[11px] font-medium text-blue-600 shadow-sm">

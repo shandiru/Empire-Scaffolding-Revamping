@@ -22,8 +22,8 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-4 left-0 z-50 w-full px-3 sm:top-5 sm:px-6 lg:px-8">
-      <div className="mx-auto flex max-w-[1760px] items-center justify-between rounded-full border border-slate-200/80 bg-white/95 px-4 py-3 shadow-[0_18px_60px_rgba(15,23,42,0.16)] backdrop-blur-md sm:px-7 lg:px-10">
+    <header className="app-section fixed top-4 left-0 z-50 w-full sm:top-5">
+      <div className="app-container flex items-center justify-between rounded-full border border-slate-200/80 bg-white/95 px-4 py-3 shadow-[0_18px_60px_rgba(15,23,42,0.16)] backdrop-blur-md sm:px-7 lg:px-10">
         <div className="flex items-center">
           <HashLink smooth to="/#top" className="flex items-center">
             <img
@@ -82,7 +82,7 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="mx-auto mt-3 flex max-w-[1760px] flex-col items-center gap-4 rounded-[2rem] border border-slate-200 bg-white px-6 py-6 text-lg text-slate-900 shadow-[0_20px_60px_rgba(15,23,42,0.14)] lg:hidden">
+        <div className="app-container mt-3 flex flex-col items-center gap-4 rounded-[2rem] border border-slate-200 bg-white px-6 py-6 text-lg text-slate-900 shadow-[0_20px_60px_rgba(15,23,42,0.14)] lg:hidden">
           {navLinks.map((link) => (
             <HashLink
               key={link.href}

@@ -41,8 +41,8 @@ const accreditations = [
 
 const CertificationCategories = () => {
   return (
-    <section className="bg-gray-50 px-6 py-16 lg:py-20">
-      <div className="mx-auto max-w-[1440px]">
+    <section className="app-section bg-gray-50 py-16 lg:py-20">
+      <div className="app-container">
         <div className="mb-12">
           <p className="hero-reveal mb-2 text-sm font-semibold uppercase tracking-widest text-blue-600">
             OUR ACCREDITATIONS &amp; MEMBERSHIPS

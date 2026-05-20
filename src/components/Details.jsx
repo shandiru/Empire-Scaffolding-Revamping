@@ -24,8 +24,8 @@ const services = [
 
 const Details = () => {
     return (
-        <section id="services" className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-16">
-            <div className="max-w-7xl mx-auto text-center">
+        <section id="services" className="app-section bg-gray-100 py-16">
+            <div className="app-container text-center">
                 <h2 className="text-5xl font-bold mb-2">Scale That Speaks Volumes</h2>
                 <p className="text-gray-800 mb-12 text-xl max-w-3xl mx-auto mt-4">
                     From towering commercial complexes to intricate residential projects,

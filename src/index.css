@@ -2,6 +2,8 @@
 
 :root {
   --app-font-sans: sans-serif;
+  --app-container-width: 80rem;
+  --app-page-padding: clamp(0.75rem, 2.5vw, 2rem);
   --color-brand-navy: #0B1224;
   --color-brand-blue: #155DFC;
   --color-brand-blue-dark: #193CB8;
@@ -42,8 +44,26 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+#root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
+}
+
+.app-section {
+  padding-left: var(--app-page-padding);
+  padding-right: var(--app-page-padding);
+}
+
+.app-container {
+  width: 100%;
+  max-width: var(--app-container-width);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 button,

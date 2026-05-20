@@ -31,10 +31,10 @@ const clientLogos = [
 const Testimonials = () => {
   return (
     <section
-      className="bg-white px-4 py-16 sm:px-6 lg:px-16"
+      className="app-section bg-white py-16"
       id="testimonials"
     >
-      <div className="mx-auto max-w-7xl rounded-[1.75rem] border border-slate-100 bg-white p-6 shadow-[0_18px_70px_rgba(15,23,42,0.08)] sm:p-8 lg:p-10">
+      <div className="app-container rounded-[1.75rem] border border-slate-100 bg-white p-6 shadow-[0_18px_70px_rgba(15,23,42,0.08)] sm:p-8 lg:p-10">
         <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
           <div>
             <div className="hero-reveal inline-flex items-center gap-3 rounded-full bg-blue-100 px-4 py-2 text-xs font-semibold text-slate-950">

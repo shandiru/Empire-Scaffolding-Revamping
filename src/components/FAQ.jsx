@@ -34,8 +34,8 @@ export default function FAQ() {
 
   return (
     <section id="faq">
-      <div className="px-5 py-12 sm:px-8 sm:py-14 lg:px-10">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
+      <div className="app-section py-12 sm:py-14">
+        <div className="app-container grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
           <div className="lg:sticky lg:top-10 lg:self-start">
             <div className="inline-flex items-center gap-3 text-sm font-semibold text-slate-950">
               <span className="h-px w-12 bg-slate-300" />

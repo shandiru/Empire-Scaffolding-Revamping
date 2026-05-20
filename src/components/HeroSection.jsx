@@ -65,8 +65,8 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,15,33,0.1)_0%,rgba(8,15,33,0.2)_25%,rgba(8,15,33,0.62)_70%,rgba(4,8,20,0.92)_100%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.2),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(37,99,235,0.16),transparent_30%)]" />
 
-      <header className="absolute inset-x-0 top-4 z-50 px-4 sm:top-6 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-[1660px] rounded-[2rem] border border-white/80 bg-white px-5 py-4 shadow-[0_20px_60px_rgba(15,23,42,0.15)] sm:px-8 lg:rounded-[2.6rem] lg:px-10 lg:py-6">
+      <header className="app-section absolute inset-x-0 top-4 z-50 sm:top-6">
+        <div className="app-container rounded-[2rem] border border-white/80 bg-white px-5 py-4 shadow-[0_20px_60px_rgba(15,23,42,0.15)] sm:px-8 lg:rounded-[2.6rem] lg:px-10 lg:py-6">
           <div className="flex items-center justify-between gap-4">
             <a href="#top" className="flex items-center">
               <img
@@ -135,8 +135,9 @@ const HeroSection = () => {
         </div>
       </header>
 
-      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1660px] items-end px-4 pb-10 pt-36 sm:px-6 sm:pb-12 sm:pt-40 lg:px-8 lg:pb-14 lg:pt-44">
-        <div className="grid w-full gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(620px,0.95fr)] lg:items-end">
+      <div className="app-section relative z-10 flex min-h-screen w-full items-end pb-10 pt-36 sm:pb-12 sm:pt-40 lg:pb-14 lg:pt-44">
+        <div className="app-container">
+        <div className="grid w-full gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(560px,0.95fr)] lg:items-end">
           <div className="max-w-[760px] text-left">
             <div
               className="hero-reveal inline-flex items-center gap-3 rounded-full bg-gray-900/88 px-5 py-3 text-sm font-semibold text-white shadow-[0_16px_32px_rgba(0,0,0,0.24)] backdrop-blur-sm"
@@ -185,7 +186,7 @@ const HeroSection = () => {
                   }`}
                   style={{ animationDelay: `${0.68 + index * 0.12}s` }}
                 >
-                  <p className="text-5xl font-semibold tracking-tight text-white lg:text-[4rem]">
+                  <p className="text-5xl font-semibold tracking-tight text-white lg:text-[3.5rem] xl:text-[4rem]">
                     <CounterValue value={stat.value} suffix={stat.suffix} />
                   </p>
                   <p className="mt-4 text-base text-white/86 lg:text-[1.05rem]">
@@ -199,29 +200,30 @@ const HeroSection = () => {
               className="hero-reveal mt-8 border-t border-white/12 pt-8"
               style={{ animationDelay: "0.92s" }}
             >
-              <div className="flex flex-col gap-6 xl:flex-row xl:items-center xl:justify-between">
+              <div className="flex flex-col gap-6 2xl:flex-row 2xl:items-center 2xl:justify-between">
                 <a
                   href="mailto:Shay@empirescaffolding.co.uk"
-                  className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-base font-semibold text-[#0B1224] transition hover:bg-blue-100 sm:w-fit"
+                  className="inline-flex w-fit items-center justify-center gap-3 whitespace-nowrap rounded-full bg-white px-6 py-4 text-base font-semibold text-[#0B1224] transition hover:bg-blue-100 sm:px-8"
                 >
-                  Get Free Quote
+                  Get a Free Quote
                   <ArrowUpRight className="h-5 w-5" />
                 </a>
 
-                <div className="flex items-center gap-4">
-                  <p className="text-2xl font-semibold leading-none">5.0</p>
-                  <div className="flex items-center gap-1 text-blue-300">
+                <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+                  <p className="shrink-0 text-2xl font-semibold leading-none">5.0</p>
+                  <div className="flex shrink-0 items-center gap-1 text-blue-300">
                     {Array.from({ length: 5 }).map((_, index) => (
                       <Star key={index} className="h-5 w-5 fill-current" />
                     ))}
                   </div>
-                  <p className="text-base text-white/82">
+                  <p className="max-w-[14rem] text-base leading-snug text-white/82 sm:max-w-none">
                     Based on Customer Reviews
                   </p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
 

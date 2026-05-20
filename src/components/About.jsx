@@ -149,8 +149,9 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="mx-auto max-w-[1180px] bg-gray-50 px-5 py-10 md:px-8 lg:px-10"
+      className="app-section bg-gray-50 py-10"
     >
+      <div className="app-container">
       {/* TOP */}
       <div className="mb-8 grid gap-8 lg:grid-cols-[1.45fr_0.75fr]">
         <div>
@@ -289,6 +290,7 @@ export default function AboutSection() {
           label="Handed-Over Project"
           delay={300}
         />
+      </div>
       </div>
     </section>
   );

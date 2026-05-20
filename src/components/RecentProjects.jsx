@@ -30,8 +30,8 @@ const RecentProjects = () => {
   const activeProject = projects[activeProjectIndex];
 
   return (
-    <section className="bg-white px-4 py-10 sm:px-6 lg:px-16" id="recent-projects">
-      <div className="mx-auto max-w-7xl">
+    <section className="app-section bg-white py-10" id="recent-projects">
+      <div className="app-container">
         <div className="relative overflow-hidden rounded-[2rem] bg-[#0B1224] px-5 py-12 text-white shadow-[0_28px_90px_rgba(15,23,42,0.18)] sm:px-8 sm:py-14 lg:px-12 lg:py-16">
           <div className="pointer-events-none absolute inset-0 opacity-30">
             <div className="absolute -right-24 -top-24 h-[36rem] w-[36rem] rounded-full border border-white/10" />
@@ -42,10 +42,8 @@ const RecentProjects = () => {
 
           <div className="relative">
             <div className="text-center">
-              <div className="hero-reveal inline-flex items-center gap-3 font-semibold text-white">
-                <span className="h-px w-10 bg-white/30" />
+              <div className="hero-reveal inline-flex items-center font-semibold text-white">
                 <span>Recent Projects</span>
-                <span className="h-px w-10 bg-white/30" />
               </div>
               <h2
                 className="hero-reveal mx-auto mt-5 max-w-3xl text-[2.3rem] font-semibold leading-[1.05] tracking-[-0.05em] text-white sm:text-[3.1rem]"
@@ -100,8 +98,8 @@ const RecentProjects = () => {
                     key={project.category}
                     className={`hero-stat flex min-w-fit items-center gap-0.5 whitespace-nowrap border-t pt-4 text-left transition-colors duration-300 ${
                       isActive
-                        ? "border-white text-white"
-                        : "border-white/15 text-white/80 hover:border-white/40 hover:text-white"
+                        ? "border-blue-500 text-white"
+                        : "border-white/15 text-white/80 hover:border-blue-500/70 hover:text-white"
                     }`}
                     style={{ animationDelay: `${0.2 + index * 0.08}s` }}
                     type="button"

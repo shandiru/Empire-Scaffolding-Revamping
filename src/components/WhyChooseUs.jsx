@@ -31,10 +31,10 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative overflow-hidden bg-[#0B1224] px-5 py-20 text-white md:px-8 lg:px-10">
+    <section className="app-section relative overflow-hidden bg-[#0B1224] py-20 text-white">
       <div className="absolute left-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-blue-600/25 blur-[110px]" />
 
-      <div className="relative mx-auto max-w-[1180px]">
+      <div className="app-container relative">
         <div className="mb-12 text-center">
           <div className="mb-4 inline-flex rounded-full bg-white/10 px-4 py-1 text-[11px] font-medium text-blue-100">
             Why Choose Us

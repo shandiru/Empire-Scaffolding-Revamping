@@ -13,7 +13,8 @@ const pageLinks = [
 const Footer = () => {
   return (
     <footer className="bg-[#0B1224] text-white">
-      <div className="mx-auto max-w-7xl px-6 py-12">
+      <div className="app-section py-12">
+        <div className="app-container">
         <div className="flex flex-col justify-between gap-10 md:flex-row">
           <div className="flex flex-1 flex-col">
             <span className="mb-4 text-2xl font-bold">
@@ -103,11 +104,13 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+        </div>
       </div>
 
       <div className="border-t border-white/20" />
 
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 text-sm text-gray-300 md:flex-row">
+      <div className="app-section py-6">
+      <div className="app-container flex flex-col items-center justify-between gap-4 text-sm text-gray-300 md:flex-row">
         <div className="text-center md:text-left">
           © 2026 Empire Scaffolding (GB) Ltd. All rights reserved.
         </div>
@@ -138,6 +141,7 @@ const Footer = () => {
             Terms of Service
           </Link>
         </div>
+      </div>
       </div>
     </footer>
   );

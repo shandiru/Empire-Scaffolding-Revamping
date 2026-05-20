@@ -67,8 +67,8 @@ export default function Gallery() {
   };
 
   return (
-    <section className="bg-white py-7 px-4" id="gallery">
-      <div className="max-w-7xl mx-auto text-center">
+    <section className="app-section bg-white py-7" id="gallery">
+      <div className="app-container text-center">
         <p className="font-semibold text-2xl uppercase mb-10">Gallery</p>
 
         <div className="relative">
