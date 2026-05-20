@@ -168,8 +168,7 @@ export default function AboutSection() {
             style={fadeStyle(titleFade.visible, 0.05)}
             className="max-w-[720px] text-[34px] font-bold leading-[1.05] tracking-[-1px] text-gray-900 md:text-[52px]"
           >
-            Trusted builders creating modern{" "}
-            <em className="italic">spaces with integrity</em>
+            About Empire Scaffolding
           </h2>
         </div>
 
@@ -210,8 +209,9 @@ export default function AboutSection() {
         >
           <img
             src="/Empire.jpg"
-            alt=""
+            alt="Empire Scaffolding team and fleet of vehicles Hucknall Nottinghamshire"
             className="h-full w-full object-cover"
+            loading="lazy"
           />
 
           <SpinBadge />
@@ -236,8 +236,9 @@ export default function AboutSection() {
           <div className="overflow-hidden rounded-[18px]">
             <img
               src="/building.png"
-              alt=""
+              alt="Commercial scaffolding project by Empire Scaffolding (GB) Ltd"
               className="h-[215px] w-full object-cover"
+              loading="lazy"
             />
           </div>
         </div>
@@ -251,8 +252,9 @@ export default function AboutSection() {
           <div className="overflow-hidden rounded-[16px]">
             <img
               src="/1.jpg"
-              alt=""
+              alt="Scaffolding installation by Empire Scaffolding (GB) Ltd"
               className="h-[165px] w-full object-cover"
+              loading="lazy"
             />
           </div>
 

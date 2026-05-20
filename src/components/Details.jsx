@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { Building, Home, CheckCircle, Play, Pause } from "lucide-react";
+import { isPrerender } from "../seo/isPrerender";
 
 const services = [
     {
@@ -47,6 +48,7 @@ const VideoCard = ({ service }) => {
     const videoRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [showPause, setShowPause] = useState(false);
+    const shouldLoadVideo = !isPrerender();
 
     const handlePlay = () => {
         if (videoRef.current) {
@@ -74,7 +76,7 @@ const VideoCard = ({ service }) => {
                     <>
                         <video
                             ref={videoRef}
-                            src={service.video}
+                            src={shouldLoadVideo ? service.video : undefined}
                             className="w-full h-100 object-cover"
                             loop
                             muted

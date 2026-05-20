@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="100" viewBox="0 0 220 100" role="img" aria-labelledby="title desc">
+  <title id="title">CHAS logo</title>
+  <desc id="desc">CHAS accreditation badge</desc>
+  <rect width="220" height="100" rx="14" fill="#ffffff"/>
+  <rect x="8" y="8" width="204" height="84" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
+  <circle cx="46" cy="50" r="22" fill="#2563eb"/>
+  <path d="M36 50l7 7 14-16" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="82" y="60" fill="#0f172a" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="1">CHAS</text>
+</svg>

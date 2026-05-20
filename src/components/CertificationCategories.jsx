@@ -41,7 +41,7 @@ const accreditations = [
 
 const CertificationCategories = () => {
   return (
-    <section className="app-section bg-gray-50 py-16 lg:py-20">
+    <section className="app-section bg-gray-50 py-16 lg:py-20" id="accreditations">
       <div className="app-container">
         <div className="mb-12">
           <p className="hero-reveal mb-2 text-sm font-semibold uppercase tracking-widest text-blue-600">
@@ -51,7 +51,7 @@ const CertificationCategories = () => {
             className="hero-reveal text-3xl font-bold text-slate-950 lg:text-4xl"
             style={{ animationDelay: "0.1s" }}
           >
-            Accredited. Certified. Trusted.
+            Our Accreditations &amp; Memberships
           </h2>
         </div>
 
@@ -65,7 +65,7 @@ const CertificationCategories = () => {
               <div className="mb-4 flex h-16 w-28 items-center justify-center rounded-xl border border-slate-200 bg-gray-50 p-3">
                 <img
                   src={accreditation.logo}
-                  alt={`${accreditation.title} accreditation logo`}
+                  alt={`${accreditation.title} logo - Empire Scaffolding accredited member`}
                   className="max-h-full max-w-full object-contain"
                   loading="lazy"
                 />

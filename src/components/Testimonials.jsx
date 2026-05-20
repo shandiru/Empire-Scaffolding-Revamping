@@ -46,8 +46,7 @@ const Testimonials = () => {
               className="hero-reveal mt-6 max-w-xl text-3xl font-semibold leading-[1.05] tracking-[-0.04em] text-slate-950 sm:text-4xl lg:text-[2.8rem]"
               style={{ animationDelay: "0.1s" }}
             >
-              Client experiences that reflect our{" "}
-              <span className="italic">reliability</span>
+              What Our Clients Say
             </h2>
 
             <p
@@ -75,6 +74,7 @@ const Testimonials = () => {
                   src="/nottingham.png"
                   alt="Nottingham City Council logo"
                   className="max-h-12 max-w-full object-contain"
+                  loading="lazy"
                 />
               </div>
               <Quote className="h-12 w-12 fill-slate-100 text-slate-100" />

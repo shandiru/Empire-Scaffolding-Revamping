@@ -24,14 +24,9 @@ const Home = () => {
             <OurServices />
             <About />
             <RecentProjects />
-          
-         
-           
             <WhyChooseUs />
             <Testimonials />
             <CertificationCategories />
-           
-          
             <FAQ />
             <CallToAction />
         </div>

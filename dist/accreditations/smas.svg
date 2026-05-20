@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="100" viewBox="0 0 220 100" role="img" aria-labelledby="title desc">
+  <title id="title">SMAS logo</title>
+  <desc id="desc">SMAS accreditation badge</desc>
+  <rect width="220" height="100" rx="14" fill="#ffffff"/>
+  <rect x="8" y="8" width="204" height="84" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <path d="M32 64c10-29 37-42 66-28 23 11 43 10 63-5-9 28-36 43-65 29-24-12-45-10-64 4z" fill="#22c55e"/>
+  <text x="54" y="59" fill="#0f172a" font-family="Segoe UI, Arial, sans-serif" font-size="31" font-weight="800" letter-spacing="1">SMAS</text>
+</svg>

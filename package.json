@@ -5,9 +5,23 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/run-react-snap.mjs && node scripts/generate-sitemap.mjs",
+    "build:vite": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
+  },
+  "reactSnap": {
+    "source": "dist",
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ],
+    "skipThirdPartyRequests": true,
+    "include": [
+      "/",
+      "/privacy-policy",
+      "/terms&condition"
+    ]
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
@@ -29,6 +43,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
+    "react-snap": "^1.23.0",
     "vite": "^7.0.4"
   }
 }
