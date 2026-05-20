@@ -4,8 +4,8 @@ import React from "react";
 const TermsConditions = () => {
   return (
     <div className="bg-black text-white">
-      <div className="container mx-auto px-4 py-12">
-        <h1 className="text-3xl font-semibold text-center mb-6 mt-20 text-white">Website Terms of Use</h1>
+      <div className="container mx-auto px-4 py-28">
+        <h1 className="mb-6 text-center text-3xl font-semibold text-white">Website Terms of Use</h1>
         <p className="text-center text-gray-400">Last updated: 09/09/25</p>
 
         <div className="mt-8 space-y-6">

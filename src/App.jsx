@@ -1,6 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 import TermsConditions from "./components/Term";
 import Home from "./pages/Home";
 import PrivacyPolicy from "./components/PrivacyPolicy";
@@ -8,11 +14,15 @@ import ScrollToTop from "./components/ScrollToTop";
 import GDPRConsent from "./components/GDPRButton";
 import SEO from "./seo/SEO";
 
-function App() {
+function AppLayout() {
+  const { pathname } = useLocation();
+  const isHomePage = pathname === "/";
+
   return (
-    <Router>
+    <>
       <SEO />
       <ScrollToTop />
+      {!isHomePage && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/terms&condition" element={<TermsConditions />} />
@@ -20,6 +30,14 @@ function App() {
       </Routes>
       <Footer />
       <GDPRConsent />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppLayout />
     </Router>
   );
 }
