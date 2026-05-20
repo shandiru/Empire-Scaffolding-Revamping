@@ -24,14 +24,14 @@ const Home = () => {
             <OurServices />
             <About />
             <RecentProjects />
-            <PRSection />
-            <Gallery />
-            <Details />
+          
+         
+           
             <WhyChooseUs />
             <Testimonials />
             <CertificationCategories />
-            <CertificationsSection />
-            <TrustedBy />
+           
+          
             <FAQ />
             <CallToAction />
         </div>
