@@ -15,9 +15,8 @@ const StatsContactBar = () => {
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className={`hero-stat px-4 text-center ${
-                index < stats.length - 1 ? "sm:border-r sm:border-slate-200" : ""
-              }`}
+              className={`hero-stat px-4 text-center ${index < stats.length - 1 ? "sm:border-r sm:border-slate-200" : ""
+                }`}
               style={{ animationDelay: `${0.08 + index * 0.1}s` }}
             >
               <p className="text-2xl font-semibold leading-none tracking-tight text-slate-950 sm:text-[1.7rem] xl:text-3xl">
@@ -36,18 +35,23 @@ const StatsContactBar = () => {
         >
           <a
             href="tel:01159641600"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-blue-600"
+            className="group inline-flex items-center gap-2 text-sm font-semibold text-slate-950"
           >
-            <Phone className="h-4 w-4" />
+            <Phone className="h-4 w-4 transition-colors duration-200 group-hover:text-blue-600" />
             0115 9641 600
           </a>
 
           <a
             href="mailto:Shay@empirescaffolding.co.uk"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
+            className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition-colors duration-300"
           >
-            Get a Free Quote
-            <ArrowUpRight className="h-4 w-4" />
+            {/* The sliding yellow background layer */}
+            <span className="absolute inset-0 -translate-x-[100%] rounded-full bg-blue-600 transition-transform duration-500 ease-out group-hover:translate-x-0" />
+
+            {/* The text layer (needs relative & z-10 so it stays on top of the yellow background) */}
+            <span className="relative z-10 transition-colors duration-300 group-hover:text-slate-900">
+              Get a Free Quote
+            </span>
           </a>
         </div>
       </div>

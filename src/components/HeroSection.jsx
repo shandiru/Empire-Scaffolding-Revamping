@@ -52,7 +52,7 @@ const HeroSection = () => {
   return (
     <section
       id="top"
-      className="relative min-h-screen max-w-330 mt-4 mx-auto rounded-2xl overflow-hidden bg-[#0B1224] text-white"
+      className="relative min-h-screen overflow-hidden bg-[#0B1224] text-white"
     >
       <video
         aria-label="Empire Scaffolding aerial view of commercial scaffolding project Nottingham"
@@ -69,11 +69,11 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.2),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(37,99,235,0.16),transparent_30%)]" />
 
       <header className="app-section absolute inset-x-0 top-4 z-50 sm:top-6">
-        <div className="app-container rounded-[1.4rem] border border-white/80 bg-white px-4 py-3 shadow-[0_20px_60px_rgba(15,23,42,0.15)] sm:rounded-[2rem] sm:px-8 sm:py-4 lg:rounded-[2.6rem] lg:px-10 lg:py-6">
+        <div className="app-container rounded-[1.4rem] border border-white/80 bg-white px-4 shadow-[0_20px_60px_rgba(15,23,42,0.15)] sm:rounded-[2rem] sm:px-8 py-4 lg:rounded-[2.6rem] lg:px-10">
           <div className="flex items-center justify-between gap-4">
             <a href="#top" className="flex items-center">
               <img
-                src="/Logo.png"
+                src="/Logo-bg.png"
                 alt="Empire Scaffolding Logo"
                 className="h-11 w-auto object-contain sm:h-12 lg:h-14"
               />
@@ -95,7 +95,7 @@ const HeroSection = () => {
             <div className="hidden sm:block">
               <a
                 href="mailto:Shay@empirescaffolding.co.uk"
-                className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-[#0B1224] px-6 py-3 text-sm font-semibold text-white transition-colors duration-300 lg:px-8 lg:py-4 lg:text-base"
+                className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-[#0B1224] px-6 py-3 text-sm font-semibold text-white transition-colors duration-300 lg:px-8 lg:py-3 lg:text-base"
               >
                 <span className="absolute inset-0 translate-y-full bg-blue-700 transition-transform duration-300 ease-out group-hover:translate-y-0" />
                 <span className="relative z-10 inline-flex items-center gap-2">
@@ -207,7 +207,7 @@ const HeroSection = () => {
                   {/* Hero Main Video-Style Button */}
                   <a
                     href="mailto:Shay@empirescaffolding.co.uk"
-                    className="group relative inline-flex w-full items-center justify-center gap-3 overflow-hidden rounded-full bg-white px-5 py-4 text-base font-semibold text-[#0B1224] transition-colors duration-300 min-[420px]:w-fit sm:px-8"
+                    className="group relative inline-flex w-full items-center justify-center gap-3 overflow-hidden rounded-full bg-white px-5 py-3 text-base font-semibold text-[#0B1224] transition-colors duration-300 min-[420px]:w-fit sm:px-8"
                   >
                     <span className="absolute inset-0 translate-y-full bg-blue-100 transition-transform duration-300 ease-out group-hover:translate-y-0" />
 

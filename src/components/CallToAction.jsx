@@ -11,9 +11,15 @@ import { Link } from "react-router-dom";
 const inputClassName =
   "w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-600 focus:ring-1 focus:ring-blue-600";
 
+// Updated business hours data
 const businessHours = [
-  "Business hours to be confirmed with client",
-  "before go-live",
+  "Monday: 9:00 AM – 4:30 PM (Hours might differ on Bank Holidays)",
+  "Tuesday: 9:00 AM – 4:30 PM",
+  "Wednesday: 9:00 AM – 4:30 PM",
+  "Thursday: 9:00 AM – 4:00 PM",
+  "Friday: 9:00 AM – 4:30 PM",
+  "Saturday: Closed",
+  "Sunday: Closed",
 ];
 
 const CallToAction = () => {
@@ -32,7 +38,7 @@ const CallToAction = () => {
           </div>
 
           <h2 className="mt-5 text-[2rem] font-semibold leading-[1.05] tracking-[-0.05em] text-slate-950 sm:text-[2.7rem]">
-            Get a Quote
+            Tell us about your project.
           </h2>
 
           <form className="mt-8 space-y-4">
@@ -150,9 +156,8 @@ const CallToAction = () => {
           </form>
 
           <p className="mt-5 text-center text-xs text-slate-500">
-            By submitting this form you agree to us processing your details to
-            respond to your enquiry. Your information is handled securely and in
-            line with our Privacy Policy.
+            By submitting this form you agree to us processing your details to respond to
+            your enquiry. Your information is handled securely and in line with our Privacy Policy.
           </p>
 
           <div className="mt-6 h-60 w-full">
@@ -161,7 +166,7 @@ const CallToAction = () => {
               height="240"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=Hucknall%2C%20Nottinghamshire&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2399.3122216885804!2d-1.1875307999999998!3d53.032725799999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879eabef559f7d5%3A0x26077de68f86ee4c!2sEmpire%20Scaffolding%20(GB)%20Ltd!5e0!3m2!1sen!2slk!4v1779297176558!5m2!1sen!2slk"
               title="Empire Scaffolding Hucknall location map"
             />
           </div>
@@ -246,13 +251,13 @@ const CallToAction = () => {
                 Call 0115 9641 600
               </a>
               <a
-                className="mt-3 inline-flex items-center gap-2 text-slate-900 transition hover:text-blue-600"
-                href="https://www.google.com/maps/search/?api=1&query=Hucknall,+Nottinghamshire"
+                className="mt-3 lg:ml-10 inline-flex items-center gap-2 text-slate-900 transition hover:text-blue-600"
+                href="https://maps.app.goo.gl/2t5UQAyUMnBofiH49"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <MapPin height={16} width={16} />
-                Open Hucknall location
+                Hucknall, Nottinghamshire
                 <ArrowRight height={16} width={16} />
               </a>
             </div>

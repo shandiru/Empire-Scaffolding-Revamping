@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { FiArrowUpRight } from "react-icons/fi";
 
 function useCountUp(target, duration = 1800, suffix = "") {
   const [display, setDisplay] = useState("0");
@@ -152,147 +153,145 @@ export default function AboutSection() {
       className="app-section bg-gray-50 py-10"
     >
       <div className="app-container">
-      {/* TOP */}
-      <div className="mb-8 grid gap-8 lg:grid-cols-[1.45fr_0.75fr]">
-        <div>
-          <div
-            ref={labelFade.ref}
-            style={fadeStyle(labelFade.visible)}
-            className="mb-4 inline-flex rounded-full bg-white px-3 py-1 text-[11px] font-medium text-gray-600"
-          >
-            About Our Construction
-          </div>
-
-          <h2
-            ref={titleFade.ref}
-            style={fadeStyle(titleFade.visible, 0.05)}
-            className="max-w-[720px] text-[34px] font-bold leading-[1.05] tracking-[-1px] text-gray-900 md:text-[52px]"
-          >
-            About Empire Scaffolding
-          </h2>
-        </div>
-
-        <div className="max-w-[360px] lg:ml-auto">
-          <p
-            ref={descFade.ref}
-            style={fadeStyle(descFade.visible, 0.08)}
-            className="mb-6 text-sm leading-relaxed text-gray-600"
-          >
-            We are trusted builders committed to delivering modern,
-            quality spaces built with precision, care and innovation.
-          </p>
-
-          <div
-            ref={buttonFade.ref}
-            style={fadeStyle(buttonFade.visible, 0.12)}
-          >
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 rounded-full bg-[#0B1224] px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-800"
+        {/* TOP */}
+        <div className="mb-8 grid gap-8 lg:grid-cols-[1.45fr_0.75fr]">
+          <div>
+            <div
+              ref={labelFade.ref}
+              style={fadeStyle(labelFade.visible)}
+              className="mb-4 inline-flex rounded-full bg-white px-3 py-1 text-[11px] font-medium text-gray-600"
             >
-              Learn More About
-              <span className="flex h-5 w-5 items-center justify-center rounded-full border border-white/40">
-                ↗
-              </span>
-            </a>
+              About Empire Scaffolding
+            </div>
+
+            <h2
+              ref={titleFade.ref}
+              style={fadeStyle(titleFade.visible, 0.05)}
+              className="max-w-[720px] text-[34px] font-bold leading-[1.05] tracking-[-1px] text-gray-900 md:text-[45px]"
+            >
+              A family-run scaffolding company built on experience, safety, and reliability
+            </h2>
+          </div>
+
+          <div className="max-w-[360px] lg:ml-auto">
+            <p
+              ref={descFade.ref}
+              style={fadeStyle(descFade.visible, 0.08)}
+              className="mb-6 text-sm leading-relaxed text-gray-600"
+            >
+              Empire Scaffolding (GB) Ltd is a family-run company established in 2000, specialising in the supply, erection, and dismantling of scaffolding for commercial, domestic, and industrial projects. Based in Hucknall, Nottinghamshire, we are ideally located to deliver scaffolding services nationwide.
+            </p>
+
+            <div
+              ref={buttonFade.ref}
+              style={fadeStyle(buttonFade.visible, 0.12)}
+            >
+              <a
+                href="#"
+                className="inline-flex items-center gap-2 rounded-full bg-[#0B1224] px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-800"
+              >
+                Our Services
+                <span className="flex h-5 w-5 items-center justify-center">
+                  <FiArrowUpRight className="h-4 w-4" />
+                </span>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* GRID */}
-      <div className="grid gap-5 lg:grid-cols-[1.45fr_0.7fr_0.7fr]">
-        {/* BIG IMAGE */}
-        <div
-          ref={imageFade.ref}
-          style={fadeStyle(imageFade.visible)}
-          className="relative h-[320px] overflow-hidden rounded-[20px] bg-blue-100 sm:h-[400px] lg:h-[460px]"
-        >
-          <img
-            src="/Empire.jpg"
-            alt="Empire Scaffolding team and fleet of vehicles Hucknall Nottinghamshire"
-            className="h-full w-full object-cover"
-            loading="lazy"
+        {/* GRID */}
+        <div className="grid gap-5 lg:grid-cols-[1.45fr_0.7fr_0.7fr]">
+          {/* BIG IMAGE */}
+          <div
+            ref={imageFade.ref}
+            style={fadeStyle(imageFade.visible)}
+            className="relative h-[320px] overflow-hidden rounded-[20px] bg-blue-100 sm:h-[400px] lg:h-[460px]"
+          >
+            <img
+              src="/Empire.jpg"
+              alt="Empire Scaffolding team and fleet of vehicles Hucknall Nottinghamshire"
+              className="h-full w-full object-cover"
+              loading="lazy"
+            />
+
+            <SpinBadge />
+          </div>
+
+          {/* CARD 1 */}
+          <div
+            ref={cardOneFade.ref}
+            style={fadeStyle(cardOneFade.visible)}
+            className="flex h-[320px] flex-col justify-between rounded-[20px] bg-white p-5"
+          >
+            <div className="text-center mb-5"> 
+              <h3 className="mb-2 text-[18px] font-semibold text-gray-900">
+                60+ CISRS-Qualified Staff
+              </h3>
+
+              <p className="text-[13px] leading-relaxed text-gray-500">
+                Over 60 directly employed, CISRS-qualified professionals delivering safe, reliable scaffolding on every project.
+              </p>
+            </div>
+
+            <div className="overflow-hidden rounded-[18px]">
+              <img
+                src="/building.png"
+                alt="Commercial scaffolding project by Empire Scaffolding (GB) Ltd"
+                className="h-[215px] w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          {/* CARD 2 */}
+          <div
+            ref={cardTwoFade.ref}
+            style={fadeStyle(cardTwoFade.visible)}
+            className="h-[320px] rounded-[20px] bg-white p-3"
+          >
+            <div className="overflow-hidden rounded-[16px]">
+              <img
+                src="/1.jpg"
+                alt="Scaffolding installation by Empire Scaffolding (GB) Ltd"
+                className="h-[165px] w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+
+            <div className="px-2 pt-5 text-center">
+              <h3 className="mb-2 text-[18px] font-semibold text-gray-900">
+               Established 2000
+              </h3>
+
+              <p className="text-[13px] leading-relaxed text-gray-500">
+                25 years of experience across commercial, domestic, and industrial scaffolding projects throughout the UK.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* STATS */}
+        <div className="mt-8 grid grid-cols-1 gap-5 rounded-[20px] bg-white p-5 shadow-[0_18px_50px_rgba(15,23,42,0.06)] sm:grid-cols-3 lg:ml-[53%] lg:mt-[-105px] lg:bg-transparent lg:p-0 lg:shadow-none">
+          <StatCard
+            value={25}
+            suffix="+"
+            label="Years Experience"
+            delay={0}
           />
 
-          <SpinBadge />
+          <StatCard
+            value={60}
+            label="CISRS-Trained Staff"
+            delay={150}
+          />
+
+          <StatCard
+            value={100}
+            suffix="%"
+            label="Safety Record"
+            delay={300}
+          />
         </div>
-
-        {/* CARD 1 */}
-        <div
-          ref={cardOneFade.ref}
-          style={fadeStyle(cardOneFade.visible)}
-          className="flex h-[320px] flex-col justify-between rounded-[20px] bg-white p-5"
-        >
-          <div>
-            <h3 className="mb-2 text-[18px] font-semibold text-gray-900">
-              Your Trusted Partners
-            </h3>
-
-            <p className="text-[13px] leading-relaxed text-gray-500">
-              We stand by you at every stage of the construction journey
-            </p>
-          </div>
-
-          <div className="overflow-hidden rounded-[18px]">
-            <img
-              src="/building.png"
-              alt="Commercial scaffolding project by Empire Scaffolding (GB) Ltd"
-              className="h-[215px] w-full object-cover"
-              loading="lazy"
-            />
-          </div>
-        </div>
-
-        {/* CARD 2 */}
-        <div
-          ref={cardTwoFade.ref}
-          style={fadeStyle(cardTwoFade.visible)}
-          className="h-[320px] rounded-[20px] bg-white p-3"
-        >
-          <div className="overflow-hidden rounded-[16px]">
-            <img
-              src="/1.jpg"
-              alt="Scaffolding installation by Empire Scaffolding (GB) Ltd"
-              className="h-[165px] w-full object-cover"
-              loading="lazy"
-            />
-          </div>
-
-          <div className="px-2 pt-5">
-            <h3 className="mb-2 text-[18px] font-semibold text-gray-900">
-              Modern Design Solution
-            </h3>
-
-            <p className="text-[13px] leading-relaxed text-gray-500">
-              We stand by you at every stage of the construction journey
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* STATS */}
-      <div className="mt-8 grid grid-cols-1 gap-5 rounded-[20px] bg-white p-5 shadow-[0_18px_50px_rgba(15,23,42,0.06)] sm:grid-cols-3 lg:ml-[60%] lg:mt-[-105px] lg:bg-transparent lg:p-0 lg:shadow-none">
-        <StatCard
-          value={25}
-          suffix="+"
-          label="Real Estate Expertise"
-          delay={0}
-        />
-
-        <StatCard
-          value={50}
-          suffix="+"
-          label="Expert Team Members"
-          delay={150}
-        />
-
-        <StatCard
-          value={500}
-          suffix="+"
-          label="Handed-Over Project"
-          delay={300}
-        />
-      </div>
       </div>
     </section>
   );
