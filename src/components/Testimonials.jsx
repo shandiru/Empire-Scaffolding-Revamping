@@ -1,97 +1,121 @@
-import { Star } from "lucide-react";
+import { ArrowUpRight, Quote } from "lucide-react";
 
-const testimonials = [
+const clientLogos = [
   {
-    name: "Martin Wragg",
-    role: "Verified Customer",
-    initial: "M",
-    bgColor: "bg-blue-600",
-    text: `They were the most polite people I've ever had working with me. People need to treat people as they would like to be treated themselves before leaving a bad review.`,
+    name: "NHS Nottingham University Hospitals",
+    src: "/nhs.png",
+    alt: "NHS Nottingham University Hospitals logo",
   },
   {
-    name: "Ghost Hunter",
-    role: "Domestic Customer",
-    initial: "G",
-    bgColor: "bg-blue-600",
-    text: `They did a great job scaffolding the front of our house. It was perfect for what we needed to do, they are very professional and are great value for money.`,
+    name: "Nottingham City Council",
+    src: "/nottingham.png",
+    alt: "Nottingham City Council logo",
+  },
+  {
+    name: "Morgan Sindall Group",
+    src: "/mor.png",
+    alt: "Morgan Sindall Group logo",
+  },
+  {
+    name: "Bowmer & Kirkland",
+    src: "/bow.png",
+    alt: "Bowmer and Kirkland logo",
+  },
+  {
+    name: "University of Nottingham",
+    src: "/university.png",
+    alt: "University of Nottingham logo",
   },
 ];
 
 const Testimonials = () => {
   return (
-    <section className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-16 scroll-m-18" id="testimonials">
-      <div className="max-w-7xl mx-auto text-center">
-        {/* Header */}
-        <h2 className="text-2xl sm:text-3xl font-bold mb-2">
-          What Our Customers Say
-        </h2>
-        <p className="text-sm sm:text-base text-gray-800 mb-12">
-          Don't just take our word for it – hear from our satisfied customers
-        </p>
-
-        {/* Testimonials Grid */}
-        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 w-full max-w-5xl mx-auto">
-          {testimonials.map((t, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl shadow-md p-6 text-left"
-            >
-              {/* Star Rating */}
-              <div className="flex mb-4 text-yellow-500">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={18} fill="currentColor" />
-                ))}
-              </div>
-
-              {/* Testimonial Text */}
-              <p className="italic text-gray-800 mb-6">"{t.text}"</p>
-
-              {/* Author Info */}
-              <div className="flex items-center gap-3">
-                <div
-                  className={`w-10 h-10 ${t.bgColor} text-white rounded-full flex items-center justify-center font-semibold`}
-                >
-                  {t.initial}
-                </div>
-                <div>
-                  <p className="font-semibold text-sm">{t.name}</p>
-                  <p className="text-xs text-gray-500">{t.role}</p>
-                </div>
-              </div>
+    <section
+      className="bg-white px-4 py-16 sm:px-6 lg:px-16"
+      id="testimonials"
+    >
+      <div className="mx-auto max-w-7xl rounded-[1.75rem] border border-slate-100 bg-white p-6 shadow-[0_18px_70px_rgba(15,23,42,0.08)] sm:p-8 lg:p-10">
+        <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+          <div>
+            <div className="hero-reveal inline-flex items-center gap-3 rounded-full bg-lime-100 px-4 py-2 text-xs font-semibold text-slate-950">
+              <span className="h-2 w-2 rounded-full bg-lime-400" />
+              <span>Our Testimonials</span>
             </div>
-          ))}
-        </div>
 
-        {/* Bottom Rating Bar */}
-        <div
-          className="
-    mt-10 
-    flex flex-col sm:flex-row items-center 
-    bg-white rounded-full 
-    py-3 px-4 sm:px-6 md:px-8 
-    max-w-sm sm:max-w-lg md:max-w-2xl 
-    mx-auto 
-    justify-center gap-3 sm:gap-4 
-    text-xs sm:text-sm md:text-base 
-    text-gray-700 shadow-md
-  "
-        >
-          {/* Star Rating */}
-          <div className="flex items-center gap-1 text-yellow-500">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} size={16} className="sm:w-5 sm:h-5" fill="currentColor" />
-            ))}
+            <h2
+              className="hero-reveal mt-6 max-w-xl text-3xl font-semibold leading-[1.05] tracking-[-0.04em] text-slate-950 sm:text-4xl lg:text-[2.8rem]"
+              style={{ animationDelay: "0.1s" }}
+            >
+              Client experiences that reflect our{" "}
+              <span className="italic">reliability</span>
+            </h2>
+
+            <p
+              className="hero-reveal mt-5 max-w-2xl text-sm leading-7 text-slate-500"
+              style={{ animationDelay: "0.18s" }}
+            >
+              Don't just take our word for it - hear from the contractors,
+              developers, and homeowners who trust Empire Scaffolding to deliver.
+            </p>
+
+            <a
+              href="#contact"
+              className="hero-reveal mt-7 inline-flex items-center gap-2 rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+              style={{ animationDelay: "0.26s" }}
+            >
+              See All Reviews
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
           </div>
 
-          {/* Text Section */}
-          <p className="text-center leading-tight sm:leading-normal">
-            <strong className="font-bold text-gray-900">
-              5.0 out of 5 stars ·{" "}
-            </strong>
-            Based on customer reviews
-          </p>
+          <div className="hero-stat relative" style={{ animationDelay: "0.18s" }}>
+            <div className="mb-8 flex items-center justify-between gap-4">
+              <div className="flex h-12 w-36 items-center justify-start">
+                <img
+                  src="/nottingham.png"
+                  alt="Nottingham City Council logo"
+                  className="max-h-12 max-w-full object-contain"
+                />
+              </div>
+              <Quote className="h-12 w-12 fill-slate-100 text-slate-100" />
+            </div>
+
+            <blockquote className="max-w-2xl text-base font-semibold leading-8 text-slate-950">
+              "They were the most polite people I've ever had working with me.
+              People need to treat people as they would like to be treated
+              themselves before leaving a bad review."
+            </blockquote>
+
+            <div className="mt-10">
+              <p className="text-sm font-bold text-slate-950">Martin Wragg</p>
+              <p className="mt-1 text-xs text-slate-500">Verified Customer</p>
+            </div>
+          </div>
         </div>
 
+        <div className="mt-12 border-t border-slate-100 pt-8">
+          <p className="mb-8 text-center text-sm text-slate-500">
+            Trusted by leading organisations across construction, education, and
+            the public sector
+          </p>
+
+          <div className="grid grid-cols-2 items-center justify-items-center gap-6 sm:grid-cols-3 lg:grid-cols-5">
+            {clientLogos.map((logo, index) => (
+              <div
+                key={logo.name}
+                className="hero-stat flex h-16 w-full max-w-[190px] items-center justify-center rounded-xl bg-white px-5 py-3"
+                style={{ animationDelay: `${0.28 + index * 0.08}s` }}
+              >
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="max-h-12 max-w-full object-contain"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
