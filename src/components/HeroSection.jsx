@@ -1,19 +1,12 @@
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Star, Menu, X } from "lucide-react";
+import { ArrowUpRight, Star } from "lucide-react";
 import { isPrerender } from "../seo/isPrerender";
+import Navbar from "./Navbar";
 
 const heroStats = [
   { value: 25, suffix: "+", label: "Years Experience" },
   { value: 60, suffix: "", label: "CISRS-Trained Staff" },
   { value: 100, suffix: "%", label: "Safety Record" },
-];
-
-const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Recent Projects", href: "#projects" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
 ];
 
 const CounterValue = ({ value, suffix = "", duration = 1600, decimals = 0 }) => {
@@ -46,7 +39,6 @@ const CounterValue = ({ value, suffix = "", duration = 1600, decimals = 0 }) => 
 };
 
 const HeroSection = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const shouldLoadVideo = !isPrerender();
 
   return (
@@ -68,84 +60,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,15,33,0.1)_0%,rgba(8,15,33,0.2)_25%,rgba(8,15,33,0.62)_70%,rgba(4,8,20,0.92)_100%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.2),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(37,99,235,0.16),transparent_30%)]" />
 
-      <header className="app-section absolute inset-x-0 top-4 z-50 sm:top-6">
-        <div className="app-container rounded-[1.4rem] border border-white/80 bg-white px-4 shadow-[0_20px_60px_rgba(15,23,42,0.15)] sm:rounded-[2rem] sm:px-8 py-4 lg:rounded-[2.6rem] lg:px-10">
-          <div className="flex items-center justify-between gap-4">
-            <a href="#top" className="flex items-center">
-              <img
-                src="/Logo-bg.png"
-                alt="Empire Scaffolding Logo"
-                className="h-11 w-auto object-contain sm:h-12 lg:h-14"
-              />
-            </a>
-
-            <nav className="hidden items-center gap-10 text-[1.05rem] font-medium text-slate-700 lg:flex">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="transition hover:text-blue-600"
-                >
-                  {item.label}
-                </a>
-              ))}
-            </nav>
-
-            {/* Header Quote Button */}
-            <div className="hidden sm:block">
-              <a
-                href="mailto:Shay@empirescaffolding.co.uk"
-                className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-[#0B1224] px-6 py-3 text-sm font-semibold text-white transition-colors duration-300 lg:px-8 lg:py-3 lg:text-base"
-              >
-                <span className="absolute inset-0 translate-y-full bg-blue-700 transition-transform duration-300 ease-out group-hover:translate-y-0" />
-                <span className="relative z-10 inline-flex items-center gap-2">
-                  Get Quote
-                  {/* Added transition and group-hover:rotate-45 below */}
-                  <ArrowUpRight className="btn-arrow h-4 w-4 transition-transform duration-300 group-hover:rotate-45 lg:h-5 lg:w-5" />
-                </span>
-              </a>
-            </div>
-
-            <button
-              className="block text-slate-900 lg:hidden"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle navigation menu"
-            >
-              {mobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </button>
-          </div>
-
-          {mobileMenuOpen && (
-            <div className="mt-5 flex flex-col gap-4 border-t border-slate-200 pt-5 lg:hidden">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-base font-medium text-slate-700 transition hover:text-blue-600"
-                >
-                  {item.label}
-                </a>
-              ))}
-              <a
-                href="mailto:Shay@empirescaffolding.co.uk"
-                className="group relative mt-2 inline-flex w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-[#0B1224] py-3 text-sm font-semibold text-white transition-colors duration-300"
-              >
-                <span className="absolute inset-0 translate-y-full bg-blue-700 transition-transform duration-300 ease-out group-hover:translate-y-0" />
-                <span className="relative z-10 inline-flex items-center gap-2">
-                  Get Quote
-                  {/* Added transition and group-hover:rotate-45 below */}
-                  <ArrowUpRight className="btn-arrow h-4 w-4 transition-transform duration-300 group-hover:rotate-45" />
-                </span>
-              </a>
-            </div>
-          )}
-        </div>
-      </header>
+      <Navbar overlay />
 
       <div className="app-section relative z-10 flex min-h-screen w-full items-end pb-10 pt-36 sm:pb-12 sm:pt-40 lg:pb-14 lg:pt-44">
         <div className="app-container">
