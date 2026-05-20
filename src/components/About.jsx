@@ -206,7 +206,7 @@ export default function AboutSection() {
         <div
           ref={imageFade.ref}
           style={fadeStyle(imageFade.visible)}
-          className="relative h-[460px] overflow-hidden rounded-[20px] bg-blue-100"
+          className="relative h-[320px] overflow-hidden rounded-[20px] bg-blue-100 sm:h-[400px] lg:h-[460px]"
         >
           <img
             src="/Empire.jpg"
@@ -269,7 +269,7 @@ export default function AboutSection() {
       </div>
 
       {/* STATS */}
-      <div className="mt-[-105px] grid grid-cols-3 gap-6 lg:ml-[60%]">
+      <div className="mt-8 grid grid-cols-1 gap-5 rounded-[20px] bg-white p-5 shadow-[0_18px_50px_rgba(15,23,42,0.06)] sm:grid-cols-3 lg:ml-[60%] lg:mt-[-105px] lg:bg-transparent lg:p-0 lg:shadow-none">
         <StatCard
           value={25}
           suffix="+"

@@ -66,7 +66,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.2),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(37,99,235,0.16),transparent_30%)]" />
 
       <header className="app-section absolute inset-x-0 top-4 z-50 sm:top-6">
-        <div className="app-container rounded-[2rem] border border-white/80 bg-white px-5 py-4 shadow-[0_20px_60px_rgba(15,23,42,0.15)] sm:px-8 lg:rounded-[2.6rem] lg:px-10 lg:py-6">
+        <div className="app-container rounded-[1.4rem] border border-white/80 bg-white px-4 py-3 shadow-[0_20px_60px_rgba(15,23,42,0.15)] sm:rounded-[2rem] sm:px-8 sm:py-4 lg:rounded-[2.6rem] lg:px-10 lg:py-6">
           <div className="flex items-center justify-between gap-4">
             <a href="#top" className="flex items-center">
               <img
@@ -140,7 +140,7 @@ const HeroSection = () => {
         <div className="grid w-full gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(560px,0.95fr)] lg:items-end">
           <div className="max-w-[760px] text-left">
             <div
-              className="hero-reveal inline-flex items-center gap-3 rounded-full bg-gray-900/88 px-5 py-3 text-sm font-semibold text-white shadow-[0_16px_32px_rgba(0,0,0,0.24)] backdrop-blur-sm"
+              className="hero-reveal inline-flex max-w-full items-center gap-2 rounded-full bg-gray-900/88 px-4 py-3 text-xs font-semibold text-white shadow-[0_16px_32px_rgba(0,0,0,0.24)] backdrop-blur-sm sm:gap-3 sm:px-5 sm:text-sm"
               style={{ animationDelay: "0.08s" }}
             >
               <span className="h-2.5 w-2.5 rounded-full bg-blue-400" />
@@ -149,13 +149,13 @@ const HeroSection = () => {
 
             <div className="mt-8">
               <h1
-                className="hero-reveal text-5xl font-medium leading-[0.98] tracking-tight text-white sm:text-6xl lg:text-[5.5rem]"
+                className="hero-reveal text-[2.7rem] font-medium leading-[0.98] tracking-tight text-white min-[380px]:text-5xl sm:text-6xl lg:text-[5.5rem]"
                 style={{ animationDelay: "0.18s" }}
               >
                 Safe &amp; Reliable Scaffolding
               </h1>
               <p
-                className="hero-reveal mt-4 text-5xl font-light italic leading-[0.98] tracking-tight text-white sm:text-6xl lg:text-[5rem]"
+                className="hero-reveal mt-4 text-[2.7rem] font-light italic leading-[0.98] tracking-tight text-white min-[380px]:text-5xl sm:text-6xl lg:text-[5rem]"
                 style={{ animationDelay: "0.3s" }}
               >
                 Solutions
@@ -203,7 +203,7 @@ const HeroSection = () => {
               <div className="flex flex-col gap-6 2xl:flex-row 2xl:items-center 2xl:justify-between">
                 <a
                   href="mailto:Shay@empirescaffolding.co.uk"
-                  className="inline-flex w-fit items-center justify-center gap-3 whitespace-nowrap rounded-full bg-white px-6 py-4 text-base font-semibold text-[#0B1224] transition hover:bg-blue-100 sm:px-8"
+                  className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-white px-5 py-4 text-base font-semibold text-[#0B1224] transition hover:bg-blue-100 min-[420px]:w-fit sm:px-8"
                 >
                   Get a Free Quote
                   <ArrowUpRight className="h-5 w-5" />
