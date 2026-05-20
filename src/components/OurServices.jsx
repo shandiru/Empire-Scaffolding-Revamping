@@ -47,8 +47,8 @@ export default function ServicesSection() {
             ● Our Services
           </div>
 
-          <h2 className="mx-auto max-w-[760px] text-[34px] font-bold leading-[1.1] tracking-[-1px] text-gray-900 md:text-[52px]">
-            Our Services
+          <h2 className="mx-auto max-w-[760px] text-[34px] font-bold leading-[1.1] tracking-[-1px] text-gray-900 md:text-[48px]">
+            Reliable scaffolding services for every project
           </h2>
         </div>
 
@@ -60,7 +60,7 @@ export default function ServicesSection() {
             return (
               <div
                 key={index}
-                className="group overflow-hidden rounded-[24px] bg-white transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]"
+                className="group flex flex-col overflow-hidden rounded-[24px] bg-white transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]"
               >
                 {/* IMAGE */}
                 <div className="relative h-[185px] overflow-hidden">
@@ -77,7 +77,8 @@ export default function ServicesSection() {
                 </div>
 
                 {/* CONTENT */}
-                <div className="p-6">
+                {/* 2. Added 'flex-1 flex flex-col' to allow this container to fill remaining space and control its children */}
+                <div className="flex flex-1 flex-col p-6">
                   <h3 className="mb-3 text-[20px] font-semibold leading-tight text-gray-900">
                     {service.title}
                   </h3>
@@ -86,9 +87,9 @@ export default function ServicesSection() {
                     {service.description}
                   </p>
 
-                  <button className="inline-flex items-center gap-3 text-sm font-semibold text-gray-900 transition hover:text-blue-600">
+                  {/* 3. Replaced 'mb-7' on paragraph with 'mt-auto' on the button to firmly anchor it to the bottom */}
+                  <button className="mt-auto inline-flex items-center gap-3 text-sm font-semibold text-gray-900 transition hover:text-blue-600">
                     Learn More
-
                     <span className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 text-blue-600">
                       <ArrowUpRight size={14} />
                     </span>

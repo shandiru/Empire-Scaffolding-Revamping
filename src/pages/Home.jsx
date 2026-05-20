@@ -21,10 +21,10 @@ const Home = () => {
         <div>
             <HeroSection />
             <StatsContactBar />
-            <OurServices />
             <About />
-            <RecentProjects />
+            <OurServices />
             <WhyChooseUs />
+            <RecentProjects />
             <Testimonials />
             <CertificationCategories />
             <FAQ />

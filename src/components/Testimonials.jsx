@@ -1,4 +1,5 @@
-import { ArrowUpRight, Quote } from "lucide-react";
+import { useState } from "react";
+import { ArrowUpRight, ArrowLeft, ArrowRight, Quote } from "lucide-react";
 
 const clientLogos = [
   {
@@ -28,14 +29,43 @@ const clientLogos = [
   },
 ];
 
+// Dynamic testimonial content array
+const testimonialsData = [
+  {
+    id: 1,
+    logoSrc: "/nottingham.png",
+    logoAlt: "Nottingham City Council logo",
+    quote: "“The team delivered exceptional quality and maintained complete transparency throughout the project. The construction was completed on time, and the finishing exceeded our workmanship and strong project management and the finishing exceeded our workmanship and strong project management.”",
+    author: "Martin Wragg",
+    role: "Verified Customer"
+  },
+  {
+    id: 2,
+    logoSrc: "/nhs.png",
+    logoAlt: "NHS logo",
+    quote: "“They were the most polite people I've ever had working with me. People need to treat people as they would like to be treated themselves before leaving a bad review.”",
+    author: "Martin Wragg",
+    role: "Verified Customer"
+  }
+];
+
 const Testimonials = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev === testimonialsData.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? testimonialsData.length - 1 : prev - 1));
+  };
+
   return (
-    <section
-      className="app-section bg-white py-16"
-      id="testimonials"
-    >
+    <section className="app-section bg-white py-16" id="testimonials">
       <div className="app-container rounded-[1.75rem] border border-slate-100 bg-white p-6 shadow-[0_18px_70px_rgba(15,23,42,0.08)] sm:p-8 lg:p-10">
         <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+          
+          {/* Left Side Content */}
           <div>
             <div className="hero-reveal inline-flex items-center gap-3 rounded-full bg-blue-100 px-4 py-2 text-xs font-semibold text-slate-950">
               <span className="h-2 w-2 rounded-full bg-blue-600" />
@@ -46,57 +76,90 @@ const Testimonials = () => {
               className="hero-reveal mt-6 max-w-xl text-3xl font-semibold leading-[1.05] tracking-[-0.04em] text-slate-950 sm:text-4xl lg:text-[2.8rem]"
               style={{ animationDelay: "0.1s" }}
             >
-              What Our Clients Say
+              Client experiences that reflect <span className="italic font-normal">our excellence</span>
             </h2>
 
             <p
               className="hero-reveal mt-5 max-w-2xl text-sm leading-7 text-slate-500"
               style={{ animationDelay: "0.18s" }}
             >
-              Don't just take our word for it - hear from the contractors,
-              developers, and homeowners who trust Empire Scaffolding to deliver.
+              What our clients say about our construction services reflects our commitment to 
+              quality workmanship, timely project delivery, and transparent communication.
             </p>
 
+            {/* View All Reviews Button */}
             <a
               href="#contact"
-              className="hero-reveal mt-7 inline-flex items-center gap-2 rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+              className="group hero-reveal relative mt-7 inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:text-white"
               style={{ animationDelay: "0.26s" }}
             >
-              See All Reviews
-              <ArrowUpRight className="h-4 w-4" />
+              <span className="absolute inset-0 translate-y-full bg-blue-700 transition-transform duration-300 ease-out group-hover:translate-y-0" />
+              <span className="relative z-10 inline-flex items-center gap-2 transition-colors duration-300">
+                View All Review
+                <ArrowUpRight className="btn-arrow h-4 w-4 transition-transform duration-300 group-hover:rotate-45" />
+              </span>
             </a>
           </div>
 
-          <div className="hero-stat relative" style={{ animationDelay: "0.18s" }}>
-            <div className="mb-8 flex items-center justify-between gap-4">
-              <div className="flex h-12 w-36 items-center justify-start">
-                <img
-                  src="/nottingham.png"
-                  alt="Nottingham City Council logo"
-                  className="max-h-12 max-w-full object-contain"
-                  loading="lazy"
-                />
-              </div>
-              <Quote className="h-12 w-12 fill-slate-100 text-slate-100" />
-            </div>
+          {/* Right Side Content (Dynamic Carousel Engine) */}
+          <div className="hero-stat relative border-b border-slate-100 pb-8 lg:border-none lg:pb-0" style={{ animationDelay: "0.18s" }}>
+            {testimonialsData.map((testimonial, index) => {
+              // Only render the active item based on currentSlide state matching the array index
+              if (index !== currentSlide) return null;
 
-            <blockquote className="max-w-2xl text-base font-semibold leading-8 text-slate-950">
-              "They were the most polite people I've ever had working with me.
-              People need to treat people as they would like to be treated
-              themselves before leaving a bad review."
-            </blockquote>
+              return (
+                <div key={testimonial.id} className="animate-fadeIn">
+                  <div className="mb-8 flex items-center justify-between gap-4">
+                    <div className="flex h-12 w-36 items-center justify-start">
+                      <img
+                        src={testimonial.logoSrc}
+                        alt={testimonial.logoAlt}
+                        className="max-h-12 max-w-full object-contain"
+                        loading="lazy"
+                      />
+                    </div>
+                    <Quote className="h-12 w-12 fill-slate-100 text-slate-100 transform rotate-180" />
+                  </div>
 
-            <div className="mt-10">
-              <p className="text-sm font-bold text-slate-950">Martin Wragg</p>
-              <p className="mt-1 text-xs text-slate-500">Verified Customer</p>
-            </div>
+                  <blockquote className="max-w-2xl text-base font-semibold leading-8 text-slate-500">
+                    {testimonial.quote}
+                  </blockquote>
+
+                  {/* Client Info & Control row */}
+                  <div className="mt-10 flex items-center justify-between gap-4">
+                    <div>
+                      <p className="text-sm font-bold text-slate-950">{testimonial.author}</p>
+                      <p className="mt-1 text-xs text-slate-500">{testimonial.role}</p>
+                    </div>
+
+                    {/* Slider Arrows */}
+                    <div className="flex items-center gap-3 group">
+                      <button 
+                        onClick={prevSlide}
+                        className="flex h-10 w-10 items-center group-hover:text-black justify-center rounded-full border border-slate-200 bg-white text-slate-700 transition-all hover:bg-blue-600 active:scale-95"
+                        aria-label="Previous testimonial"
+                      >
+                        <ArrowLeft className="h-5 w-5" />
+                      </button>
+                      <button 
+                        onClick={nextSlide}
+                        className="flex h-10 w-10 items-center group-hover:text-black justify-center rounded-full border border-slate-200 bg-white text-slate-700 transition-all hover:bg-blue-600 active:scale-95"
+                        aria-label="Next testimonial"
+                      >
+                        <ArrowRight className="h-5 w-5" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 
+        {/* Bottom Logo Grid Section */}
         <div className="mt-12 border-t border-slate-100 pt-8">
           <p className="mb-8 text-center text-sm text-slate-500">
-            Trusted by leading organisations across construction, education, and
-            the public sector
+            Trusted by leading organisations across construction, education, and the public sector
           </p>
 
           <div className="grid grid-cols-2 items-center justify-items-center gap-6 sm:grid-cols-3 lg:grid-cols-5">
