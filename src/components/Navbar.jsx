@@ -18,7 +18,7 @@ const Navbar = () => {
 
   // Handle phone call
   const handleCall = () => {
-    console.log("Calling 01159 641 600");
+    console.log("Calling 0115 9641 600");
   };
 
   return (
@@ -62,14 +62,14 @@ const Navbar = () => {
               onClick={handleCall}
               className="whitespace-nowrap font-semibold"
             >
-              01159 641 600
+              0115 9641 600
             </a>
           </div>
           <a
             href="mailto:Shay@empirescaffolding.co.uk"
             className="inline-flex items-center rounded-full bg-slate-950 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
           >
-            Get Quote
+            Get a Free Quote
           </a>
         </div>
 
@@ -108,14 +108,14 @@ const Navbar = () => {
               onClick={handleCall}
               className="whitespace-nowrap font-semibold"
             >
-              01159 641 600
+              0115 9641 600
             </a>
           </div>
           <a
             href="mailto:Shay@empirescaffolding.co.uk"
             className="rounded-full bg-slate-950 px-5 py-3 font-semibold text-white transition hover:bg-blue-700"
           >
-            Get Quote
+            Get a Free Quote
           </a>
         </div>
       )}

@@ -1,90 +1,83 @@
 import React from "react";
-import { AiOutlineSafety } from "react-icons/ai";
-import { FaRegListAlt, FaRegStar } from "react-icons/fa";
-import { LuAward, LuBuilding2 } from "react-icons/lu";
 
-const certifications = [
+const accreditations = [
   {
-    id: 1,
-    category: "Construction Standards",
     title: "NASC",
-    sub: "National Access and Scaffolding Confederation",
-    description: "Leading trade association for the access and scaffolding industry, ensuring safety and professional standards.",
-    icon: <LuBuilding2 className="h-8 w-8 text-blue-600" />,
+    description:
+      "National Access and Scaffolding Confederation - the leading trade association for the access and scaffolding industry, ensuring safety and professional standards.",
+    logo: "/accreditations/nasc.svg",
   },
   {
-    id: 2,
-    category: "Safety & Health",
     title: "CHAS",
-    sub: "Contractors Health and Safety Assessment Scheme",
-    description: "Health and safety pre-qualification scheme for contractors, demonstrating compliance with health and safety standards.",
-    icon: <AiOutlineSafety className="h-8 w-8 text-blue-600" />,
+    description:
+      "Contractors Health and Safety Assessment Scheme - health and safety pre-qualification demonstrating full compliance with industry standards.",
+    logo: "/accreditations/chas.svg",
   },
   {
-    id: 3,
-    category: "Quality Management",
     title: "SMAS",
-    sub: "Safety Management Advisory Services",
-    description: "Health and safety assessment scheme providing assurance of contractor competence and compliance.",
-    icon: <FaRegListAlt className="h-8 w-8 text-blue-600" />,
+    description:
+      "Safety Management Advisory Services - independent health and safety assessment scheme providing assurance of contractor competence and compliance.",
+    logo: "/accreditations/smas.svg",
   },
   {
-    id: 4,
-    category: "Professional Standards",
     title: "Builders Profile",
-    sub: "Builders Profile Certification",
-    description: "Verified contractor profile ensuring financial stability and professional competence.",
-    icon: <FaRegStar className="h-8 w-8 text-blue-600" />,
+    description:
+      "Verified contractor profile ensuring financial stability and professional competence across the construction industry.",
+    logo: "/accreditations/builders-profile.svg",
   },
   {
-    id: 5,
-    category: "Industry Registration",
     title: "Construction Line",
-    sub: "Construction Line Registration",
-    description: "Pre-qualification service for construction contractors, ensuring compliance and capability.",
-    icon: <LuBuilding2 className="h-8 w-8 text-blue-600" />,
+    description:
+      "Pre-qualification service for construction contractors, ensuring compliance, capability, and readiness to deliver.",
+    logo: "/accreditations/construction-line.svg",
   },
   {
-    id: 6,
-    category: "Quality Assurance",
     title: "ISO 9001",
-    sub: "ISO 9001:2015 Quality Management",
-    description: "International standard for quality management systems, ensuring consistent service delivery.",
-    icon: <LuAward className="h-8 w-8 text-blue-600" />,
+    description:
+      "ISO 9001:2015 Quality Management certification - international standard ensuring consistent, high-quality service delivery on every project.",
+    logo: "/accreditations/iso-9001.svg",
   },
 ];
 
 const CertificationCategories = () => {
   return (
-    <section className="py-12 px-6 bg-gray-50">
-      <div className="container mx-auto text-black text-center">
-        <h2 className="text-3xl font-semibold mb-7">Our Professional Accreditations & Memberships</h2>
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
-          <button className="bg-blue-600 text-white py-2 px-4 rounded-full text-sm md:text-base">Construction Standards</button>
-          <button className="bg-blue-600 text-white py-2 px-4 rounded-full text-sm md:text-base">Safety & Health</button>
-          <button className="bg-blue-600 text-white py-2 px-4 rounded-full text-sm md:text-base">Quality Management</button>
-          <button className="bg-blue-600 text-white py-2 px-4 rounded-full text-sm md:text-base">Professional Standards</button>
-          <button className="bg-blue-600 text-white py-2 px-4 rounded-full text-sm md:text-base">Industry Registration</button>
-          <button className="bg-blue-600 text-white py-2 px-4 rounded-full text-sm md:text-base">Quality Assurance</button>
+    <section className="bg-gray-50 px-6 py-16 lg:py-20">
+      <div className="mx-auto max-w-[1440px]">
+        <div className="mb-12">
+          <p className="hero-reveal mb-2 text-sm font-semibold uppercase tracking-widest text-blue-600">
+            OUR ACCREDITATIONS &amp; MEMBERSHIPS
+          </p>
+          <h2
+            className="hero-reveal text-3xl font-bold text-slate-950 lg:text-4xl"
+            style={{ animationDelay: "0.1s" }}
+          >
+            Accredited. Certified. Trusted.
+          </h2>
         </div>
-      </div>
-      <div className="container mx-auto text-center max-w-6xl">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {certifications.map((certification) => (
-            <div
-              key={certification.id}
-              className="flex flex-col items-start p-6 border rounded-lg shadow-md hover:shadow-xl hover:z-10 hover:scale-105 transition-all duration-300 relative"
+
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {accreditations.map((accreditation, index) => (
+            <article
+              key={accreditation.title}
+              className="hero-stat rounded-2xl border border-slate-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+              style={{ animationDelay: `${0.16 + index * 0.08}s` }}
             >
-              <div className="flex items-center mb-4">
-                <div className="bg-blue-100 p-3 rounded-full">{certification.icon}</div>
-                <div className="ml-4">
-                  <p className="text-xs sm:text-sm text-gray-500 bg-gray-200 p-1 rounded-lg">{certification.category}</p>
-                </div>
+              <div className="mb-4 flex h-16 w-28 items-center justify-center rounded-xl border border-slate-200 bg-gray-50 p-3">
+                <img
+                  src={accreditation.logo}
+                  alt={`${accreditation.title} accreditation logo`}
+                  className="max-h-full max-w-full object-contain"
+                  loading="lazy"
+                />
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">{certification.title}</h3>
-              <p className="text-sm sm:text-base text-gray-700 text-left mb-5">{certification.sub}</p>
-              <p className="text-sm sm:text-base text-gray-700 text-left">{certification.description}</p>
-            </div>
+
+              <h3 className="mb-2 text-lg font-bold text-slate-950">
+                {accreditation.title}
+              </h3>
+              <p className="text-sm leading-relaxed text-slate-500">
+                {accreditation.description}
+              </p>
+            </article>
           ))}
         </div>
       </div>

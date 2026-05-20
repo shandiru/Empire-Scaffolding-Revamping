@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="100" viewBox="0 0 220 100" role="img" aria-labelledby="title desc">
+  <title id="title">NASC logo</title>
+  <desc id="desc">NASC accreditation badge</desc>
+  <rect width="220" height="100" rx="14" fill="#ffffff"/>
+  <rect x="8" y="8" width="204" height="84" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <path d="M33 68V32h9l24 23V32h12v36h-9L45 45v23H33z" fill="#0f172a"/>
+  <path d="M92 68l18-36h12l18 36h-13l-3-7h-17l-3 7H92zm19-16h10l-5-11-5 11z" fill="#2563eb"/>
+  <path d="M150 58c7 3 16 3 16-1 0-7-27-2-27-15 0-8 8-12 19-12 7 0 13 1 18 4l-5 9c-5-2-12-4-17-3-4 0-6 1-6 3 0 6 27 1 27 15 0 8-8 12-20 12-8 0-15-2-21-5l6-9c3 2 6 3 10 4z" fill="#0f172a"/>
+</svg>

@@ -13,12 +13,14 @@ import Testimonials from "../components/Testimonials"
 import TrustedBy from "../components/TrustedBy"
 import WhyChooseUs from "../components/WhyChooseUs"
 import HeroSection from '../components/HeroSection'
+import StatsContactBar from "../components/StatsContactBar"
 
 
 const Home = () => {
     return (
         <div>
             <HeroSection />
+            <StatsContactBar />
             <OurServices />
             <About />
             <RecentProjects />
