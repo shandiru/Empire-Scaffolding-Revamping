@@ -3,9 +3,10 @@ import { Instagram, Youtube } from "lucide-react";
 
 const pageLinks = [
   { label: "About", href: "/#about" },
-  { label: "Services", href: "/#our-services" },
-  { label: "Recent Projects", href: "/#recent-projects" },
-  { label: "Gallery", href: "/#gallery" },
+  { label: "Services", href: "/#services" },
+  { label: "Why Choose Us", href: "/#why-choose-us" },
+  { label: "Recent Projects", href: "/#projects" },
+  { label: "Accreditations", href: "/#accreditations" },
   { label: "Testimonials", href: "/#testimonials" },
   { label: "Contact", href: "/#contact" },
 ];

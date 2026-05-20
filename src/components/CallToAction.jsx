@@ -32,7 +32,7 @@ const CallToAction = () => {
           </div>
 
           <h2 className="mt-5 text-[2rem] font-semibold leading-[1.05] tracking-[-0.05em] text-slate-950 sm:text-[2.7rem]">
-            Tell us about your project.
+            Get a Quote
           </h2>
 
           <form className="mt-8 space-y-4">
@@ -173,9 +173,9 @@ const CallToAction = () => {
             <span>Contact Details</span>
           </div>
 
-          <h2 className="mt-5 text-[2rem] font-semibold leading-[1.05] tracking-[-0.05em] text-slate-950">
+          <h3 className="mt-5 text-[2rem] font-semibold leading-[1.05] tracking-[-0.05em] text-slate-950">
             Rather just pick up the phone?
-          </h2>
+          </h3>
 
           <p className="mt-5 leading-8 text-slate-500">
             Empire Scaffolding (GB) Ltd,

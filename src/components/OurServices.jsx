@@ -12,38 +12,34 @@ const services = [
     description:
       "Standard scaffolding for various commercial, domestic, and industrial construction needs.",
     icon: Building2,
-    image:
-      "/service1.jpg",
+    image: "/Empire.jpg",
   },
   {
     title: "Full Supply, Erection & Dismantling",
     description:
       "We handle all stages of scaffolding work, from initial supply through to safe dismantling.",
     icon: Wrench,
-    image:
-      "/Empire.jpg",
+    image: "/building.png",
   },
   {
     title: "Projects of Any Size",
     description:
       "From small domestic towers to large-scale high-rise commercial buildings.",
     icon: ClipboardList,
-    image:
-      "/service3.jpg",
+    image: "/Mansfield.webp",
   },
   {
     title: "Plettac System Scaffolding",
     description:
       "Modular system scaffolding suitable for complex or high-rise projects.",
     icon: PanelsTopLeft,
-    image:
-      "/service4.jpg",
+    image: "/garage.jpg",
   },
 ];
 
 export default function ServicesSection() {
   return (
-    <section className="app-section bg-gray-50 py-16">
+    <section className="app-section bg-gray-50 py-16" id="services">
       <div className="app-container">
         {/* TOP */}
         <div className="mb-14 text-center">
@@ -52,8 +48,7 @@ export default function ServicesSection() {
           </div>
 
           <h2 className="mx-auto max-w-[760px] text-[34px] font-bold leading-[1.1] tracking-[-1px] text-gray-900 md:text-[52px]">
-            Reliable scaffolding services for every{" "}
-            <em className="italic">project</em>
+            Our Services
           </h2>
         </div>
 
@@ -71,8 +66,9 @@ export default function ServicesSection() {
                 <div className="relative h-[185px] overflow-hidden">
                   <img
                     src={service.image}
-                    alt={service.title}
+                    alt={`${service.title} by Empire Scaffolding (GB) Ltd`}
                     className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    loading="lazy"
                   />
 
                   <div className="absolute left-5 top-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#0B1224] text-white shadow-lg">
@@ -109,21 +105,24 @@ export default function ServicesSection() {
             {/* AVATARS */}
             <div className="flex -space-x-3">
               <img
-                src="/avatar1.jpg"
-                alt=""
+                src="/nhs.png"
+                alt="NHS Nottingham University Hospitals logo"
                 className="h-10 w-10 rounded-full border-2 border-white object-cover"
+                loading="lazy"
               />
 
               <img
-                src="/avatar2.jpg"
-                alt=""
+                src="/nottingham.png"
+                alt="Nottingham City Council logo"
                 className="h-10 w-10 rounded-full border-2 border-white object-cover"
+                loading="lazy"
               />
 
               <img
-                src="/avatar3.jpg"
-                alt=""
+                src="/university.png"
+                alt="University of Nottingham logo"
                 className="h-10 w-10 rounded-full border-2 border-white object-cover"
+                loading="lazy"
               />
             </div>
 

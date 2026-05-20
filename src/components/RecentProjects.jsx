@@ -30,7 +30,7 @@ const RecentProjects = () => {
   const activeProject = projects[activeProjectIndex];
 
   return (
-    <section className="app-section bg-white py-10" id="recent-projects">
+    <section className="app-section bg-white py-10" id="projects">
       <div className="app-container">
         <div className="relative overflow-hidden rounded-[1.5rem] bg-[#0B1224] px-4 py-10 text-white shadow-[0_28px_90px_rgba(15,23,42,0.18)] sm:rounded-[2rem] sm:px-8 sm:py-14 lg:px-12 lg:py-16">
           <div className="pointer-events-none absolute inset-0 opacity-30">
@@ -49,15 +49,16 @@ const RecentProjects = () => {
                 className="hero-reveal mx-auto mt-5 max-w-3xl text-[2.3rem] font-semibold leading-[1.05] tracking-[-0.05em] text-white sm:text-[3.1rem]"
                 style={{ animationDelay: "0.1s" }}
               >
-                A look at some of our recent projects.
+                Recent Projects
               </h2>
             </div>
 
             <div className="mt-12 grid items-center gap-8 lg:grid-cols-[1.05fr_1fr] lg:gap-12">
               <div className="hero-stat overflow-hidden rounded-[1.2rem]">
                 <img
-                  alt={activeProject.title}
+                  alt={`${activeProject.title} scaffolding by Empire Scaffolding (GB) Ltd`}
                   className="h-[260px] w-full object-cover sm:h-[340px] lg:h-[360px]"
+                  loading="lazy"
                   src={activeProject.image}
                 />
               </div>

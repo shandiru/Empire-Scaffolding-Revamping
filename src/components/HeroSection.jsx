@@ -10,9 +10,8 @@ const heroStats = [
 
 const navItems = [
   { label: "About", href: "#about" },
-  { label: "Services", href: "#our-services" },
-  { label: "Recent Projects", href: "#recent-projects" },
-  { label: "Gallery", href: "#gallery" },
+  { label: "Services", href: "#services" },
+  { label: "Recent Projects", href: "#projects" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
@@ -56,7 +55,9 @@ const HeroSection = () => {
       className="relative min-h-screen overflow-hidden bg-[#0B1224] text-white"
     >
       <video
+        aria-label="Empire Scaffolding aerial view of commercial scaffolding project Nottingham"
         className="absolute inset-0 h-full w-full object-cover"
+        poster="/Empire.jpg"
         src={shouldLoadVideo ? "/back.mp4" : undefined}
         autoPlay
         muted
@@ -154,14 +155,11 @@ const HeroSection = () => {
                 className="hero-reveal text-[2.7rem] font-medium leading-[0.98] tracking-tight text-white min-[380px]:text-5xl sm:text-6xl lg:text-[5.5rem]"
                 style={{ animationDelay: "0.18s" }}
               >
-                Safe &amp; Reliable Scaffolding
+                Safe &amp; Reliable Scaffolding{" "}
+                <span className="mt-4 block font-light italic">
+                  Solutions
+                </span>
               </h1>
-              <p
-                className="hero-reveal mt-4 text-[2.7rem] font-light italic leading-[0.98] tracking-tight text-white min-[380px]:text-5xl sm:text-6xl lg:text-[5rem]"
-                style={{ animationDelay: "0.3s" }}
-              >
-                Solutions
-              </p>
             </div>
             <p
               className="hero-reveal mt-6 max-w-xl text-base leading-7 text-white/78 sm:text-lg"

@@ -31,7 +31,10 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="app-section relative overflow-hidden bg-[#0B1224] py-20 text-white">
+    <section
+      className="app-section relative overflow-hidden bg-[#0B1224] py-20 text-white"
+      id="why-choose-us"
+    >
       <div className="absolute left-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-blue-600/25 blur-[110px]" />
 
       <div className="app-container relative">
@@ -41,8 +44,7 @@ export default function WhyChooseUs() {
           </div>
 
           <h2 className="mx-auto max-w-[720px] text-[34px] font-bold leading-[1.05] tracking-[-1px] md:text-[52px]">
-            Why Contractors and Clients{" "}
-            <em className="italic">Choose Empire Scaffolding</em>
+            Why Choose Empire Scaffolding
           </h2>
         </div>
 
@@ -76,8 +78,9 @@ export default function WhyChooseUs() {
             <div className="overflow-hidden rounded-[22px] border border-white/10 bg-white/10 p-2 shadow-[0_25px_90px_rgba(29,78,216,0.18)]">
               <img
                 src="/Empire.jpg"
-                alt="Empire Scaffolding fleet and team"
+                alt="Empire Scaffolding team and fleet of vehicles Hucknall Nottinghamshire"
                 className="h-[320px] w-full rounded-[16px] object-cover md:h-[390px]"
+                loading="lazy"
               />
             </div>
 

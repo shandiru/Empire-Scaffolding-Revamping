@@ -9,9 +9,9 @@ const Navbar = () => {
 
   const navLinks = [
     { label: "About", href: "about" },
-    { label: "Services", href: "our-services" },
-    { label: "Recent Projects", href: "recent-projects" },
-    { label: "Gallery", href: "gallery" },
+    { label: "Services", href: "services" },
+    { label: "Recent Projects", href: "projects" },
+    { label: "Why Choose Us", href: "why-choose-us" },
     { label: "Testimonials", href: "testimonials" },
     { label: "Contact", href: "contact" },
   ];

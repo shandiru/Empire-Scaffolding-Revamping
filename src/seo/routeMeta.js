@@ -5,9 +5,11 @@ export const DEFAULT_IMAGE = "/logo.jpg";
 export const routeMeta = [
   {
     path: "/",
-    title: "Empire Scaffolding (GB) Ltd | Scaffolding Contractors Nottingham",
+    title: "Empire Scaffolding Nottingham | Commercial & Domestic Scaffolding Services",
     description:
-      "Empire Scaffolding (GB) Ltd provides safe, reliable commercial, domestic, and industrial scaffolding across Nottingham, the Midlands, and the UK.",
+      "Empire Scaffolding (GB) Ltd - family-run scaffolding company based in Hucknall, Nottinghamshire. NASC accredited, CISRS-qualified team. Commercial, domestic and industrial scaffolding across the Midlands and UK. Call 0115 9641 600.",
+    ogDescription:
+      "NASC accredited scaffolding company based in Hucknall, Nottinghamshire. 25+ years experience. Call 0115 9641 600.",
     priority: "1.0",
   },
   {
@@ -31,4 +33,4 @@ export const getRouteMeta = (pathname) => {
   return routeMeta.find((route) => route.path === normalizedPath) || routeMeta[0];
 };
 
-export const absoluteUrl = (path) => `${SITE_URL}${path === "/" ? "/" : path}`;
+export const absoluteUrl = (path) => `${SITE_URL}${path === "/" ? "" : path}`;

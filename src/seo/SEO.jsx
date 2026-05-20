@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { absoluteUrl, DEFAULT_IMAGE, getRouteMeta, SITE_NAME, SITE_URL } from "./routeMeta";
+import { faqPageSchema, localBusinessSchema } from "./schema";
 
 const setMetaTag = (selector, attributes) => {
   let element = document.head.querySelector(selector);
@@ -27,6 +28,23 @@ const setLinkTag = (rel, href) => {
   element.setAttribute("href", href);
 };
 
+const setJsonLd = (id, schema) => {
+  let element = document.head.querySelector(`script#${id}`);
+
+  if (!element) {
+    element = document.createElement("script");
+    element.id = id;
+    element.type = "application/ld+json";
+    document.head.appendChild(element);
+  }
+
+  element.textContent = JSON.stringify(schema);
+};
+
+const removeJsonLd = (id) => {
+  document.head.querySelector(`script#${id}`)?.remove();
+};
+
 const SEO = () => {
   const { pathname } = useLocation();
 
@@ -34,6 +52,7 @@ const SEO = () => {
     const meta = getRouteMeta(pathname);
     const canonicalUrl = absoluteUrl(meta.path);
     const imageUrl = `${SITE_URL}${DEFAULT_IMAGE}`;
+    const socialDescription = meta.ogDescription || meta.description;
 
     document.title = meta.title;
     setLinkTag("canonical", canonicalUrl);
@@ -42,6 +61,10 @@ const SEO = () => {
       name: "description",
       content: meta.description,
     });
+    setMetaTag('meta[name="robots"]', {
+      name: "robots",
+      content: "index, follow",
+    });
 
     setMetaTag('meta[property="og:title"]', {
       property: "og:title",
@@ -49,7 +72,7 @@ const SEO = () => {
     });
     setMetaTag('meta[property="og:description"]', {
       property: "og:description",
-      content: meta.description,
+      content: socialDescription,
     });
     setMetaTag('meta[property="og:image"]', {
       property: "og:image",
@@ -78,12 +101,20 @@ const SEO = () => {
     });
     setMetaTag('meta[name="twitter:description"]', {
       name: "twitter:description",
-      content: meta.description,
+      content: socialDescription,
     });
     setMetaTag('meta[name="twitter:image"]', {
       name: "twitter:image",
       content: imageUrl,
     });
+
+    if (meta.path === "/") {
+      setJsonLd("local-business-schema", localBusinessSchema);
+      setJsonLd("faq-page-schema", faqPageSchema);
+    } else {
+      removeJsonLd("local-business-schema");
+      removeJsonLd("faq-page-schema");
+    }
   }, [pathname]);
 
   return null;
