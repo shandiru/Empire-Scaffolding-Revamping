@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight, Star, Menu, X } from "lucide-react";
+import { isPrerender } from "../seo/isPrerender";
 
 const heroStats = [
   { value: 25, suffix: "+", label: "Years Experience" },
@@ -47,6 +48,7 @@ const CounterValue = ({ value, suffix = "", duration = 1600, decimals = 0 }) => 
 
 const HeroSection = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const shouldLoadVideo = !isPrerender();
 
   return (
     <section
@@ -55,7 +57,7 @@ const HeroSection = () => {
     >
       <video
         className="absolute inset-0 h-full w-full object-cover"
-        src="/back.mp4"
+        src={shouldLoadVideo ? "/back.mp4" : undefined}
         autoPlay
         muted
         loop

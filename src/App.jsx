@@ -6,10 +6,12 @@ import Home from "./pages/Home";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import ScrollToTop from "./components/ScrollToTop";
 import GDPRConsent from "./components/GDPRButton";
+import SEO from "./seo/SEO";
 
 function App() {
   return (
     <Router>
+      <SEO />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
