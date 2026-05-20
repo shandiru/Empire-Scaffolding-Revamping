@@ -45,13 +45,13 @@ const CertificationCategories = () => {
       <div className="app-container">
         <div className="mb-12">
           <p className="hero-reveal mb-2 text-sm font-semibold uppercase tracking-widest text-blue-600">
-            OUR ACCREDITATIONS &amp; MEMBERSHIPS
+           OUR ACCREDITATIONS & MEMBERSHIPS
           </p>
           <h2
             className="hero-reveal text-3xl font-bold text-slate-950 lg:text-4xl"
             style={{ animationDelay: "0.1s" }}
           >
-            Our Accreditations &amp; Memberships
+            Accredited. Certified. Trusted.
           </h2>
         </div>
 

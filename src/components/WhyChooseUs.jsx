@@ -43,8 +43,8 @@ export default function WhyChooseUs() {
             Why Choose Us
           </div>
 
-          <h2 className="mx-auto max-w-[720px] text-[34px] font-bold leading-[1.05] tracking-[-1px] md:text-[52px]">
-            Why Choose Empire Scaffolding
+          <h2 className="mx-auto max-w-[720px] text-[34px] font-bold leading-[1.05] tracking-[-1px] md:text-[48px]">
+           Why Contractors and Clients <span className="italic">Choose</span> Empire Scaffolding
           </h2>
         </div>
 

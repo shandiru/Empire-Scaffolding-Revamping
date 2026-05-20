@@ -14,7 +14,7 @@ const projects = [
     category: "/Nottingham Castle Renovation",
     title: "Nottingham Castle Renovation",
     description: "Insert project description - client to supply before go-live.",
-    image: "/nottingham.png",
+    image: "/ablett.jpg",
   },
   {
     eyebrow: "[PLACEHOLDER]",
@@ -49,7 +49,7 @@ const RecentProjects = () => {
                 className="hero-reveal mx-auto mt-5 max-w-3xl text-[2.3rem] font-semibold leading-[1.05] tracking-[-0.05em] text-white sm:text-[3.1rem]"
                 style={{ animationDelay: "0.1s" }}
               >
-                Recent Projects
+                A look at some of our recent projects.
               </h2>
             </div>
 

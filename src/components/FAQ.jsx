@@ -43,7 +43,7 @@ export default function FAQ() {
             </div>
 
             <h2 className="mt-5 max-w-xl text-[2.4rem] font-semibold leading-[1.05] tracking-[-0.05em] text-slate-950 sm:text-[3.1rem]">
-              Frequently Asked Questions
+              Frequently asked questions about our scaffolding services.
             </h2>
 
             <p className="mt-5 max-w-lg text-base leading-7 text-slate-500">
