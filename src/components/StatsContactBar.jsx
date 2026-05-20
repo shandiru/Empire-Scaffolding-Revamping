@@ -44,7 +44,7 @@ const StatsContactBar = () => {
 
           <a
             href="mailto:Shay@empirescaffolding.co.uk"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-yellow-300 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-yellow-200"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
           >
             Get a Free Quote
             <ArrowUpRight className="h-4 w-4" />

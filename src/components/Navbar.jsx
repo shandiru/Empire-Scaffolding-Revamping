@@ -67,7 +67,7 @@ const Navbar = () => {
           </div>
           <a
             href="mailto:Shay@empirescaffolding.co.uk"
-            className="inline-flex items-center rounded-full bg-slate-950 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
+            className="inline-flex items-center rounded-full bg-[#0B1224] px-6 py-3 font-semibold text-white transition hover:bg-blue-800"
           >
             Get a Free Quote
           </a>
@@ -113,7 +113,7 @@ const Navbar = () => {
           </div>
           <a
             href="mailto:Shay@empirescaffolding.co.uk"
-            className="rounded-full bg-slate-950 px-5 py-3 font-semibold text-white transition hover:bg-blue-700"
+            className="rounded-full bg-[#0B1224] px-5 py-3 font-semibold text-white transition hover:bg-blue-800"
           >
             Get a Free Quote
           </a>

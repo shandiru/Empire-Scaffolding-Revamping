@@ -43,15 +43,15 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="bg-[#f5f5f3] px-5 py-16 md:px-8 lg:px-10">
+    <section className="bg-gray-50 px-5 py-16 md:px-8 lg:px-10">
       <div className="mx-auto max-w-[1180px]">
         {/* TOP */}
         <div className="mb-14 text-center">
-          <div className="mb-4 inline-flex items-center rounded-full bg-white px-4 py-1 text-[11px] font-medium text-[#4a5fd1] shadow-sm">
+          <div className="mb-4 inline-flex items-center rounded-full bg-white px-4 py-1 text-[11px] font-medium text-blue-600 shadow-sm">
             ● Our Services
           </div>
 
-          <h2 className="mx-auto max-w-[760px] text-[34px] font-bold leading-[1.1] tracking-[-1px] text-[#111111] md:text-[52px]">
+          <h2 className="mx-auto max-w-[760px] text-[34px] font-bold leading-[1.1] tracking-[-1px] text-gray-900 md:text-[52px]">
             Reliable scaffolding services for every{" "}
             <em className="italic">project</em>
           </h2>
@@ -75,25 +75,25 @@ export default function ServicesSection() {
                     className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   />
 
-                  <div className="absolute left-5 top-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#0d1226] text-white shadow-lg">
+                  <div className="absolute left-5 top-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#0B1224] text-white shadow-lg">
                     <Icon size={20} />
                   </div>
                 </div>
 
                 {/* CONTENT */}
                 <div className="p-6">
-                  <h3 className="mb-3 text-[20px] font-semibold leading-tight text-[#111111]">
+                  <h3 className="mb-3 text-[20px] font-semibold leading-tight text-gray-900">
                     {service.title}
                   </h3>
 
-                  <p className="mb-7 text-[14px] leading-relaxed text-[#6f6f6f]">
+                  <p className="mb-7 text-[14px] leading-relaxed text-gray-600">
                     {service.description}
                   </p>
 
-                  <button className="inline-flex items-center gap-3 text-sm font-semibold text-[#111111] transition hover:text-[#4a5fd1]">
+                  <button className="inline-flex items-center gap-3 text-sm font-semibold text-gray-900 transition hover:text-blue-600">
                     Learn More
 
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#dfe8ff] text-[#4a5fd1]">
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 text-blue-600">
                       <ArrowUpRight size={14} />
                     </span>
                   </button>
@@ -127,19 +127,19 @@ export default function ServicesSection() {
               />
             </div>
 
-            <p className="max-w-[540px] text-sm text-[#666666]">
+            <p className="max-w-[540px] text-sm text-gray-600">
               Commercial, domestic, and industrial scaffolding across the UK -{" "}
-              <span className="font-semibold text-[#111111] underline underline-offset-4">
+              <span className="font-semibold text-gray-900 underline underline-offset-4">
                 View All Services
               </span>
             </p>
           </div>
 
           {/* RATING */}
-          <div className="flex flex-wrap items-center justify-center gap-3 text-sm font-semibold text-[#111111]">
+          <div className="flex flex-wrap items-center justify-center gap-3 text-sm font-semibold text-gray-900">
             <span className="text-[20px]">5.0/5</span>
 
-            <div className="flex items-center gap-1 text-[#4a5fd1]">
+            <div className="flex items-center gap-1 text-blue-600">
               ★ ★ ★ ★ ★
             </div>
 

@@ -22,7 +22,7 @@ const CallToAction = () => {
       id="contact"
       className="relative overflow-hidden px-5 py-12 text-slate-900 sm:px-8 sm:py-14 lg:px-10"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.12),transparent_32%),linear-gradient(180deg,#f5f7fb_0%,#eef2f8_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(21,93,252,0.12),transparent_32%),linear-gradient(180deg,#F9FAFB_0%,#F3F4F6_100%)]" />
 
       <div className="relative z-10 mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="rounded-[1.75rem] border border-white/60 bg-white/88 p-8 shadow-[0_18px_50px_rgba(15,23,42,0.08)] backdrop-blur-sm">

@@ -12,7 +12,7 @@ const pageLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#404143] text-white">
+    <footer className="bg-[#0B1224] text-white">
       <div className="mx-auto max-w-7xl px-6 py-12">
         <div className="flex flex-col justify-between gap-10 md:flex-row">
           <div className="flex flex-1 flex-col">

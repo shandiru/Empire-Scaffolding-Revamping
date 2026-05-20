@@ -31,12 +31,12 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative overflow-hidden bg-[#07101f] px-5 py-20 text-white md:px-8 lg:px-10">
-      <div className="absolute left-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[#1D4ED8]/25 blur-[110px]" />
+    <section className="relative overflow-hidden bg-[#0B1224] px-5 py-20 text-white md:px-8 lg:px-10">
+      <div className="absolute left-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-blue-600/25 blur-[110px]" />
 
       <div className="relative mx-auto max-w-[1180px]">
         <div className="mb-12 text-center">
-          <div className="mb-4 inline-flex rounded-full bg-white/10 px-4 py-1 text-[11px] font-medium text-[#93C5FD]">
+          <div className="mb-4 inline-flex rounded-full bg-white/10 px-4 py-1 text-[11px] font-medium text-blue-100">
             Why Choose Us
           </div>
 
@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
                   key={index}
                   className="animate-float rounded-[20px] border border-white/10 bg-white/8 p-5 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-white/12"
                 >
-                  <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-[#1D4ED8]/20 text-[#93C5FD]">
+                  <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-blue-600/20 text-blue-100">
                     <Icon size={18} />
                   </div>
 
@@ -86,7 +86,7 @@ export default function WhyChooseUs() {
               className="mt-7 inline-flex items-center gap-3 rounded-full bg-white px-5 py-2 text-sm font-semibold text-black"
             >
               Get a free quote today - call 0115 9641 600
-              <ArrowRight size={16} className="text-[#1D4ED8]" />
+              <ArrowRight size={16} className="text-blue-600" />
             </a>
           </div>
 
@@ -100,7 +100,7 @@ export default function WhyChooseUs() {
                   className="animate-float rounded-[20px] border border-white/10 bg-white/8 p-5 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-white/12"
                   style={{ animationDelay: `${index * 0.4}s` }}
                 >
-                  <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-[#1D4ED8]/20 text-[#93C5FD]">
+                  <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-blue-600/20 text-blue-100">
                     <Icon size={18} />
                   </div>
 

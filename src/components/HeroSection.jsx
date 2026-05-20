@@ -51,7 +51,7 @@ const HeroSection = () => {
   return (
     <section
       id="top"
-      className="relative min-h-screen overflow-hidden bg-[#050816] text-white"
+      className="relative min-h-screen overflow-hidden bg-[#0B1224] text-white"
     >
       <video
         className="absolute inset-0 h-full w-full object-cover"
@@ -91,7 +91,7 @@ const HeroSection = () => {
             <div className="hidden sm:block">
               <a
                 href="mailto:Shay@empirescaffolding.co.uk"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#060922] px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 lg:px-8 lg:py-4 lg:text-base"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0B1224] px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-800 lg:px-8 lg:py-4 lg:text-base"
               >
                 Get Quote
                 <ArrowUpRight className="h-4 w-4 lg:h-5 lg:w-5" />
@@ -125,7 +125,7 @@ const HeroSection = () => {
               ))}
               <a
                 href="mailto:Shay@empirescaffolding.co.uk"
-                className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#060922] py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+                className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#0B1224] py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
               >
                 Get Quote
                 <ArrowUpRight className="h-4 w-4" />
@@ -139,7 +139,7 @@ const HeroSection = () => {
         <div className="grid w-full gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(620px,0.95fr)] lg:items-end">
           <div className="max-w-[760px] text-left">
             <div
-              className="hero-reveal inline-flex items-center gap-3 rounded-full bg-[#2f3544]/88 px-5 py-3 text-sm font-semibold text-white shadow-[0_16px_32px_rgba(0,0,0,0.24)] backdrop-blur-sm"
+              className="hero-reveal inline-flex items-center gap-3 rounded-full bg-gray-900/88 px-5 py-3 text-sm font-semibold text-white shadow-[0_16px_32px_rgba(0,0,0,0.24)] backdrop-blur-sm"
               style={{ animationDelay: "0.08s" }}
             >
               <span className="h-2.5 w-2.5 rounded-full bg-blue-400" />
@@ -202,7 +202,7 @@ const HeroSection = () => {
               <div className="flex flex-col gap-6 xl:flex-row xl:items-center xl:justify-between">
                 <a
                   href="mailto:Shay@empirescaffolding.co.uk"
-                  className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-base font-semibold text-[#060922] transition hover:bg-blue-50 sm:w-fit"
+                  className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-base font-semibold text-[#0B1224] transition hover:bg-blue-100 sm:w-fit"
                 >
                   Get Free Quote
                   <ArrowUpRight className="h-5 w-5" />

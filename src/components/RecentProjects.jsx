@@ -32,7 +32,7 @@ const RecentProjects = () => {
   return (
     <section className="bg-white px-4 py-10 sm:px-6 lg:px-16" id="recent-projects">
       <div className="mx-auto max-w-7xl">
-        <div className="relative overflow-hidden rounded-[2rem] bg-[#0d131b] px-5 py-12 text-white shadow-[0_28px_90px_rgba(15,23,42,0.18)] sm:px-8 sm:py-14 lg:px-12 lg:py-16">
+        <div className="relative overflow-hidden rounded-[2rem] bg-[#0B1224] px-5 py-12 text-white shadow-[0_28px_90px_rgba(15,23,42,0.18)] sm:px-8 sm:py-14 lg:px-12 lg:py-16">
           <div className="pointer-events-none absolute inset-0 opacity-30">
             <div className="absolute -right-24 -top-24 h-[36rem] w-[36rem] rounded-full border border-white/10" />
             <div className="absolute -right-10 top-6 h-[42rem] w-[42rem] rounded-full border border-white/10" />
@@ -68,7 +68,7 @@ const RecentProjects = () => {
                 className="hero-stat max-w-lg"
                 style={{ animationDelay: "0.12s" }}
               >
-                <p className="text-base font-bold text-amber-400">
+                <p className="text-base font-bold text-blue-500">
                   {activeProject.category}
                 </p>
                 <h3 className="mt-4 text-[2rem] font-bold leading-[1.05] tracking-[-0.05em] text-white">
@@ -80,9 +80,9 @@ const RecentProjects = () => {
                 <div className="mt-8">
                   <button
                     type="button"
-                    className="inline-flex items-center rounded-full bg-amber-400 px-5 py-3 text-sm font-semibold text-slate-950 transition-transform duration-300 hover:-translate-y-0.5"
+                    className="inline-flex items-center rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5 hover:bg-blue-800"
                   >
-                    <span className="flex h-4 w-6 items-center justify-center text-slate-950">
+                    <span className="flex h-4 w-6 items-center justify-center text-white">
                       <ChevronRight className="h-4 w-4" />
                     </span>
                     <span className="text-base">View Project</span>
