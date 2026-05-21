@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Instagram, Youtube } from "lucide-react";
 
 const pageLinks = [
   { label: "About", href: "/#about" },
@@ -34,23 +33,6 @@ const Footer = () => {
                 safe, reliable scaffolding solutions for commercial, domestic, and
                 industrial projects across the Midlands and throughout the UK.
               </p>
-
-              <div className="mt-auto flex gap-5">
-                <a
-                  href="#"
-                  aria-label="Instagram link to be confirmed"
-                  className="text-2xl transition hover:text-pink-400"
-                >
-                  <Instagram />
-                </a>
-                <a
-                  href="#"
-                  aria-label="YouTube link to be confirmed"
-                  className="text-2xl transition hover:text-red-400"
-                >
-                  <Youtube />
-                </a>
-              </div>
             </div>
 
             <div className="flex flex-1 flex-col md:items-center">
