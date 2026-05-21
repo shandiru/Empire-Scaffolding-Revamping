@@ -20,10 +20,10 @@ export const routeMeta = [
     priority: "0.5",
   },
   {
-    path: "/terms&condition",
-    title: "Website Terms of Use | Empire Scaffolding (GB) Ltd",
+    path: "/terms-and-conditions",
+    title: "Terms & Conditions | Empire Scaffolding (GB) Ltd",
     description:
-      "Review the website terms of use for Empire Scaffolding (GB) Ltd, including acceptable use, liability, intellectual property, and contact details.",
+      "Read the Terms & Conditions for Empire Scaffolding (GB) Ltd, covering quotations, payments, customer responsibilities, liability, website use, and data protection.",
     priority: "0.5",
   },
 ];

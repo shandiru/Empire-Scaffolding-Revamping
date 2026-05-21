@@ -88,12 +88,7 @@ export default function ServicesSection() {
                   </p>
 
                   {/* 3. Replaced 'mb-7' on paragraph with 'mt-auto' on the button to firmly anchor it to the bottom */}
-                  <button className="mt-auto inline-flex items-center gap-3 text-sm font-semibold text-gray-900 transition hover:text-blue-600">
-                    Learn More
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 text-blue-600">
-                      <ArrowUpRight size={14} />
-                    </span>
-                  </button>
+                 
                 </div>
               </div>
             );
@@ -128,10 +123,8 @@ export default function ServicesSection() {
             </div>
 
             <p className="max-w-[540px] text-sm text-gray-600">
-              Commercial, domestic, and industrial scaffolding across the UK -{" "}
-              <span className="font-semibold text-gray-900 underline underline-offset-4">
-                View All Services
-              </span>
+              Commercial, domestic, and industrial scaffolding across the UK 
+             
             </p>
           </div>
 

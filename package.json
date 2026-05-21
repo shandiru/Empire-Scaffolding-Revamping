@@ -20,7 +20,7 @@
     "include": [
       "/",
       "/privacy-policy",
-      "/terms&condition"
+      "/terms-and-conditions"
     ]
   },
   "dependencies": {

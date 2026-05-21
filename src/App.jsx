@@ -25,7 +25,7 @@ function AppLayout() {
       {!isHomePage && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/terms&condition" element={<TermsConditions />} />
+        <Route path="/terms-and-conditions" element={<TermsConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />

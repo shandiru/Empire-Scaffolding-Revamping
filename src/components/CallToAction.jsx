@@ -326,10 +326,10 @@ const CallToAction = () => {
               Privacy Policy
             </Link>
             <Link
-              to="/terms&condition"
+              to="/terms-and-conditions"
               className="underline transition hover:text-blue-600"
             >
-              Terms of Service
+              Terms & Conditions
             </Link>
           </div>
         </div>
