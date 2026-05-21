@@ -3,25 +3,79 @@ import { ChevronRight } from "lucide-react";
 
 const projects = [
   {
-    eyebrow: "[PLACEHOLDER]",
-    category: "/Commercial",
-    title: "Nottingham Castle",
-    description: "Insert project description - client to supply before go-live.",
-    image: "/nottingham castle.jpg",
+    eyebrow: "Historic Building",
+    category: "/Nottingham",
+    title: "Council House Dome",
+    description:
+      "Complex scaffolding solution for historic civic building restoration, providing safe access for dome maintenance and architectural preservation work.",
+    image: "/council.png",
+    tags: ["Historic Building", "Complex Access", "Civic Project"],
   },
   {
-    eyebrow: "[PLACEHOLDER]",
-    category: "/Nottingham Castle Renovation",
-    title: "Nottingham Castle Renovation",
-    description: "Insert project description - client to supply before go-live.",
-    image: "/ablett.jpg",
+    eyebrow: "Victorian Architecture",
+    category: "/Birmingham",
+    title: "Victoria Law Courts",
+    description:
+      "Comprehensive scaffolding installation for major Victorian courthouse renovation, ensuring complete building envelope coverage for restoration works.",
+    image: "/victoria.png",
+    tags: ["Victorian Architecture", "Full Coverage", "Legal Institution"],
   },
   {
-    eyebrow: "[PLACEHOLDER]",
-    category: "/Sherwood Observatory",
+    eyebrow: "Multi-Level",
+    category: "/Sutton-in-Ashfield",
     title: "Sherwood Observatory",
-    description: "Insert project description - client to supply before go-live.",
+    description:
+      "Multi-level scaffolding system for modern institutional building maintenance, providing safe working platforms across multiple floors and sections.",
     image: "/building.png",
+    video: "/castle.mp4",
+    tags: ["Multi-Level", "Institutional", "Modern Building"],
+  },
+  {
+    eyebrow: "Historic Building",
+    category: "/Nottingham",
+    title: "Nottingham Castle",
+    description:
+      "Complex scaffolding solution for historic civic building restoration, providing safe access for dome maintenance and architectural preservation work.",
+    image: "/nottingham castle.jpg",
+    tags: ["Historic Building", "Complex Access", "Civic Project"],
+  },
+  {
+    eyebrow: "Modern student accommodation",
+    category: "/Liverpool",
+    title: "Ablett House",
+    description:
+      "Modern student accommodation development designed to provide safe and stylish living in the heart of Liverpool.",
+    image: "/ablett.jpg",
+    tags: [
+      "Modern student accommodation",
+      "City-centre location",
+      "High-rise structure",
+    ],
+  },
+  {
+    eyebrow: "Victorian Architecture",
+    category: "/Nottingham",
+    title: "Nottingham Queens Medical Centre",
+    description: "Plettac scaffold for window replacement",
+    image: "/queen.jpg",
+    tags: ["Victorian Architecture", "Full Coverage", "Legal Institution"],
+  },
+  {
+    eyebrow: "Temporary",
+    category: "/Nottingham",
+    title: "Temporary garage for Fire engine",
+    description:
+      "A short-term period, often during construction, renovation, or emergency situations where a permanent garage is unavailable.",
+    image: "/garage.jpg",
+    tags: ["Temporary", "Emergency", "Legal Institution"],
+  },
+  {
+    eyebrow: "Full Building Access",
+    category: "/Nottingham",
+    title: "Mansfield Road",
+    description: "Traditional tube and fit scaffolding for full renovation works",
+    image: "/Mansfield.webp",
+    tags: ["Full Building Access", "Safety & Compliance", "Custom Builds"],
   },
 ];
 
@@ -54,12 +108,14 @@ const RecentProjects = () => {
             </div>
 
             <div className="mt-12 grid items-center gap-8 lg:grid-cols-[1.05fr_1fr] lg:gap-12">
-              <div className="hero-stat overflow-hidden rounded-[1.2rem]">
+              <div className="hero-stat overflow-hidden rounded-[1.2rem] bg-slate-950/60">
                 <img
                   alt={`${activeProject.title} scaffolding by Empire Scaffolding (GB) Ltd`}
-                  className="h-[260px] w-full object-cover sm:h-[340px] lg:h-[360px]"
+                  className="h-[260px] w-full object-contain object-center sm:h-[340px] lg:h-[360px]"
+                  decoding="async"
                   loading="lazy"
                   src={activeProject.image}
+                  style={{ imageRendering: "auto" }}
                 />
               </div>
 
@@ -96,7 +152,7 @@ const RecentProjects = () => {
 
                 return (
                   <button
-                    key={project.category}
+                    key={`${project.title}-${project.category}`}
                     className={`hero-stat flex min-w-0 items-center gap-1 border-t pt-4 text-left transition-colors duration-300 ${
                       isActive
                         ? "border-blue-500 text-white"
