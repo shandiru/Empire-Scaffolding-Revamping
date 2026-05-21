@@ -1,6 +1,6 @@
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import {
-  Instagram,
-  Youtube,
   Phone,
   Mail,
   MapPin,
@@ -10,6 +10,12 @@ import { Link } from "react-router-dom";
 
 const inputClassName =
   "w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-600 focus:ring-1 focus:ring-blue-600";
+
+const emailJsConfig = {
+  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+};
 
 // Updated business hours data
 const businessHours = [
@@ -23,6 +29,60 @@ const businessHours = [
 ];
 
 const CallToAction = () => {
+  const formRef = useRef(null);
+  const [formStatus, setFormStatus] = useState({
+    type: "idle",
+    message: "",
+  });
+
+  const isSubmitting = formStatus.type === "loading";
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    if (
+      !emailJsConfig.serviceId ||
+      !emailJsConfig.templateId ||
+      !emailJsConfig.publicKey
+    ) {
+      setFormStatus({
+        type: "error",
+        message:
+          "Email service is not configured yet. Please try again later or call us directly.",
+      });
+      return;
+    }
+
+    setFormStatus({
+      type: "loading",
+      message: "Sending your enquiry...",
+    });
+
+    try {
+      await emailjs.sendForm(
+        emailJsConfig.serviceId,
+        emailJsConfig.templateId,
+        formRef.current,
+        {
+          publicKey: emailJsConfig.publicKey,
+        }
+      );
+
+      formRef.current.reset();
+      setFormStatus({
+        type: "success",
+        message: "Thank you. Your enquiry has been sent successfully.",
+      });
+    } catch (error) {
+      console.error("EmailJS enquiry failed:", error);
+      setFormStatus({
+        type: "error",
+        message:
+          "Sorry, your enquiry could not be sent. Please try again or call us on 0115 9641 600.",
+      });
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -41,7 +101,7 @@ const CallToAction = () => {
             Tell us about your project.
           </h2>
 
-          <form className="mt-8 space-y-4">
+          <form ref={formRef} className="mt-8 space-y-4" onSubmit={handleSubmit}>
             <div className="grid gap-4 md:grid-cols-2">
               <div>
                 <label
@@ -52,7 +112,7 @@ const CallToAction = () => {
                 </label>
                 <input
                   id="contact-name"
-                  name="name"
+                  name="from_name"
                   type="text"
                   required
                   placeholder="Enter your full name"
@@ -69,7 +129,7 @@ const CallToAction = () => {
                 </label>
                 <input
                   id="contact-company"
-                  name="companyName"
+                  name="company_name"
                   type="text"
                   placeholder="Enter company name"
                   className={inputClassName}
@@ -87,7 +147,7 @@ const CallToAction = () => {
                 </label>
                 <input
                   id="contact-email"
-                  name="email"
+                  name="from_email"
                   type="email"
                   required
                   placeholder="hello@example.com"
@@ -104,7 +164,7 @@ const CallToAction = () => {
                 </label>
                 <input
                   id="contact-phone"
-                  name="phone"
+                  name="phone_number"
                   type="tel"
                   required
                   placeholder="07XXX XXXXXX"
@@ -122,7 +182,7 @@ const CallToAction = () => {
               </label>
               <input
                 id="contact-location"
-                name="projectLocation"
+                name="project_location"
                 type="text"
                 required
                 placeholder="Where is the project located?"
@@ -139,7 +199,7 @@ const CallToAction = () => {
               </label>
               <textarea
                 id="contact-description"
-                name="description"
+                name="message"
                 rows="4"
                 required
                 placeholder="Tell us about your scaffolding requirements, project size, and timescales."
@@ -149,10 +209,26 @@ const CallToAction = () => {
 
             <button
               type="submit"
+              disabled={isSubmitting}
               className="inline-flex min-h-12 items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-slate-950 disabled:cursor-not-allowed disabled:opacity-70"
             >
-              SEND ENQUIRY
+              {isSubmitting ? "SENDING..." : "SEND ENQUIRY"}
             </button>
+
+            {formStatus.message && (
+              <p
+                aria-live="polite"
+                className={`rounded-xl border px-4 py-3 text-sm ${
+                  formStatus.type === "success"
+                    ? "border-emerald-200 bg-emerald-50 text-emerald-700"
+                    : formStatus.type === "error"
+                      ? "border-red-200 bg-red-50 text-red-700"
+                      : "border-blue-200 bg-blue-50 text-blue-700"
+                }`}
+              >
+                {formStatus.message}
+              </p>
+            )}
           </form>
 
           <p className="mt-5 text-center text-xs text-slate-500">
@@ -206,27 +282,6 @@ const CallToAction = () => {
               info@empirescaffolding.co.uk
             </a>
           </p>
-
-          <div className="mt-6 flex items-center gap-4 text-xl">
-            <a
-              aria-label="Visit our Instagram page"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-900 transition hover:border-blue-600 hover:text-blue-600"
-              href="#"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <Instagram height={20} width={20} />
-            </a>
-            <a
-              aria-label="Visit our YouTube page"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-900 transition hover:border-blue-600 hover:text-blue-600"
-              href="#"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <Youtube height={20} width={20} />
-            </a>
-          </div>
 
           <h3 className="mt-10 text-lg font-semibold text-slate-900">
             Business Hours
