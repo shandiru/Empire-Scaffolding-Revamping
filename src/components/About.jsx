@@ -1,49 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 
-function useCountUp(target, duration = 1800, suffix = "") {
-  const [display, setDisplay] = useState("0");
-  const ref = useRef(null);
-  const started = useRef(false);
-
-  useEffect(() => {
-    const node = ref.current;
-    if (!node) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !started.current) {
-          started.current = true;
-
-          const numericTarget = parseFloat(target);
-          const start = performance.now();
-
-          const tick = (now) => {
-            const progress = Math.min((now - start) / duration, 1);
-            const eased = 1 - (1 - progress) ** 3;
-            const current = Math.round(eased * numericTarget);
-
-            setDisplay(`${current}${suffix}`);
-
-            if (progress < 1) {
-              requestAnimationFrame(tick);
-            }
-          };
-
-          requestAnimationFrame(tick);
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    observer.observe(node);
-
-    return () => observer.disconnect();
-  }, [duration, suffix, target]);
-
-  return { ref, display };
-}
-
 function useFadeUp(delay = 0) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -78,27 +35,6 @@ function fadeStyle(visible, delay = 0, translateY = 20, scale = 1) {
       : `translate3d(0,${translateY}px,0) scale(${scale})`,
     transition: `all 0.7s cubic-bezier(0.22,1,0.36,1) ${delay}s`,
   };
-}
-
-function StatCard({ value, suffix, label, delay }) {
-  const { ref, display } = useCountUp(value, 1800, suffix);
-  const fade = useFadeUp(delay);
-
-  return (
-    <div
-      ref={(el) => {
-        ref.current = el;
-        fade.ref.current = el;
-      }}
-      style={fadeStyle(fade.visible, 0, 20, 1)}
-    >
-      <p className="text-[42px] font-bold leading-none text-gray-900">
-        {display}
-      </p>
-
-      <p className="mt-2 text-[12px] text-gray-500">{label}</p>
-    </div>
-  );
 }
 
 function SpinBadge() {
@@ -270,28 +206,6 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* STATS */}
-        <div className="mt-8 grid grid-cols-1 gap-5 rounded-[20px] bg-white p-5 shadow-[0_18px_50px_rgba(15,23,42,0.06)] sm:grid-cols-3 lg:ml-[53%] lg:mt-[-105px] lg:bg-transparent lg:p-0 lg:shadow-none">
-          <StatCard
-            value={25}
-            suffix="+"
-            label="Years Experience"
-            delay={0}
-          />
-
-          <StatCard
-            value={60}
-            label="CISRS-Trained Staff"
-            delay={150}
-          />
-
-          <StatCard
-            value={100}
-            suffix="%"
-            label="Safety Record"
-            delay={300}
-          />
-        </div>
       </div>
     </section>
   );
