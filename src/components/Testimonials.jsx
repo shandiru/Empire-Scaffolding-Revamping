@@ -36,7 +36,7 @@ const testimonialsData = [
     logoSrc: "/nottingham.png",
     logoAlt: "Nottingham City Council logo",
     quote: "“The team delivered exceptional quality and maintained complete transparency throughout the project. The construction was completed on time, and the finishing exceeded our workmanship and strong project management and the finishing exceeded our workmanship and strong project management.”",
-    author: "Martin Wragg",
+    author: "Ghost Hunter",
     role: "Verified Customer"
   },
   {

@@ -294,6 +294,86 @@ const TermsConditions = () => {
               .
             </p>
           </section>
+
+          <section>
+            <h2 className={sectionHeadingClassName}>11. Cookies</h2>
+            <p className={bodyClassName}>
+              Our website may use cookies to improve user experience, monitor
+              website performance, and analyse traffic.
+            </p>
+            <p className={bodyClassName}>
+              Users can manage or disable cookies through their browser
+              settings.
+            </p>
+          </section>
+
+          <section>
+            <h2 className={sectionHeadingClassName}>12. Third-Party Links</h2>
+            <p className={bodyClassName}>
+              Our website may contain links to third-party websites. Empire
+              Scaffolding (GB) Ltd is not responsible for the content,
+              security, or privacy practices of external websites.
+            </p>
+          </section>
+
+          <section>
+            <h2 className={sectionHeadingClassName}>
+              13. Changes to These Terms
+            </h2>
+            <p className={bodyClassName}>
+              Empire Scaffolding (GB) Ltd reserves the right to update these
+              Terms & Conditions at any time without prior notice.
+            </p>
+            <p className={bodyClassName}>
+              Updated versions will be published on this page.
+            </p>
+          </section>
+
+          <section>
+            <h2 className={sectionHeadingClassName}>14. Governing Law</h2>
+            <p className={bodyClassName}>
+              These Terms & Conditions shall be governed by and interpreted in
+              accordance with the laws of England and Wales.
+            </p>
+            <p className={bodyClassName}>
+              Any disputes arising from the use of our services or website
+              shall be subject to the exclusive jurisdiction of the UK courts.
+            </p>
+          </section>
+
+          <section>
+            <h2 className={sectionHeadingClassName}>Contact Us</h2>
+            <p className={bodyClassName}>
+              If you have any questions regarding these Terms & Conditions,
+              please contact:
+            </p>
+            <div className="mt-4 rounded-2xl border border-white/10 bg-white/5 p-5 text-gray-300">
+              <p className="font-semibold text-white">
+                Empire Scaffolding (GB) Ltd
+              </p>
+              <p className="mt-2">Bakerbrook Industrial Estate</p>
+              <p>Wigwam Lane, Hucknall</p>
+              <p>Nottingham NG15 7SZ</p>
+              <p className="mt-4">
+                Phone:{" "}
+                <a
+                  href="tel:01159641600"
+                  className="text-amber-400 transition hover:text-amber-300 hover:underline"
+                >
+                  01159 641 600
+                </a>
+              </p>
+              <p>
+                Email:{" "}
+                <a
+                  href="mailto:info@empirescaffolding.co.uk"
+                  className="text-amber-400 transition hover:text-amber-300 hover:underline"
+                >
+                  info@empirescaffolding.co.uk
+                </a>
+              </p>
+            </div>
+          </section>
         </div>
       </div>
     </div>
