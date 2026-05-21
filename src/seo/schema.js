@@ -1,13 +1,15 @@
 export const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["GeneralContractor", "LocalBusiness"],
   name: "Empire Scaffolding (GB) Ltd",
-  description:
-    "Family-run scaffolding company established in 2000, specialising in commercial, domestic and industrial scaffolding across the Midlands and UK.",
   url: "https://empirescaffolding.co.uk",
-  telephone: "01159641600",
+  logo: "https://empirescaffolding.co.uk/Logo-bg.png",
+  description:
+    "Family-run scaffolding company established in 2000, specialising in the supply, erection and dismantling of scaffolding for commercial, domestic and industrial projects. NASC accredited, CISRS-qualified team based in Hucknall, Nottinghamshire.",
+  telephone: "+441159641600",
   email: "info@empirescaffolding.co.uk",
   foundingDate: "2000",
+  areaServed: ["Nottinghamshire", "Midlands", "United Kingdom"],
   address: {
     "@type": "PostalAddress",
     streetAddress: "Bakerbrook Industrial Estate, Wigwam Lane",
@@ -18,8 +20,8 @@ export const localBusinessSchema = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: "53.0394",
-    longitude: "-1.1977",
+    latitude: "53.032725",
+    longitude: "-1.187530",
   },
   openingHoursSpecification: [
     {
@@ -34,11 +36,59 @@ export const localBusinessSchema = {
       opens: "09:00",
       closes: "16:00",
     },
+  ],
+  hasCredential: [
     {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Saturday", "Sunday"],
-      opens: "00:00",
-      closes: "00:00",
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "Industry Accreditation",
+      recognizedBy: {
+        "@type": "Organization",
+        name: "National Access and Scaffolding Confederation",
+        alternateName: "NASC",
+      },
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "Health and Safety Accreditation",
+      recognizedBy: {
+        "@type": "Organization",
+        name: "Contractors Health and Safety Assessment Scheme",
+        alternateName: "CHAS",
+      },
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "Health and Safety Assessment",
+      recognizedBy: {
+        "@type": "Organization",
+        name: "Safety Management Advisory Services",
+        alternateName: "SMAS",
+      },
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "Quality Management",
+      recognizedBy: {
+        "@type": "Organization",
+        name: "International Organization for Standardization",
+        alternateName: "ISO 9001",
+      },
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "Contractor Pre-qualification",
+      recognizedBy: {
+        "@type": "Organization",
+        name: "Constructionline",
+      },
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "Contractor Verification",
+      recognizedBy: {
+        "@type": "Organization",
+        name: "Builders Profile",
+      },
     },
   ],
 };
@@ -52,7 +102,7 @@ export const faqPageSchema = {
       name: "What types of scaffolding do you provide?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We provide traditional tube and fit scaffolding, Plettac system scaffolding, and bespoke solutions for commercial, domestic, and industrial projects of any size.",
+        text: "We provide traditional tube and fit scaffolding, Plettac system scaffolding, and bespoke solutions for commercial, domestic and industrial projects of any size.",
       },
     },
     {
@@ -84,7 +134,71 @@ export const faqPageSchema = {
       name: "How do I get a quote?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Call us on 0115 9641 600 or use the contact form on our website and we will get back to you promptly with a full quotation.",
+        text: "Call us on 0115 9641 600 or use the contact form and we will get back to you promptly with a full quotation.",
+      },
+    },
+  ],
+};
+
+export const serviceItemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Scaffolding Services",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      item: {
+        "@type": "Service",
+        name: "Traditional Tube & Fit Scaffolding",
+        description:
+          "Standard scaffolding for various commercial, domestic and industrial construction needs.",
+        provider: {
+          "@type": "GeneralContractor",
+          name: "Empire Scaffolding (GB) Ltd",
+        },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      item: {
+        "@type": "Service",
+        name: "Full Supply, Erection & Dismantling",
+        description:
+          "Complete scaffolding management from initial supply through to safe dismantling.",
+        provider: {
+          "@type": "GeneralContractor",
+          name: "Empire Scaffolding (GB) Ltd",
+        },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      item: {
+        "@type": "Service",
+        name: "Projects of Any Size",
+        description:
+          "Scaffolding solutions from small domestic towers to large-scale high-rise commercial buildings.",
+        provider: {
+          "@type": "GeneralContractor",
+          name: "Empire Scaffolding (GB) Ltd",
+        },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      item: {
+        "@type": "Service",
+        name: "Plettac System Scaffolding",
+        description:
+          "Modular system scaffolding suitable for complex or high-rise projects.",
+        provider: {
+          "@type": "GeneralContractor",
+          name: "Empire Scaffolding (GB) Ltd",
+        },
       },
     },
   ],

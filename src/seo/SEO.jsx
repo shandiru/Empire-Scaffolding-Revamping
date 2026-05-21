@@ -1,7 +1,11 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { absoluteUrl, DEFAULT_IMAGE, getRouteMeta, SITE_NAME, SITE_URL } from "./routeMeta";
-import { faqPageSchema, localBusinessSchema } from "./schema";
+import {
+  faqPageSchema,
+  localBusinessSchema,
+  serviceItemListSchema,
+} from "./schema";
 
 const setMetaTag = (selector, attributes) => {
   let element = document.head.querySelector(selector);
@@ -111,9 +115,11 @@ const SEO = () => {
     if (meta.path === "/") {
       setJsonLd("local-business-schema", localBusinessSchema);
       setJsonLd("faq-page-schema", faqPageSchema);
+      setJsonLd("service-item-list-schema", serviceItemListSchema);
     } else {
       removeJsonLd("local-business-schema");
       removeJsonLd("faq-page-schema");
+      removeJsonLd("service-item-list-schema");
     }
   }, [pathname]);
 
