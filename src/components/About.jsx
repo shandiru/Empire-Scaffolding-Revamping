@@ -92,9 +92,9 @@ function StatCard({ value, suffix, label, delay }) {
       }}
       style={fadeStyle(fade.visible, 0, 20, 1)}
     >
-      <h3 className="text-[42px] font-bold leading-none text-gray-900">
+      <p className="text-[42px] font-bold leading-none text-gray-900">
         {display}
-      </h3>
+      </p>
 
       <p className="mt-2 text-[12px] text-gray-500">{label}</p>
     </div>
