@@ -54,7 +54,7 @@ const SEO = () => {
 
   useEffect(() => {
     const meta = getRouteMeta(pathname);
-    const canonicalUrl = absoluteUrl(meta.path);
+    const canonicalUrl = absoluteUrl(meta.noindex ? pathname : meta.path);
     const imageUrl = `${SITE_URL}${DEFAULT_IMAGE}`;
     const socialDescription = meta.ogDescription || meta.description;
 
@@ -67,7 +67,7 @@ const SEO = () => {
     });
     setMetaTag('meta[name="robots"]', {
       name: "robots",
-      content: "index, follow",
+      content: meta.noindex ? "noindex, nofollow" : "index, follow",
     });
 
     setMetaTag('meta[property="og:title"]', {

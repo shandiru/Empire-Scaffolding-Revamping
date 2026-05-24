@@ -26,11 +26,23 @@ export const routeMeta = [
       "Read the Terms & Conditions for Empire Scaffolding (GB) Ltd, covering quotations, payments, customer responsibilities, liability, website use, and data protection.",
     priority: "0.5",
   },
+  {
+    path: "/404",
+    title: "404 Page Not Found | Empire Scaffolding (GB) Ltd",
+    description:
+      "The page you requested could not be found. Return to Empire Scaffolding (GB) Ltd homepage or contact our team for assistance.",
+    priority: "0.1",
+    noindex: true,
+  },
 ];
 
 export const getRouteMeta = (pathname) => {
   const normalizedPath = pathname === "" ? "/" : pathname;
-  return routeMeta.find((route) => route.path === normalizedPath) || routeMeta[0];
+  return (
+    routeMeta.find((route) => route.path === normalizedPath) ||
+    routeMeta.find((route) => route.path === "/404") ||
+    routeMeta[0]
+  );
 };
 
 export const absoluteUrl = (path) => `${SITE_URL}${path === "/" ? "" : path}`;

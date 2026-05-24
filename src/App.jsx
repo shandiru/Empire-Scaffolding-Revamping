@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import TermsConditions from "./components/Term";
 import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import ScrollToTop from "./components/ScrollToTop";
 import GDPRConsent from "./components/GDPRButton";
@@ -27,6 +28,7 @@ function AppLayout() {
         <Route path="/" element={<Home />} />
         <Route path="/terms-and-conditions" element={<TermsConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
       <GDPRConsent />
