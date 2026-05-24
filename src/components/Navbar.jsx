@@ -40,6 +40,9 @@ const Navbar = ({ overlay = false }) => {
               src="/Logo-bg.png"
               alt="Empire Scaffolding Logo"
               className="h-11 w-auto object-contain sm:h-12 lg:h-14"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
             />
           </HashLink>
         </div>

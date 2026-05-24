@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { FiArrowUpRight } from "react-icons/fi";
 
 function useFadeUp(delay = 0) {
   const ref = useRef(null);
@@ -77,7 +76,6 @@ export default function AboutSection() {
   const labelFade = useFadeUp(0);
   const titleFade = useFadeUp(100);
   const descFade = useFadeUp(200);
-  const buttonFade = useFadeUp(300);
 
   const imageFade = useFadeUp(150);
   const cardOneFade = useFadeUp(250);
@@ -113,25 +111,10 @@ export default function AboutSection() {
             <p
               ref={descFade.ref}
               style={fadeStyle(descFade.visible, 0.08)}
-              className="mb-6 text-sm leading-relaxed text-gray-600"
+              className="text-sm leading-relaxed text-gray-600"
             >
               Empire Scaffolding (GB) Ltd is a family-run company established in 2000, specialising in the supply, erection, and dismantling of scaffolding for commercial, domestic, and industrial projects. Based in Hucknall, Nottinghamshire, we are ideally located to deliver scaffolding services nationwide.
             </p>
-
-            <div
-              ref={buttonFade.ref}
-              style={fadeStyle(buttonFade.visible, 0.12)}
-            >
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 rounded-full bg-[#0B1224] px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-800"
-              >
-                Our Services
-                <span className="flex h-5 w-5 items-center justify-center">
-                  <FiArrowUpRight className="h-4 w-4" />
-                </span>
-              </a>
-            </div>
           </div>
         </div>
 

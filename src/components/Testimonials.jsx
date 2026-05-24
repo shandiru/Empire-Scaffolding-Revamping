@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowUpRight, ArrowLeft, ArrowRight, Quote } from "lucide-react";
+import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
 
 const clientLogos = [
   {
@@ -86,19 +86,6 @@ const Testimonials = () => {
               What our clients say about our construction services reflects our commitment to 
               quality workmanship, timely project delivery, and transparent communication.
             </p>
-
-            {/* View All Reviews Button */}
-            <a
-              href="#contact"
-              className="group hero-reveal relative mt-7 inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:text-white"
-              style={{ animationDelay: "0.26s" }}
-            >
-              <span className="absolute inset-0 translate-y-full bg-blue-700 transition-transform duration-300 ease-out group-hover:translate-y-0" />
-              <span className="relative z-10 inline-flex items-center gap-2 transition-colors duration-300">
-                View All Review
-                <ArrowUpRight className="btn-arrow h-4 w-4 transition-transform duration-300 group-hover:rotate-45" />
-              </span>
-            </a>
           </div>
 
           {/* Right Side Content (Dynamic Carousel Engine) */}

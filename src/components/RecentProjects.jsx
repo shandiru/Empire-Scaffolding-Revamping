@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { ChevronRight } from "lucide-react";
 
 const projects = [
   {
@@ -132,17 +131,6 @@ const RecentProjects = () => {
                 <p className="mt-5 max-w-lg text-base leading-8 text-white/35">
                   {activeProject.description}
                 </p>
-                <div className="mt-8">
-                  <button
-                    type="button"
-                    className="inline-flex items-center rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5 hover:bg-blue-800"
-                  >
-                    <span className="flex h-4 w-6 items-center justify-center text-white">
-                      <ChevronRight className="h-4 w-4" />
-                    </span>
-                    <span className="text-base">View Project</span>
-                  </button>
-                </div>
               </div>
             </div>
 
