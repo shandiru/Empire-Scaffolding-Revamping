@@ -43,13 +43,9 @@ const StatsContactBar = () => {
 
           <a
             href="mailto:Shay@empirescaffolding.co.uk"
-            className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition-colors duration-300"
+            className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#0B1224]"
           >
-            {/* The sliding yellow background layer */}
-            <span className="absolute inset-0 -translate-x-[100%] rounded-full bg-blue-600 transition-transform duration-500 ease-out group-hover:translate-x-0" />
-
-            {/* The text layer (needs relative & z-10 so it stays on top of the yellow background) */}
-            <span className="relative z-10 transition-colors duration-300 group-hover:text-slate-900">
+            <span className="relative z-10 transition-colors duration-300">
               Get a Free Quote
             </span>
           </a>

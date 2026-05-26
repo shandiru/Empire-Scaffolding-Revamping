@@ -88,7 +88,7 @@ const Navbar = ({ overlay = false }) => {
           </div>
           <a
             href="mailto:Shay@empirescaffolding.co.uk"
-            className={`inline-flex items-center rounded-full bg-[#0B1224] font-semibold text-white transition hover:bg-blue-800 ${
+            className={`inline-flex items-center rounded-full bg-blue-600 font-semibold text-white transition hover:bg-[#0B1224] ${
               overlay ? "px-6 py-3 text-sm lg:px-8 lg:text-base" : "px-6 py-3"
             }`}
           >
@@ -144,7 +144,7 @@ const Navbar = ({ overlay = false }) => {
           </div>
           <a
             href="mailto:Shay@empirescaffolding.co.uk"
-            className={`rounded-full bg-[#0B1224] font-semibold text-white transition hover:bg-blue-800 ${
+            className={`rounded-full bg-blue-600 font-semibold text-white transition hover:bg-[#0B1224] ${
               overlay ? "mt-2 inline-flex w-full items-center justify-center py-3 text-sm" : "px-5 py-3"
             }`}
           >
