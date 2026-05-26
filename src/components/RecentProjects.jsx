@@ -2,27 +2,24 @@ import { useState } from "react";
 
 const projects = [
   {
-    eyebrow: "Historic Building",
-    category: "/Nottingham",
     title: "Council House Dome",
+    location: "Nottingham",
     description:
       "Complex scaffolding solution for historic civic building restoration, providing safe access for dome maintenance and architectural preservation work.",
     image: "/council.png",
     tags: ["Historic Building", "Complex Access", "Civic Project"],
   },
   {
-    eyebrow: "Victorian Architecture",
-    category: "/Birmingham",
     title: "Victoria Law Courts",
+    location: "Birmingham",
     description:
       "Comprehensive scaffolding installation for major Victorian courthouse renovation, ensuring complete building envelope coverage for restoration works.",
     image: "/victoria.png",
     tags: ["Victorian Architecture", "Full Coverage", "Legal Institution"],
   },
   {
-    eyebrow: "Multi-Level",
-    category: "/Sutton-in-Ashfield",
     title: "Sherwood Observatory",
+    location: "Sutton-in-Ashfield",
     description:
       "Multi-level scaffolding system for modern institutional building maintenance, providing safe working platforms across multiple floors and sections.",
     image: "/building.png",
@@ -30,18 +27,16 @@ const projects = [
     tags: ["Multi-Level", "Institutional", "Modern Building"],
   },
   {
-    eyebrow: "Historic Building",
-    category: "/Nottingham",
     title: "Nottingham Castle",
+    location: "Nottingham",
     description:
       "Complex scaffolding solution for historic civic building restoration, providing safe access for dome maintenance and architectural preservation work.",
     image: "/nottingham castle.jpg",
     tags: ["Historic Building", "Complex Access", "Civic Project"],
   },
   {
-    eyebrow: "Modern student accommodation",
-    category: "/Liverpool",
     title: "Ablett House",
+    location: "Liverpool",
     description:
       "Modern student accommodation development designed to provide safe and stylish living in the heart of Liverpool.",
     image: "/ablett.jpg",
@@ -52,26 +47,23 @@ const projects = [
     ],
   },
   {
-    eyebrow: "Victorian Architecture",
-    category: "/Nottingham",
     title: "Nottingham Queens Medical Centre",
+    location: "Nottingham",
     description: "Plettac scaffold for window replacement",
     image: "/queen.jpg",
     tags: ["Victorian Architecture", "Full Coverage", "Legal Institution"],
   },
   {
-    eyebrow: "Temporary",
-    category: "/Nottingham",
     title: "Temporary garage for Fire engine",
+    location: "Nottingham",
     description:
       "A short-term period, often during construction, renovation, or emergency situations where a permanent garage is unavailable.",
     image: "/garage.jpg",
     tags: ["Temporary", "Emergency", "Legal Institution"],
   },
   {
-    eyebrow: "Full Building Access",
-    category: "/Nottingham",
     title: "Mansfield Road",
+    location: "Nottingham",
     description: "Traditional tube and fit scaffolding for full renovation works",
     image: "/Mansfield.webp",
     tags: ["Full Building Access", "Safety & Compliance", "Custom Builds"],
@@ -108,14 +100,26 @@ const RecentProjects = () => {
 
             <div className="mt-12 grid items-center gap-8 lg:grid-cols-[1.05fr_1fr] lg:gap-12">
               <div className="hero-stat overflow-hidden rounded-[1.2rem] bg-slate-950/60">
-                <img
-                  alt={`${activeProject.title} scaffolding by Empire Scaffolding (GB) Ltd`}
-                  className="h-[260px] w-full object-contain object-center sm:h-[340px] lg:h-[360px]"
-                  decoding="async"
-                  loading="lazy"
-                  src={activeProject.image}
-                  style={{ imageRendering: "auto" }}
-                />
+                {activeProject.video ? (
+                  <video
+                    className="h-[260px] w-full object-contain object-center sm:h-[340px] lg:h-[360px]"
+                    controls
+                    playsInline
+                    preload="metadata"
+                  >
+                    <source src={activeProject.video} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <img
+                    alt={`${activeProject.title} scaffolding by Empire Scaffolding (GB) Ltd`}
+                    className="h-[260px] w-full object-contain object-center sm:h-[340px] lg:h-[360px]"
+                    decoding="async"
+                    loading="lazy"
+                    src={activeProject.image}
+                    style={{ imageRendering: "auto" }}
+                  />
+                )}
               </div>
 
               <div
@@ -123,14 +127,22 @@ const RecentProjects = () => {
                 style={{ animationDelay: "0.12s" }}
               >
                 <p className="text-base font-bold text-blue-500">
-                  {activeProject.category}
+                  /{activeProject.location}
                 </p>
                 <h3 className="mt-4 text-[2rem] font-bold leading-[1.05] tracking-[-0.05em] text-white">
                   {activeProject.title}
                 </h3>
-                <p className="mt-5 max-w-lg text-base leading-8 text-white/35">
+                <p className="mt-5 max-w-lg text-base leading-8 text-white/70">
                   {activeProject.description}
                 </p>
+                <ul className="mt-6 space-y-3 text-sm text-white/85">
+                  {activeProject.tags.map((tag) => (
+                    <li key={tag} className="flex items-start gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-500" />
+                      <span>{tag}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
 
@@ -140,7 +152,7 @@ const RecentProjects = () => {
 
                 return (
                   <button
-                    key={`${project.title}-${project.category}`}
+                    key={`${project.title}-${project.location}`}
                     className={`hero-stat flex min-w-0 items-center gap-1 border-t pt-4 text-left transition-colors duration-300 ${
                       isActive
                         ? "border-blue-500 text-white"
@@ -151,10 +163,16 @@ const RecentProjects = () => {
                     onClick={() => setActiveProjectIndex(index)}
                   >
                     <span className="text-sm font-bold tracking-[-0.03em]">
-                      {project.eyebrow}
+                      {project.title}
                     </span>
-                    <span className={isActive ? "break-words text-white/35" : "break-words text-white/25"}>
-                      {project.category}
+                    <span
+                      className={
+                        isActive
+                          ? "break-words text-white/55"
+                          : "break-words text-white/25"
+                      }
+                    >
+                      /{project.location}
                     </span>
                   </button>
                 );
