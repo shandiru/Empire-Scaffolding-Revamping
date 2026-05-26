@@ -63,7 +63,7 @@ const VideoCard = ({ service }) => {
     };
 
     return (
-        <div className="bg-white p-6 rounded-xl shadow-lg flex flex-col items-start">
+        <div className="bg-blue-600 p-6 rounded-xl shadow-lg flex flex-col items-start text-white">
             {/* Video wrapper */}
             <div
                 className="w-full h-full rounded-lg overflow-hidden mb-4 relative bg-gray-200 group"
@@ -110,14 +110,14 @@ const VideoCard = ({ service }) => {
             <div className="flex items-center gap-3 mb-4">
                 <div className={`p-3 rounded-lg ${service.color}`}>{service.icon}</div>
                 <div>
-                    <h3 className="font-semibold text-2xl text-left">{service.title}</h3>
+                    <h3 className="font-semibold text-2xl text-left text-white">{service.title}</h3>
                     {/* <p className="text-sm text-gray-800">{service.subtitle}</p> */}
                 </div>
             </div>
-            <p className="text-lg text-gray-800 text-left">{service.subtitle}</p>
+            <p className="text-lg text-blue-50 text-left">{service.subtitle}</p>
             <div className="flex justify-between mt-5 w-full">
-                <p className="text-gray-800">Duration: {service.duration}</p>
-                <p className="text-gray-800">{service.sub}</p>
+                <p className="text-blue-100">Duration: {service.duration}</p>
+                <p className="text-blue-100">{service.sub}</p>
             </div>
 
         </div>

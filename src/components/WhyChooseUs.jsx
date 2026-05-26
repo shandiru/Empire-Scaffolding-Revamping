@@ -32,10 +32,10 @@ const features = [
 export default function WhyChooseUs() {
   return (
     <section
-      className="app-section relative overflow-hidden bg-[#0B1224] py-20 text-white"
+      className="app-section relative overflow-hidden bg-blue-600 py-20 text-white"
       id="why-choose-us"
     >
-      <div className="absolute left-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-blue-600/25 blur-[110px]" />
+      <div className="absolute left-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-blue-300/30 blur-[110px]" />
 
       <div className="app-container relative">
         <div className="mb-12 text-center">
@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
               return (
                 <div
                   key={index}
-                  className="animate-float rounded-[20px] border border-white/10 bg-white/8 p-5 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-white/12"
+                  className="animate-float rounded-[20px] border border-white/15 bg-white/10 p-5 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-white/16"
                 >
                   <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-blue-600/20 text-blue-100">
                     <Icon size={18} />
@@ -100,7 +100,7 @@ export default function WhyChooseUs() {
               return (
                 <div
                   key={index}
-                  className="animate-float rounded-[20px] border border-white/10 bg-white/8 p-5 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-white/12"
+                  className="animate-float rounded-[20px] border border-white/15 bg-white/10 p-5 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-white/16"
                   style={{ animationDelay: `${index * 0.4}s` }}
                 >
                   <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-blue-600/20 text-blue-100">

@@ -70,12 +70,12 @@ export default function GalleryCarousel() {
   };
 
   return (
-    <div
-      className="w-full min-h-screen bg-[#0d0e11] text-white flex flex-col justify-center items-center py-10 px-4 overflow-hidden select-none"
+    <div
+      className="w-full min-h-screen bg-white text-slate-900 flex flex-col justify-center items-center py-10 px-4 overflow-hidden select-none"
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
     >
-      <p className="text-white/25 text-[10px] tracking-[0.3em] uppercase mb-7">
+      <p className="text-slate-500 text-[10px] tracking-[0.3em] uppercase mb-7">
         Gallery · {currentIndex + 1} / {GALLERY_ITEMS.length}
       </p>
 
@@ -109,10 +109,10 @@ export default function GalleryCarousel() {
                   width: 'clamp(240px, 34vw, 420px)',
                   aspectRatio: '3 / 2',
                   borderRadius: 'clamp(16px, 2.5vw, 26px)',
-                  background: '#15161b',
-                  boxShadow: isCenter
-                    ? '0 45px 95px rgba(0,0,0,0.85), 0 0 0 1px rgba(255,255,255,0.06)'
-                    : '0 20px 45px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.02)',
+                  background: '#f8fafc',
+                  boxShadow: isCenter
+                    ? '0 28px 60px rgba(15,23,42,0.18), 0 0 0 1px rgba(148,163,184,0.2)'
+                    : '0 16px 32px rgba(15,23,42,0.12), 0 0 0 1px rgba(148,163,184,0.16)',
                   zIndex: isHovered ? cfg.zi + 120 : cfg.zi,
                   transformStyle: 'preserve-3d',
                   willChange: 'transform, opacity',
@@ -129,9 +129,9 @@ export default function GalleryCarousel() {
                   z: cfg.z + (isCenter ? 70 : 140),
                   y: -10,
                   scale: isCenter ? 1.04 : cfg.sc + 0.08,
-                  boxShadow: isCenter
-                    ? '0 52px 110px rgba(0,0,0,0.92), 0 0 0 1px rgba(255,255,255,0.08)'
-                    : '0 38px 90px rgba(0,0,0,0.82), 0 0 0 1px rgba(255,255,255,0.07)',
+                  boxShadow: isCenter
+                    ? '0 34px 72px rgba(15,23,42,0.22), 0 0 0 1px rgba(148,163,184,0.28)'
+                    : '0 24px 48px rgba(15,23,42,0.18), 0 0 0 1px rgba(148,163,184,0.22)',
                 }}
                 transition={{ type: 'spring', stiffness: 85, damping: 21, mass: 1 }}
               >
@@ -149,11 +149,11 @@ export default function GalleryCarousel() {
         {/* ── Directional UI Navigation Arrows ── */}
         <button
           onClick={handlePrev}
-          className="absolute left-[clamp(4px,1.5vw,12px)] top-1/2 -translate-y-1/2 z-50
-            flex items-center justify-center rounded-full
-            bg-[rgba(20,21,26,0.75)] hover:bg-[rgba(50,52,65,0.9)] active:scale-90
-            backdrop-blur-md border border-white/5 text-white/80
-            transition-all duration-200 shadow-2xl"
+          className="absolute left-[clamp(4px,1.5vw,12px)] top-1/2 -translate-y-1/2 z-50
+            flex items-center justify-center rounded-full
+            bg-white/90 hover:bg-slate-100 active:scale-90
+            backdrop-blur-md border border-slate-200 text-slate-700
+            transition-all duration-200 shadow-xl"
           style={{ width: 'clamp(36px,5.5vw,48px)', height: 'clamp(36px,5.5vw,48px)' }}
           aria-label="Previous"
         >
@@ -162,11 +162,11 @@ export default function GalleryCarousel() {
 
         <button
           onClick={handleNext}
-          className="absolute right-[clamp(4px,1.5vw,12px)] top-1/2 -translate-y-1/2 z-50
-            flex items-center justify-center rounded-full
-            bg-[rgba(20,21,26,0.75)] hover:bg-[rgba(50,52,65,0.9)] active:scale-90
-            backdrop-blur-md border border-white/5 text-white/80
-            transition-all duration-200 shadow-2xl"
+          className="absolute right-[clamp(4px,1.5vw,12px)] top-1/2 -translate-y-1/2 z-50
+            flex items-center justify-center rounded-full
+            bg-white/90 hover:bg-slate-100 active:scale-90
+            backdrop-blur-md border border-slate-200 text-slate-700
+            transition-all duration-200 shadow-xl"
           style={{ width: 'clamp(36px,5.5vw,48px)', height: 'clamp(36px,5.5vw,48px)' }}
           aria-label="Next"
         >
@@ -185,7 +185,7 @@ export default function GalleryCarousel() {
             style={{
               width: i === currentIndex ? 26 : 7,
               height: 7,
-              background: i === currentIndex ? 'rgba(255,255,255,0.85)' : 'rgba(255,255,255,0.15)',
+              background: i === currentIndex ? 'rgba(15,23,42,0.88)' : 'rgba(148,163,184,0.35)',
               transitionTimingFunction: 'cubic-bezier(0.34,1.56,0.64,1)',
             }}
           />

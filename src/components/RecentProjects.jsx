@@ -77,7 +77,7 @@ const RecentProjects = () => {
   return (
     <section className="app-section bg-white py-10" id="projects">
       <div className="app-container">
-        <div className="relative overflow-hidden rounded-[1.5rem] bg-[#0B1224] px-4 py-10 text-white shadow-[0_28px_90px_rgba(15,23,42,0.18)] sm:rounded-[2rem] sm:px-8 sm:py-14 lg:px-12 lg:py-16">
+        <div className="relative overflow-hidden rounded-[1.5rem] bg-blue-600 px-4 py-10 text-white shadow-[0_28px_90px_rgba(37,99,235,0.24)] sm:rounded-[2rem] sm:px-8 sm:py-14 lg:px-12 lg:py-16">
           <div className="pointer-events-none absolute inset-0 opacity-30">
             <div className="absolute -right-24 -top-24 h-[36rem] w-[36rem] rounded-full border border-white/10" />
             <div className="absolute -right-10 top-6 h-[42rem] w-[42rem] rounded-full border border-white/10" />
@@ -126,7 +126,7 @@ const RecentProjects = () => {
                 className="hero-stat max-w-lg"
                 style={{ animationDelay: "0.12s" }}
               >
-                <p className="text-base font-bold text-blue-500">
+                <p className="text-base font-bold text-blue-100">
                   /{activeProject.location}
                 </p>
                 <h3 className="mt-4 text-[2rem] font-bold leading-[1.05] tracking-[-0.05em] text-white">
@@ -138,7 +138,7 @@ const RecentProjects = () => {
                 <ul className="mt-6 space-y-3 text-sm text-white/85">
                   {activeProject.tags.map((tag) => (
                     <li key={tag} className="flex items-start gap-3">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-500" />
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-100" />
                       <span>{tag}</span>
                     </li>
                   ))}
@@ -155,8 +155,8 @@ const RecentProjects = () => {
                     key={`${project.title}-${project.location}`}
                     className={`hero-stat flex min-w-0 items-center gap-1 border-t pt-4 text-left transition-colors duration-300 ${
                       isActive
-                        ? "border-blue-500 text-white"
-                        : "border-white/15 text-white/80 hover:border-blue-500/70 hover:text-white"
+                        ? "border-blue-100 text-white"
+                        : "border-white/15 text-white/80 hover:border-blue-100/70 hover:text-white"
                     }`}
                     style={{ animationDelay: `${0.2 + index * 0.08}s` }}
                     type="button"
