@@ -102,7 +102,7 @@ const RecentProjects = () => {
               <div className="hero-stat overflow-hidden rounded-[1.2rem] bg-slate-950/60">
                 {activeProject.video ? (
                   <video
-                    className="h-[260px] w-full object-contain object-center sm:h-[340px] lg:h-[360px]"
+                    className="h-[260px] w-full object-cover object-center sm:h-[340px] lg:h-[360px]"
                     controls
                     playsInline
                     preload="metadata"
@@ -113,7 +113,7 @@ const RecentProjects = () => {
                 ) : (
                   <img
                     alt={`${activeProject.title} scaffolding by Empire Scaffolding (GB) Ltd`}
-                    className="h-[260px] w-full object-contain object-center sm:h-[340px] lg:h-[360px]"
+                    className="h-[260px] w-full object-cover object-center sm:h-[340px] lg:h-[360px]"
                     decoding="async"
                     loading="lazy"
                     src={activeProject.image}

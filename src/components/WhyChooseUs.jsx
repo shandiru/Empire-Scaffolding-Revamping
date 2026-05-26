@@ -32,14 +32,14 @@ const features = [
 export default function WhyChooseUs() {
   return (
     <section
-      className="app-section relative overflow-hidden bg-blue-600 py-20 text-white"
+      className="app-section relative overflow-hidden bg-white py-20 text-slate-900"
       id="why-choose-us"
     >
-      <div className="absolute left-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-blue-300/30 blur-[110px]" />
+      <div className="absolute left-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-blue-100/80 blur-[110px]" />
 
       <div className="app-container relative">
         <div className="mb-12 text-center">
-          <div className="mb-4 inline-flex rounded-full bg-white/10 px-4 py-1 text-[11px] font-medium text-blue-100">
+          <div className="mb-4 inline-flex rounded-full bg-blue-50 px-4 py-1 text-[11px] font-medium text-blue-700">
             Why Choose Us
           </div>
 
@@ -56,9 +56,9 @@ export default function WhyChooseUs() {
               return (
                 <div
                   key={index}
-                  className="animate-float rounded-[20px] border border-white/15 bg-white/10 p-5 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-white/16"
+                  className="animate-float rounded-[20px] border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md"
                 >
-                  <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-blue-600/20 text-blue-100">
+                  <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-blue-700">
                     <Icon size={18} />
                   </div>
 
@@ -66,7 +66,7 @@ export default function WhyChooseUs() {
                     {item.title}
                   </h3>
 
-                  <p className="text-sm leading-relaxed text-white/65">
+                  <p className="text-sm leading-relaxed text-slate-600">
                     {item.text}
                   </p>
                 </div>
@@ -75,7 +75,7 @@ export default function WhyChooseUs() {
           </div>
 
           <div className="flex flex-col items-center">
-            <div className="overflow-hidden rounded-[22px] border border-white/10 bg-white/10 p-2 shadow-[0_25px_90px_rgba(29,78,216,0.18)]">
+            <div className="overflow-hidden rounded-[22px] border border-slate-200 bg-white p-2 shadow-[0_25px_90px_rgba(29,78,216,0.12)]">
               <img
                 src="/Empire.jpg"
                 alt="Empire Scaffolding team and fleet of vehicles Hucknall Nottinghamshire"
@@ -86,10 +86,10 @@ export default function WhyChooseUs() {
 
             <a
               href="tel:01159641600"
-              className="mt-7 inline-flex items-center gap-3 rounded-full bg-white px-5 py-2 text-sm font-semibold text-black"
+              className="mt-7 inline-flex items-center gap-3 rounded-full bg-blue-600 px-5 py-2 text-sm font-semibold text-white"
             >
               Get a free quote today - call 0115 9641 600
-              <ArrowRight size={16} className="text-blue-600" />
+              <ArrowRight size={16} className="text-white" />
             </a>
           </div>
 
@@ -100,10 +100,10 @@ export default function WhyChooseUs() {
               return (
                 <div
                   key={index}
-                  className="animate-float rounded-[20px] border border-white/15 bg-white/10 p-5 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-white/16"
+                  className="animate-float rounded-[20px] border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md"
                   style={{ animationDelay: `${index * 0.4}s` }}
                 >
-                  <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-blue-600/20 text-blue-100">
+                  <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-blue-700">
                     <Icon size={18} />
                   </div>
 
@@ -111,7 +111,7 @@ export default function WhyChooseUs() {
                     {item.title}
                   </h3>
 
-                  <p className="text-sm leading-relaxed text-white/65">
+                  <p className="text-sm leading-relaxed text-slate-600">
                     {item.text}
                   </p>
                 </div>
