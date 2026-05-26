@@ -14,6 +14,7 @@ import Testimonials from "../components/Testimonials"
 import WhyChooseUs from "../components/WhyChooseUs"
 import HeroSection from '../components/HeroSection'
 import StatsContactBar from "../components/StatsContactBar"
+import GalleryCarousel from '../components/GalleryCarousel'
 
 
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
             <OurServices />
             <WhyChooseUs />
             <RecentProjects />
+            <GalleryCarousel />
             <Testimonials />
             <CertificationCategories />
             <FAQ />
