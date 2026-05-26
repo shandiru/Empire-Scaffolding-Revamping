@@ -27,11 +27,11 @@ const Navbar = ({ overlay = false }) => {
         overlay ? "absolute top-4 sm:top-6" : "fixed top-4 left-0 sm:top-5"
       }`}
     >
-      <div
-        className={`app-container flex items-center justify-between ${
+        <div
+          className={`app-container flex items-center justify-between ${
           overlay
-            ? "rounded-[1.4rem] border border-white/80 bg-white px-4 py-4 shadow-[0_20px_60px_rgba(15,23,42,0.15)] sm:rounded-[2rem] sm:px-8 lg:rounded-[2.6rem] lg:px-10"
-            : "rounded-full border border-slate-200/80 bg-white/95 px-4 py-3 shadow-[0_18px_60px_rgba(15,23,42,0.16)] backdrop-blur-md sm:px-7 lg:px-10"
+            ? "rounded-[1.4rem] border border-slate-800 bg-black px-4 py-4 shadow-[0_20px_60px_rgba(15,23,42,0.35)] sm:rounded-[2rem] sm:px-8 lg:rounded-[2.6rem] lg:px-10"
+            : "rounded-full border border-slate-800 bg-black/95 px-4 py-3 shadow-[0_18px_60px_rgba(15,23,42,0.3)] backdrop-blur-md sm:px-7 lg:px-10"
         }`}
       >
         <div className="flex items-center">
@@ -49,7 +49,7 @@ const Navbar = ({ overlay = false }) => {
 
         <nav
           className={`hidden items-center text-[1.05rem] font-medium lg:flex ${
-            overlay ? "gap-10 text-slate-700" : "gap-8 text-slate-900"
+            overlay ? "gap-10 text-slate-100" : "gap-8 text-slate-100"
           }`}
         >
           {navLinks.map((link) => (
@@ -74,7 +74,7 @@ const Navbar = ({ overlay = false }) => {
         <div className="hidden items-center gap-6 lg:flex">
           <div
             className={`hidden items-center gap-2 xl:flex ${
-              overlay ? "text-slate-700" : "text-slate-800"
+              overlay ? "text-slate-100" : "text-slate-100"
             }`}
           >
             <Phone className="w-4 h-4" />
@@ -97,7 +97,7 @@ const Navbar = ({ overlay = false }) => {
         </div>
 
         <button
-          className={`lg:hidden ${overlay ? "text-slate-900" : "text-slate-900"}`}
+          className={`lg:hidden ${overlay ? "text-slate-100" : "text-slate-100"}`}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -106,10 +106,10 @@ const Navbar = ({ overlay = false }) => {
 
       {isOpen && (
         <div
-          className={`app-container mt-3 flex flex-col gap-4 bg-white px-6 text-slate-900 shadow-[0_20px_60px_rgba(15,23,42,0.14)] lg:hidden ${
+          className={`app-container mt-3 flex flex-col gap-4 bg-black px-6 text-slate-100 shadow-[0_20px_60px_rgba(15,23,42,0.3)] lg:hidden ${
             overlay
-              ? "rounded-[2rem] border border-slate-200 py-6 text-base"
-              : "items-center rounded-[2rem] border border-slate-200 py-6 text-lg"
+              ? "rounded-[2rem] border border-slate-800 py-6 text-base"
+              : "items-center rounded-[2rem] border border-slate-800 py-6 text-lg"
           }`}
         >
           {navLinks.map((link) => (
@@ -125,14 +125,14 @@ const Navbar = ({ overlay = false }) => {
                 setIsOpen(false); // close mobile menu
               }}
               className={`font-medium transition hover:text-blue-600 ${
-                overlay ? "text-slate-700" : ""
+                overlay ? "text-slate-100" : ""
               }`}
             >
               {link.label}
             </HashLink>
           ))}
 
-          <div className="flex items-center gap-2 text-slate-900">
+          <div className="flex items-center gap-2 text-slate-100">
             <Phone className="w-4 h-4" />
             <a
               href="tel:01159641600"
