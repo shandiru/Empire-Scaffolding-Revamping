@@ -14,7 +14,7 @@ const GALLERY_ITEMS = [
   { image: "/Empire.jpg" },
 ];
 
-const RADIUS       = 580;  
+const RADIUS       = 680;  
 const CARD_ROT_Y   = 25;   
 const SIDE_SCALE   = 0.85;  
 const SIDE_OPACITY = 2;  
@@ -106,8 +106,8 @@ export default function GalleryCarousel() {
                 onHoverEnd={() => setHoveredIndex(null)}
                 className="absolute overflow-hidden cursor-pointer"
                 style={{
-                  width: 'clamp(170px, 28vw, 280px)',
-                  aspectRatio: '4 / 5',
+                  width: 'clamp(240px, 34vw, 420px)',
+                  aspectRatio: '3 / 2',
                   borderRadius: 'clamp(16px, 2.5vw, 26px)',
                   background: '#15161b',
                   boxShadow: isCenter
