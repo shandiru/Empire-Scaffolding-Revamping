@@ -71,11 +71,11 @@ export default function GalleryCarousel() {
 
   return (
     <div
-      className="w-full min-h-screen bg-white text-slate-900 flex flex-col justify-center items-center py-10 px-4 overflow-hidden select-none"
+      className="flex w-full flex-col items-center overflow-hidden bg-white px-4 py-8 text-slate-900 select-none sm:py-10 lg:py-12"
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
     >
-      <p className="text-slate-500 text-[10px] tracking-[0.3em] uppercase mb-7">
+      <p className="mb-5 text-[10px] uppercase tracking-[0.3em] text-slate-500 sm:mb-6">
         Gallery · {currentIndex + 1} / {GALLERY_ITEMS.length}
       </p>
 
@@ -175,7 +175,7 @@ export default function GalleryCarousel() {
       </div>
 
       {/* ── Carousel Slider Indicator Dots ── */}
-      <div className="flex items-center gap-[7px] mt-[clamp(24px,5vw,38px)]">
+        <div className="mt-5 flex items-center gap-[7px] sm:mt-6">
         {GALLERY_ITEMS.map((_, i) => (
           <button
             key={i}
