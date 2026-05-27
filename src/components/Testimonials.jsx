@@ -61,12 +61,16 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="app-section bg-white py-16" id="testimonials">
-      <div className="app-container rounded-[1.75rem] border border-slate-100 bg-white p-6 shadow-[0_18px_70px_rgba(15,23,42,0.08)] sm:p-8 lg:p-10">
+    <section className="app-section bg-white py-16" id="testimonials" data-aos="fade-up">
+      <div
+        className="app-container rounded-[1.75rem] border border-slate-100 bg-white p-6 shadow-[0_18px_70px_rgba(15,23,42,0.08)] sm:p-8 lg:p-10"
+        data-aos="fade-up"
+        data-aos-delay="80"
+      >
         <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
           
           {/* Left Side Content */}
-          <div>
+          <div data-aos="fade-up" data-aos-delay="120">
             <div className="hero-reveal inline-flex items-center gap-3 rounded-full bg-blue-100 px-4 py-2 text-xs font-semibold text-slate-950">
               <span className="h-2 w-2 rounded-full bg-blue-600" />
               <span>Our Testimonials</span>
@@ -89,7 +93,12 @@ const Testimonials = () => {
           </div>
 
           {/* Right Side Content (Dynamic Carousel Engine) */}
-          <div className="hero-stat relative border-b border-slate-100 pb-8 lg:border-none lg:pb-0" style={{ animationDelay: "0.18s" }}>
+          <div
+            className="hero-stat relative border-b border-slate-100 pb-8 lg:border-none lg:pb-0"
+            style={{ animationDelay: "0.18s" }}
+            data-aos="fade-up"
+            data-aos-delay="180"
+          >
             {testimonialsData.map((testimonial, index) => {
               // Only render the active item based on currentSlide state matching the array index
               if (index !== currentSlide) return null;
@@ -139,7 +148,7 @@ const Testimonials = () => {
         </div>
 
         {/* Bottom Logo Grid Section */}
-        <div className="mt-12 border-t border-slate-100 pt-8">
+        <div className="mt-12 border-t border-slate-100 pt-8" data-aos="fade-up" data-aos-delay="220">
           <p className="mb-8 text-center text-sm text-slate-500">
             Trusted by leading organisations across construction, education, and the public sector
           </p>
@@ -150,6 +159,8 @@ const Testimonials = () => {
                 key={logo.name}
                 className="hero-stat flex h-16 w-full max-w-[190px] items-center justify-center rounded-xl bg-white px-5 py-3"
                 style={{ animationDelay: `${0.28 + index * 0.08}s` }}
+                data-aos="fade-up"
+                data-aos-delay={260 + index * 70}
               >
                 <img
                   src={logo.src}

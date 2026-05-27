@@ -34,11 +34,12 @@ export default function WhyChooseUs() {
     <section
       className="app-section relative overflow-hidden bg-white py-20 text-slate-900"
       id="why-choose-us"
+      data-aos="fade-up"
     >
       <div className="absolute left-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-blue-100/80 blur-[110px]" />
 
       <div className="app-container relative">
-        <div className="mb-12 text-center">
+        <div className="mb-12 text-center" data-aos="fade-up" data-aos-delay="80">
           <div className="mb-4 inline-flex rounded-full bg-blue-50 px-4 py-1 text-[11px] font-medium text-blue-700">
             Why Choose Us
           </div>
@@ -57,6 +58,8 @@ export default function WhyChooseUs() {
                 <div
                   key={index}
                   className="animate-float rounded-[20px] border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md"
+                  data-aos="fade-up"
+                  data-aos-delay={120 + index * 90}
                 >
                   <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-blue-700">
                     <Icon size={18} />
@@ -75,7 +78,11 @@ export default function WhyChooseUs() {
           </div>
 
           <div className="flex flex-col items-center">
-            <div className="overflow-hidden rounded-[22px] border border-slate-200 bg-white p-2 shadow-[0_25px_90px_rgba(29,78,216,0.12)]">
+            <div
+              className="overflow-hidden rounded-[22px] border border-slate-200 bg-white p-2 shadow-[0_25px_90px_rgba(29,78,216,0.12)]"
+              data-aos="zoom-in"
+              data-aos-delay="180"
+            >
               <img
                 src="/Empire.jpg"
                 alt="Empire Scaffolding team and fleet of vehicles Hucknall Nottinghamshire"
@@ -87,6 +94,8 @@ export default function WhyChooseUs() {
             <a
               href="tel:01159641600"
               className="mt-7 inline-flex items-center gap-3 rounded-full bg-blue-600 px-5 py-2 text-sm font-semibold text-white"
+              data-aos="fade-up"
+              data-aos-delay="240"
             >
               Get a free quote today - call 0115 9641 600
               <ArrowRight size={16} className="text-white" />
@@ -102,6 +111,8 @@ export default function WhyChooseUs() {
                   key={index}
                   className="animate-float rounded-[20px] border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md"
                   style={{ animationDelay: `${index * 0.4}s` }}
+                  data-aos="fade-up"
+                  data-aos-delay={300 + index * 90}
                 >
                   <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-blue-700">
                     <Icon size={18} />

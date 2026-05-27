@@ -20,8 +20,11 @@ const PRSection = () => {
   ];
 
   return (
-    <section className="py-5 px-4 md:px-8 lg:px-16">
-      <div className="text-center mb-8">
+    <section
+      className="py-5 px-4 md:px-8 lg:px-16"
+      data-aos="fade-up"
+    >
+      <div className="text-center mb-8" data-aos="fade-up" data-aos-delay="80">
         <h2 className="text-2xl md:text-3xl font-bold">PR</h2>
         <p className="text-gray-500 mt-2">Latest news and achievements</p>
       </div>
@@ -31,6 +34,8 @@ const PRSection = () => {
           <div
             key={index}
             className="bg-white p-5 rounded-xl shadow-lg border border-blue-600 hover:shadow-md transition duration-300"
+            data-aos="fade-up"
+            data-aos-delay={140 + index * 90}
           >
             <div className="flex items-start space-x-3 mb-4">
               {card.icon}

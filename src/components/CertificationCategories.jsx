@@ -41,9 +41,13 @@ const accreditations = [
 
 const CertificationCategories = () => {
   return (
-    <section className="app-section bg-gray-50 py-16 lg:py-20" id="accreditations">
+    <section
+      className="app-section bg-gray-50 py-16 lg:py-20"
+      id="accreditations"
+      data-aos="fade-up"
+    >
       <div className="app-container">
-        <div className="mb-12">
+        <div className="mb-12" data-aos="fade-up" data-aos-delay="80">
           <p className="hero-reveal mb-2 text-sm font-semibold uppercase tracking-widest text-blue-600">
            OUR ACCREDITATIONS & MEMBERSHIPS
           </p>
@@ -61,6 +65,8 @@ const CertificationCategories = () => {
               key={accreditation.title}
               className="hero-stat rounded-2xl border border-slate-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:shadow-xl"
               style={{ animationDelay: `${0.16 + index * 0.08}s` }}
+              data-aos="fade-up"
+              data-aos-delay={140 + index * 80}
             >
               <div className="mb-4 flex h-16 w-28 items-center justify-center rounded-xl border border-slate-200 bg-gray-50 p-3">
                 <img

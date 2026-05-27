@@ -77,14 +77,28 @@ const RecentProjects = () => {
   const swiperRef = useRef(null);
 
   return (
-    <section className="px-4 py-10 sm:px-6 lg:px-16 bg-white scroll-m-18" id="recent-projects">
+    <section
+      className="px-4 py-10 sm:px-6 lg:px-16 bg-white scroll-m-18"
+      id="recent-projects"
+      data-aos="fade-up"
+    >
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-2">Recent Projects</h2>
-        <p className="text-gray-600 mb-10 text-md sm:text-lg max-w-xl mx-auto">
+        <h2
+          className="text-2xl sm:text-3xl font-bold mb-2"
+          data-aos="fade-up"
+          data-aos-delay="80"
+        >
+          Recent Projects
+        </h2>
+        <p
+          className="text-gray-600 mb-10 text-md sm:text-lg max-w-xl mx-auto"
+          data-aos="fade-up"
+          data-aos-delay="140"
+        >
           Showcasing our expertise in high-profile commercial and institutional scaffolding projects
         </p>
 
-        <div className="relative">
+        <div className="relative" data-aos="fade-up" data-aos-delay="180">
           <button
             type="button"
             aria-label="Previous project"
@@ -121,7 +135,11 @@ const RecentProjects = () => {
           >
             {projects.map((project, index) => (
               <SwiperSlide key={index}>
-                <div className="relative group h-120 bg-white rounded-xl mb-12 shadow-md overflow-hidden text-left flex flex-col">
+                <div
+                  className="relative group h-120 bg-white rounded-xl mb-12 shadow-md overflow-hidden text-left flex flex-col"
+                  data-aos="fade-up"
+                  data-aos-delay={220 + index * 70}
+                >
                   <div className="relative overflow-hidden">
                     {project.video ? (
                       <video

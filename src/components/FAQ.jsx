@@ -33,10 +33,14 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section id="faq">
+    <section id="faq" data-aos="fade-up">
       <div className="app-section py-12 sm:py-14">
         <div className="app-container grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
-          <div className="lg:sticky lg:top-10 lg:self-start">
+          <div
+            className="lg:sticky lg:top-10 lg:self-start"
+            data-aos="fade-up"
+            data-aos-delay="80"
+          >
             <div className="inline-flex items-center gap-3 text-sm font-semibold text-slate-950">
               <span className="h-px w-12 bg-slate-300" />
               <span>FAQ</span>
@@ -60,6 +64,8 @@ export default function FAQ() {
                 <article
                   key={faq.question}
                   className="overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-[0_18px_40px_rgba(15,23,42,0.05)] transition-all duration-300"
+                  data-aos="fade-up"
+                  data-aos-delay={140 + index * 80}
                 >
                   <button
                     type="button"

@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
 import About from "../components/About"
 import CallToAction from "../components/CallToAction"
 import CertificationCategories from "../components/CertificationCategories"
@@ -19,6 +20,15 @@ import Details from '../components/Details'
 import GalleryCarousel from '../components/GalleryCarousel'
 
 const Home = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 80,
+        })
+    }, [])
+
     return (
         <div>
             <HeroSection />

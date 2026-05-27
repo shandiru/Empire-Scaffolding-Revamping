@@ -24,17 +24,21 @@ const services = [
 
 const Details = () => {
     return (
-        <section id="services" className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-16">
+        <section
+            id="services"
+            className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-16"
+            data-aos="fade-up"
+        >
             <div className="max-w-7xl mx-auto text-center">
-                <h2 className="text-5xl font-bold mb-2">Scale That Speaks Volumes</h2>
-                <p className="text-gray-800 mb-12 text-xl max-w-3xl mx-auto mt-4">
+                <h2 className="text-5xl font-bold mb-2" data-aos="fade-up" data-aos-delay="80">Scale That Speaks Volumes</h2>
+                <p className="text-gray-800 mb-12 text-xl max-w-3xl mx-auto mt-4" data-aos="fade-up" data-aos-delay="140">
                     From towering commercial complexes to intricate residential projects,
                     witness the magnitude and precision of our scaffolding solutions.
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     {services.map((service, index) => (
-                        <VideoCard key={index} service={service} />
+                        <VideoCard key={index} service={service} index={index} />
                     ))}
                 </div>
             </div>
@@ -43,7 +47,7 @@ const Details = () => {
 };
 
 // Video card with play/pause overlay
-const VideoCard = ({ service }) => {
+const VideoCard = ({ service, index }) => {
     const videoRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [showPause, setShowPause] = useState(false);
@@ -63,7 +67,11 @@ const VideoCard = ({ service }) => {
     };
 
     return (
-        <div className="bg-white p-6 rounded-xl shadow-lg flex flex-col items-start">
+        <div
+            className="bg-white p-6 rounded-xl shadow-lg flex flex-col items-start"
+            data-aos="fade-up"
+            data-aos-delay={180 + index * 100}
+        >
             {/* Video wrapper */}
             <div
                 className="w-full h-full rounded-lg overflow-hidden mb-4 relative bg-gray-200 group"

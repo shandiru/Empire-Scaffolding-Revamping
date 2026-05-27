@@ -39,10 +39,14 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="app-section bg-gray-50 py-16" id="services">
+    <section
+      className="app-section bg-gray-50 py-16"
+      id="services"
+      data-aos="fade-up"
+    >
       <div className="app-container">
         {/* TOP */}
-        <div className="mb-14 text-center">
+        <div className="mb-14 text-center" data-aos="fade-up" data-aos-delay="80">
           <div className="mb-4 inline-flex items-center rounded-full bg-white px-4 py-1 text-[11px] font-medium text-blue-600 shadow-sm">
             ● Our Services
           </div>
@@ -61,6 +65,8 @@ export default function ServicesSection() {
               <div
                 key={index}
                 className="group flex flex-col overflow-hidden rounded-[24px] bg-white transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]"
+                data-aos="fade-up"
+                data-aos-delay={120 + index * 90}
               >
                 {/* IMAGE */}
                 <div className="relative h-[185px] overflow-hidden">
@@ -96,7 +102,11 @@ export default function ServicesSection() {
         </div>
 
         {/* BOTTOM REVIEW */}
-        <div className="mt-14 flex flex-col items-center justify-center gap-5 text-center">
+        <div
+          className="mt-14 flex flex-col items-center justify-center gap-5 text-center"
+          data-aos="fade-up"
+          data-aos-delay="180"
+        >
           <div className="flex items-center gap-3">
             {/* AVATARS */}
             <div className="flex -space-x-3">
