@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight, Star } from "lucide-react";
+import { HashLink } from "react-router-hash-link";
 import { isPrerender } from "../seo/isPrerender";
 import Navbar from "./Navbar";
 
@@ -120,18 +121,24 @@ const HeroSection = () => {
                 <div className="flex flex-col sm:flex-row sm:items-center gap-10">
 
                   {/* Hero Main Video-Style Button */}
-                  <a
-                    href="mailto:Shay@empirescaffolding.co.uk"
+                  <HashLink
+                    smooth
+                    to="/#contact"
+                    scroll={(el) => {
+                      const yOffset = -80;
+                      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                      window.scrollTo({ top: y, behavior: "smooth" });
+                    }}
                     className="group relative inline-flex w-full items-center justify-center gap-3 overflow-hidden rounded-full bg-white px-5 py-3 text-base font-semibold text-[#0B1224] transition-colors duration-300 min-[420px]:w-fit sm:px-8"
                   >
                     <span className="absolute inset-0 translate-y-full bg-blue-100 transition-transform duration-300 ease-out group-hover:translate-y-0" />
 
-                    <span className="relative z-10 inline-flex items-center gap-3 transition-colors duration-300">
+                  <span className="relative z-10 inline-flex items-center gap-3 transition-colors duration-300">
                       Get a Free Quote
                       {/* Added transition and group-hover:rotate-45 below */}
                       <ArrowUpRight className="btn-arrow h-5 w-5 transition-transform duration-300 group-hover:rotate-45" />
                     </span>
-                  </a>
+                  </HashLink>
 
                   {/* Review Section */}
                   <div className="flex flex-col gap-2 sm:shrink-0">
