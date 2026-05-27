@@ -103,7 +103,7 @@ const TermsConditions = () => {
                   href="tel:01159641600"
                   className="text-amber-400 transition hover:text-amber-300 hover:underline"
                 >
-                  01159 641 600
+                  0115 9641 600
                 </a>
               </p>
               <p>
@@ -360,7 +360,7 @@ const TermsConditions = () => {
                   href="tel:01159641600"
                   className="text-amber-400 transition hover:text-amber-300 hover:underline"
                 >
-                  01159 641 600
+                  0115 9641 600
                 </a>
               </p>
               <p>

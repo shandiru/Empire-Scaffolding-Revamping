@@ -41,7 +41,7 @@ const NotFound = () => {
               </Link>
               <a
                 className="inline-flex items-center rounded-full border border-white/18 px-6 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:border-white/35 hover:bg-white/6"
-                href="tel:+441159641600"
+                href="tel:01159641600"
               >
                 Call 0115 9641 600
               </a>
