@@ -10,8 +10,8 @@ const stats = [
 const StatsContactBar = () => {
   return (
     <section className="app-section relative z-20 bg-white py-6 text-slate-950 shadow-[0_-14px_40px_rgba(15,23,42,0.08)]">
-      <div className="app-container flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
-        <div className="hero-reveal grid w-full grid-cols-2 gap-y-6 sm:grid-cols-4 lg:max-w-4xl lg:gap-y-0">
+      <div className="app-container flex flex-col gap-8 xl:flex-row xl:items-center xl:justify-between">
+        <div className="hero-reveal grid w-full grid-cols-2 gap-y-6 sm:grid-cols-4 xl:max-w-4xl xl:gap-y-0">
           {stats.map((stat, index) => (
             <div
               key={stat.label}
@@ -30,7 +30,7 @@ const StatsContactBar = () => {
         </div>
 
         <div
-          className="hero-reveal flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-end"
+          className="hero-reveal flex flex-col items-center gap-4 sm:flex-row sm:justify-center xl:shrink-0 xl:justify-end"
           style={{ animationDelay: "0.54s" }}
         >
           <a

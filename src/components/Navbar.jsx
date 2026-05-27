@@ -46,7 +46,7 @@ const Navbar = ({ overlay = false }) => {
         </div>
 
         <nav
-          className={`hidden items-center text-[1.05rem] font-medium lg:flex ${
+          className={`hidden items-center text-[1.05rem] font-medium xl:flex ${
             overlay ? "gap-10 text-slate-100" : "gap-8 text-slate-100"
           }`}
         >
@@ -69,7 +69,7 @@ const Navbar = ({ overlay = false }) => {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-6 lg:flex">
+        <div className="hidden items-center gap-6 xl:flex">
           <div
             className={`hidden items-center gap-2 xl:flex ${
               overlay ? "text-slate-100" : "text-slate-100"
@@ -95,7 +95,7 @@ const Navbar = ({ overlay = false }) => {
         </div>
 
         <button
-          className={`lg:hidden ${overlay ? "text-slate-100" : "text-slate-100"}`}
+          className={`xl:hidden ${overlay ? "text-slate-100" : "text-slate-100"}`}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -104,7 +104,7 @@ const Navbar = ({ overlay = false }) => {
 
       {isOpen && (
         <div
-          className={`app-container mt-3 flex flex-col gap-4 bg-black px-6 text-slate-100 shadow-[0_20px_60px_rgba(15,23,42,0.3)] lg:hidden ${
+          className={`app-container mt-3 flex flex-col gap-4 bg-black px-6 text-slate-100 shadow-[0_20px_60px_rgba(15,23,42,0.3)] xl:hidden ${
             overlay
               ? "rounded-[2rem] border border-slate-800 py-6 text-base"
               : "items-center rounded-[2rem] border border-slate-800 py-6 text-lg"
