@@ -23,9 +23,7 @@ const Navbar = ({ overlay = false }) => {
 
   return (
     <header
-      className={`app-section inset-x-0 z-50 w-full ${
-        overlay ? "absolute top-4 sm:top-6" : "fixed top-4 left-0 sm:top-5"
-      }`}
+      className="app-section fixed inset-x-0 top-4 left-0 z-50 w-full sm:top-5"
     >
         <div
           className={`app-container flex items-center justify-between ${

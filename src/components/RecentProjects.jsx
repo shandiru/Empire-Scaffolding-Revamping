@@ -1,4 +1,9 @@
-import { useState } from "react";
+import { MapPin } from "lucide-react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css'; // Swiper styles
+import 'swiper/css/pagination'; // Pagination styles
+import 'swiper/css/autoplay'; // Autoplay styles
+import { Autoplay, Pagination } from 'swiper/modules'; // Correct module import for swiper v8+
 
 const projects = [
   {
@@ -6,7 +11,7 @@ const projects = [
     location: "Nottingham",
     description:
       "Complex scaffolding solution for historic civic building restoration, providing safe access for dome maintenance and architectural preservation work.",
-    image: "/council.png",
+    image: "/council.png", // update path as needed
     tags: ["Historic Building", "Complex Access", "Civic Project"],
   },
   {
@@ -22,8 +27,7 @@ const projects = [
     location: "Sutton-in-Ashfield",
     description:
       "Multi-level scaffolding system for modern institutional building maintenance, providing safe working platforms across multiple floors and sections.",
-    image: "/building.png",
-    video: "/castle.mp4",
+    video: "/castle.mp4", // Video URL for this project
     tags: ["Multi-Level", "Institutional", "Modern Building"],
   },
   {
@@ -31,7 +35,7 @@ const projects = [
     location: "Nottingham",
     description:
       "Complex scaffolding solution for historic civic building restoration, providing safe access for dome maintenance and architectural preservation work.",
-    image: "/nottingham castle.jpg",
+    image: "/nottingham castle.jpg", // update path as needed
     tags: ["Historic Building", "Complex Access", "Civic Project"],
   },
   {
@@ -40,16 +44,13 @@ const projects = [
     description:
       "Modern student accommodation development designed to provide safe and stylish living in the heart of Liverpool.",
     image: "/ablett.jpg",
-    tags: [
-      "Modern student accommodation",
-      "City-centre location",
-      "High-rise structure",
-    ],
+    tags: ["Modern student accommodation", "City-centre location", "High-rise structure"],
   },
   {
     title: "Nottingham Queens Medical Centre",
     location: "Nottingham",
-    description: "Plettac scaffold for window replacement",
+    description:
+      "Plettac scaffold for window replacement",
     image: "/queen.jpg",
     tags: ["Victorian Architecture", "Full Coverage", "Legal Institution"],
   },
@@ -64,122 +65,90 @@ const projects = [
   {
     title: "Mansfield Road",
     location: "Nottingham",
-    description: "Traditional tube and fit scaffolding for full renovation works",
+    description:
+      "Traditional tube and fit scaffolding for full renovation works",
     image: "/Mansfield.webp",
-    tags: ["Full Building Access", "Safety & Compliance", "Custom Builds"],
+    tags: ["Full Building Access" , "Safety & Compliance", "Custom Builds"],
   },
 ];
 
 const RecentProjects = () => {
-  const [activeProjectIndex, setActiveProjectIndex] = useState(0);
-  const activeProject = projects[activeProjectIndex];
-
   return (
-    <section className="app-section bg-white py-10" id="projects">
-      <div className="app-container">
-        <div className="relative overflow-hidden rounded-[1.5rem] bg-blue-600 px-4 py-10 text-white shadow-[0_28px_90px_rgba(37,99,235,0.24)] sm:rounded-[2rem] sm:px-8 sm:py-14 lg:px-12 lg:py-16">
-          <div className="pointer-events-none absolute inset-0 opacity-30">
-            <div className="absolute -right-24 -top-24 h-[36rem] w-[36rem] rounded-full border border-white/10" />
-            <div className="absolute -right-10 top-6 h-[42rem] w-[42rem] rounded-full border border-white/10" />
-            <div className="absolute left-[-18rem] top-40 h-[56rem] w-[56rem] rounded-full border border-white/[0.06]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.08),transparent_32%)]" />
-          </div>
+    <section className="px-4 py-10 sm:px-6 lg:px-16 bg-white scroll-m-18" id="recent-projects">
+      <div className="max-w-7xl mx-auto text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-2">Recent Projects</h2>
+        <p className="text-gray-600 mb-10 text-md sm:text-lg max-w-xl mx-auto">
+          Showcasing our expertise in high-profile commercial and institutional scaffolding projects
+        </p>
 
-          <div className="relative">
-            <div className="text-center">
-              <div className="hero-reveal inline-flex items-center font-semibold text-white">
-                <span>Recent Projects</span>
+        {/* Swiper component for swipe functionality */}
+        <Swiper
+          modules={[Autoplay, Pagination]} // Correct module import for swiper v8+
+          spaceBetween={30}
+          loop={true}
+          autoplay={{ delay: 3000 }}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            640: { slidesPerView: 1 }, // For small screens, 1 project card visible
+            768: { slidesPerView: 2 }, // For medium screens, 2 project cards visible
+            1024: { slidesPerView: 3 }, // For large screens, 3 project cards visible
+          }}
+          className="relative"
+        >
+          {projects.map((project, index) => (
+            <SwiperSlide key={index}>
+              <div className="relative group h-120 bg-white rounded-xl mb-12 shadow-md overflow-hidden text-left flex flex-col">
+                <div className="relative overflow-hidden">
+                  {/* Conditionally render video for the "Sir John Robinson House" project */}
+                  {project.video ? (
+                    <video
+                      src={project.video}
+                      alt={project.title}
+                      className="w-full h-58 object-cover rounded-2xl transform transition-transform duration-300 group-hover:scale-105"
+                      autoplay
+                      muted
+                      loop
+                    />
+                  ) : (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-58 object-cover rounded-2xl transform transition-transform duration-300 group-hover:scale-105"
+                    />
+                  )}
+                  <span className="absolute top-3 left-3 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                    Commercial
+                  </span>
+                </div>
+                <div className="p-5 flex-1 flex flex-col">
+                  <h3 className="font-semibold text-lg mb-1">{project.title}</h3>
+                  <div className="flex items-center text-sm text-gray-500 mb-2">
+                    <MapPin className="w-4 h-4 mr-1" />
+                    {project.location}
+                  </div>
+                  <p className="text-sm text-gray-700 mb-4">{project.description}</p>
+                  <div className="mt-auto flex flex-wrap gap-2 mb-5">
+                    {project.tags.map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className="text-xs border border-gray-300 text-black px-2 py-1 rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <h2
-                className="hero-reveal mx-auto mt-5 max-w-3xl text-[2.3rem] font-semibold leading-[1.05] tracking-[-0.05em] text-white sm:text-[3.1rem]"
-                style={{ animationDelay: "0.1s" }}
-              >
-                A look at some of our recent projects.
-              </h2>
-            </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-            <div className="mt-12 grid items-center gap-8 lg:grid-cols-[1.05fr_1fr] lg:gap-12">
-              <div className="hero-stat overflow-hidden rounded-[1.2rem] bg-slate-950/60">
-                {activeProject.video ? (
-                  <video
-                    className="h-[260px] w-full object-cover object-center sm:h-[340px] lg:h-[360px]"
-                    controls
-                    playsInline
-                    preload="metadata"
-                  >
-                    <source src={activeProject.video} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                ) : (
-                  <img
-                    alt={`${activeProject.title} scaffolding by Empire Scaffolding (GB) Ltd`}
-                    className="h-[260px] w-full object-cover object-center sm:h-[340px] lg:h-[360px]"
-                    decoding="async"
-                    loading="lazy"
-                    src={activeProject.image}
-                    style={{ imageRendering: "auto" }}
-                  />
-                )}
-              </div>
-
-              <div
-                className="hero-stat max-w-lg"
-                style={{ animationDelay: "0.12s" }}
-              >
-                <p className="text-base font-bold text-blue-100">
-                  /{activeProject.location}
-                </p>
-                <h3 className="mt-4 text-[2rem] font-bold leading-[1.05] tracking-[-0.05em] text-white">
-                  {activeProject.title}
-                </h3>
-                <p className="mt-5 max-w-lg text-base leading-8 text-white/70">
-                  {activeProject.description}
-                </p>
-                <ul className="mt-6 space-y-3 text-sm text-white/85">
-                  {activeProject.tags.map((tag) => (
-                    <li key={tag} className="flex items-start gap-3">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-100" />
-                      <span>{tag}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            <div className="mt-12 grid gap-4 pt-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-              {projects.map((project, index) => {
-                const isActive = activeProjectIndex === index;
-
-                return (
-                  <button
-                    key={`${project.title}-${project.location}`}
-                    className={`hero-stat flex min-w-0 items-center gap-1 border-t pt-4 text-left transition-colors duration-300 ${
-                      isActive
-                        ? "border-blue-100 text-white"
-                        : "border-white/15 text-white/80 hover:border-blue-100/70 hover:text-white"
-                    }`}
-                    style={{ animationDelay: `${0.2 + index * 0.08}s` }}
-                    type="button"
-                    onClick={() => setActiveProjectIndex(index)}
-                  >
-                    <span className="text-sm font-bold tracking-[-0.03em]">
-                      {project.title}
-                    </span>
-                    <span
-                      className={
-                        isActive
-                          ? "break-words text-white/55"
-                          : "break-words text-white/25"
-                      }
-                    >
-                      /{project.location}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        </div>
+        {/* CTA Button
+        <div className="mt-10">
+          <button className="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold text-sm hover:bg-blue-700 transition">
+            View All Projects
+          </button>
+        </div> */}
       </div>
     </section>
   );

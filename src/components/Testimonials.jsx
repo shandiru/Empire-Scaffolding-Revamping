@@ -98,12 +98,7 @@ const Testimonials = () => {
                 <div key={testimonial.id} className="animate-fadeIn">
                   <div className="mb-8 flex items-center justify-between gap-4">
                     <div className="flex h-12 w-36 items-center justify-start">
-                      <img
-                        src={testimonial.logoSrc}
-                        alt={testimonial.logoAlt}
-                        className="max-h-12 max-w-full object-contain"
-                        loading="lazy"
-                      />
+                     
                     </div>
                     <Quote className="h-12 w-12 fill-slate-100 text-slate-100 transform rotate-180" />
                   </div>
