@@ -16,6 +16,13 @@ const navLinks = [
 const Navbar = ({ overlay = false }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const scrollWithOffset = (el) => {
+    const yOffset = -80;
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+    setIsOpen(false);
+  };
+
   // Handle phone call
   const handleCall = () => {
     console.log("Calling 0115 9641 600");
@@ -55,13 +62,7 @@ const Navbar = ({ overlay = false }) => {
               key={link.href}
               smooth
               to={`/#${link.href}`}
-              scroll={(el) => {
-                const yOffset = -80; // height of your fixed navbar
-                const y =
-                  el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                window.scrollTo({ top: y, behavior: "smooth" });
-                setIsOpen(false); // close mobile menu
-              }}
+              scroll={scrollWithOffset}
               className="transition hover:text-blue-600"
             >
               {link.label}
@@ -84,14 +85,16 @@ const Navbar = ({ overlay = false }) => {
               0115 9641 600
             </a>
           </div>
-          <a
-            href="mailto:Shay@empirescaffolding.co.uk"
+          <HashLink
+            smooth
+            to="/#contact"
+            scroll={scrollWithOffset}
             className={`inline-flex items-center rounded-full bg-blue-600 font-semibold text-white transition hover:bg-[#0B1224] ${
               overlay ? "px-6 py-3 text-sm lg:px-8 lg:text-base" : "px-6 py-3"
             }`}
           >
             {overlay ? "Get Quote" : "Get a Free Quote"}
-          </a>
+          </HashLink>
         </div>
 
         <button
@@ -115,13 +118,7 @@ const Navbar = ({ overlay = false }) => {
               key={link.href}
               smooth
               to={`/#${link.href}`}
-              scroll={(el) => {
-                const yOffset = -80; // height of your fixed navbar
-                const y =
-                  el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                window.scrollTo({ top: y, behavior: "smooth" });
-                setIsOpen(false); // close mobile menu
-              }}
+              scroll={scrollWithOffset}
               className={`font-medium transition hover:text-blue-600 ${
                 overlay ? "text-slate-100" : ""
               }`}
@@ -140,14 +137,16 @@ const Navbar = ({ overlay = false }) => {
               0115 9641 600
             </a>
           </div>
-          <a
-            href="mailto:Shay@empirescaffolding.co.uk"
+          <HashLink
+            smooth
+            to="/#contact"
+            scroll={scrollWithOffset}
             className={`rounded-full bg-blue-600 font-semibold text-white transition hover:bg-[#0B1224] ${
               overlay ? "mt-2 inline-flex w-full items-center justify-center py-3 text-sm" : "px-5 py-3"
             }`}
           >
             {overlay ? "Get Quote" : "Get a Free Quote"}
-          </a>
+          </HashLink>
         </div>
       )}
     </header>

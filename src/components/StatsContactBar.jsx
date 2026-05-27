@@ -1,4 +1,5 @@
 import { ArrowUpRight, Phone } from "lucide-react";
+import { HashLink } from "react-router-hash-link";
 
 const stats = [
   { value: "25+", label: "Years in Business" },
@@ -8,6 +9,12 @@ const stats = [
 ];
 
 const StatsContactBar = () => {
+  const scrollWithOffset = (el) => {
+    const yOffset = -80;
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
+
   return (
     <section className="app-section relative z-20 bg-white py-6 text-slate-950 shadow-[0_-14px_40px_rgba(15,23,42,0.08)]">
       <div className="app-container flex flex-col gap-8 xl:flex-row xl:items-center xl:justify-between">
@@ -41,14 +48,16 @@ const StatsContactBar = () => {
             0115 9641 600
           </a>
 
-          <a
-            href="mailto:Shay@empirescaffolding.co.uk"
+          <HashLink
+            smooth
+            to="/#contact"
+            scroll={scrollWithOffset}
             className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#0B1224]"
           >
             <span className="relative z-10 transition-colors duration-300">
               Get a Free Quote
             </span>
-          </a>
+          </HashLink>
         </div>
       </div>
     </section>
