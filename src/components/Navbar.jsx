@@ -7,7 +7,7 @@ import { HashLink } from "react-router-hash-link";
 const navLinks = [
   { label: "About", href: "about" },
   { label: "Services", href: "services" },
-  { label: "Recent Projects", href: "projects" },
+  { label: "Recent Projects", href: "recent-projects" },
   { label: "Why Choose Us", href: "why-choose-us" },
   { label: "Testimonials", href: "testimonials" },
   { label: "Contact", href: "contact" },
