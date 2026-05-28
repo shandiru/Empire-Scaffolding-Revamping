@@ -22,7 +22,7 @@ const businessHours = [
   "Monday: 9:00 AM – 4:30 PM (Hours might differ on Bank Holidays)",
   "Tuesday: 9:00 AM – 4:30 PM",
   "Wednesday: 9:00 AM – 4:30 PM",
-  "Thursday: 9:00 AM – 4:00 PM",
+  "Thursday: 9:00 AM – 4:30 PM",
   "Friday: 9:00 AM – 4:30 PM",
   "Saturday: Closed",
   "Sunday: Closed",
@@ -218,13 +218,12 @@ const CallToAction = () => {
             {formStatus.message && (
               <p
                 aria-live="polite"
-                className={`rounded-xl border px-4 py-3 text-sm ${
-                  formStatus.type === "success"
-                    ? "border-emerald-200 bg-emerald-50 text-emerald-700"
-                    : formStatus.type === "error"
-                      ? "border-red-200 bg-red-50 text-red-700"
-                      : "border-blue-200 bg-blue-50 text-blue-700"
-                }`}
+                className={`rounded-xl border px-4 py-3 text-sm ${formStatus.type === "success"
+                  ? "border-emerald-200 bg-emerald-50 text-emerald-700"
+                  : formStatus.type === "error"
+                    ? "border-red-200 bg-red-50 text-red-700"
+                    : "border-blue-200 bg-blue-50 text-blue-700"
+                  }`}
               >
                 {formStatus.message}
               </p>
@@ -264,14 +263,6 @@ const CallToAction = () => {
             Hucknall, Nottinghamshire
           </p>
 
-          <p className="mt-4 text-slate-500">
-            <a
-              href="tel:01159641600"
-              className="transition hover:text-blue-600"
-            >
-              0115 9641 600
-            </a>
-          </p>
 
           <p className="mt-4 text-slate-500">
             <a
@@ -282,8 +273,27 @@ const CallToAction = () => {
               info@empirescaffolding.co.uk
             </a>
           </p>
+          <h3 className="mt-5 text-lg font-semibold text-slate-900">
+            Emergency Business Hours
+          </h3>
+          <p className="mt-2 text-slate-500">
+            <a
+              href="tel:07908581796"
+              className="transition hover:text-blue-600"
+            >
+              Shay: +44 7908 581796
+            </a>
+          </p>
+          <p className="mt-2 text-slate-500">
+            <a
+              href="tel:07719028955"
+              className="transition hover:text-blue-600"
+            >
+              Matt: +44 7719 028955
+            </a>
+          </p>
 
-          <h3 className="mt-10 text-lg font-semibold text-slate-900">
+          <h3 className="mt-5 text-lg font-semibold text-slate-900">
             Business Hours
           </h3>
           <ul className="mt-3 space-y-2 text-sm text-slate-500">

@@ -145,7 +145,6 @@ export default function GalleryCarousel() {
                   x: config.x,
                   z: config.z,
                   rotateY: config.rotateY,
-                  opacity: config.opacity,
                   scale: config.scale,
                 }}
                 whileHover={{

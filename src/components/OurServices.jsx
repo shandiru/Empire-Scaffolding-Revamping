@@ -24,7 +24,7 @@ const services = [
   {
     title: "Projects of Any Size",
     description:
-      "From small domestic towers to large-scale high-rise commercial buildings.",
+      "From small domestic houses to large-scale high-rise commercial buildings.",
     icon: ClipboardList,
     image: "/Mansfield.webp",
   },

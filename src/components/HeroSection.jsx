@@ -80,8 +80,8 @@ const HeroSection = () => {
                   className="hero-reveal text-[2.7rem] font-medium leading-[0.98] tracking-tight text-white min-[380px]:text-5xl"
                   style={{ animationDelay: "0.18s" }}
                 >
-                  Safe &amp; Reliable Scaffolding{" "}
-                  <span className="mt-4 block font-light italic">
+                  NASC Accredited &amp; Reliable Scaffolding{" "}
+                  <span className="font-light italic">
                     Solutions
                   </span>
                 </h1>
@@ -133,7 +133,7 @@ const HeroSection = () => {
                   >
                     <span className="absolute inset-0 translate-y-full bg-blue-100 transition-transform duration-300 ease-out group-hover:translate-y-0" />
 
-                  <span className="relative z-10 inline-flex items-center gap-3 transition-colors duration-300">
+                    <span className="relative z-10 inline-flex items-center gap-3 transition-colors duration-300">
                       Get a Free Quote
                       {/* Added transition and group-hover:rotate-45 below */}
                       <ArrowUpRight className="btn-arrow h-5 w-5 transition-transform duration-300 group-hover:rotate-45" />

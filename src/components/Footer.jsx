@@ -12,7 +12,7 @@ const pageLinks = [
 // Clean formatting for the opening hours data
 const openingHours = [
   { days: "Mon - Wed", time: "9:00 AM – 4:30 PM" },
-  { days: "Thursday", time: "9:00 AM – 4:00 PM" },
+  { days: "Thursday", time: "9:00 AM – 4:30 PM" },
   { days: "Friday", time: "9:00 AM – 4:30 PM" },
   { days: "Sat - Sun", time: "Closed" },
 ];
