@@ -13,6 +13,8 @@ const child = spawn(process.execPath, [childScript], {
 let completed = false;
 let output = "";
 
+const canKillChild = () => child.exitCode === null && !child.killed;
+
 const markIfComplete = (chunk) => {
   output += chunk;
   const matches = [...output.matchAll(/crawled\s+(\d+)\s+out of\s+(\d+)/g)];
@@ -26,7 +28,7 @@ const markIfComplete = (chunk) => {
   if (crawled === total && total > 0) {
     completed = true;
     setTimeout(() => {
-      if (!child.killed) child.kill();
+      if (canKillChild()) child.kill();
     }, 250);
     return true;
   }
@@ -49,7 +51,7 @@ child.stderr.on("data", (data) => {
 });
 
 const timeout = setTimeout(() => {
-  if (!child.killed) child.kill();
+  if (canKillChild()) child.kill();
 }, 120000);
 
 child.on("close", (code) => {

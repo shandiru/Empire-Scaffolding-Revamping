@@ -20,7 +20,31 @@ const services = [
         sub: "New Build Project",
         duration: "1:12"
     },
+    {
+        title: "Empire Scaffolding",
+        subtitle: "Watch another Empire Scaffolding project in action with this featured YouTube video.",
+        icon: <CheckCircle className="w-7 h-7" />,
+        video: "https://m.youtube.com/watch?v=6rw7fu2_oyU&ra=m",
+        color: "bg-blue-600 text-white",
+        sub: "Featured Project",
+        duration: "YouTube"
+    },
 ];
+
+const getYoutubeEmbedUrl = (url) => {
+    try {
+        const parsedUrl = new URL(url);
+        const videoId = parsedUrl.searchParams.get("v");
+
+        if (videoId) {
+            return `https://www.youtube.com/embed/${videoId}?rel=0`;
+        }
+    } catch (error) {
+        return null;
+    }
+
+    return null;
+};
 
 const Details = () => {
     return (
@@ -51,6 +75,7 @@ const VideoCard = ({ service, index }) => {
     const videoRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [showPause, setShowPause] = useState(false);
+    const youtubeEmbedUrl = getYoutubeEmbedUrl(service.video);
 
     const handlePlay = () => {
         if (videoRef.current) {
@@ -79,34 +104,45 @@ const VideoCard = ({ service, index }) => {
                 onMouseLeave={() => setShowPause(false)}
             >
                 {service.video ? (
-                    <>
-                        <video
-                            ref={videoRef}
-                            src={service.video}
-                            className="w-full h-100 object-cover"
-                            loop
-                            muted
-                            playsInline
-                        />
-                        {/* Play Button */}
-                        {!isPlaying && (
-                            <button
-                                onClick={handlePlay}
-                                className="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/60 transition"
-                            >
-                                <Play className="w-12 h-12 text-white bg-blue-600 rounded-full p-4" />
-                            </button>
-                        )}
-                        {/* Pause Button (only visible when hovering & playing) */}
-                        {isPlaying && showPause && (
-                            <button
-                                onClick={handlePause}
-                                className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/50 transition"
-                            >
-                                <Pause className="w-12 h-12 text-white bg-blue-600 rounded-full p-4" />
-                            </button>
-                        )}
-                    </>
+                    youtubeEmbedUrl ? (
+                            <iframe
+                                src={youtubeEmbedUrl}
+                                title={service.title}
+                                className="w-full h-100"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen
+                            />
+                        ) : (
+                            <>
+                                <video
+                                    ref={videoRef}
+                                    src={service.video}
+                                    className="w-full h-100 object-cover"
+                                    loop
+                                    muted
+                                    playsInline
+                                />
+                                {/* Play Button */}
+                                {!isPlaying && (
+                                    <button
+                                        onClick={handlePlay}
+                                        className="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/60 transition"
+                                    >
+                                        <Play className="w-12 h-12 text-white bg-blue-600 rounded-full p-4" />
+                                    </button>
+                                )}
+                                {/* Pause Button (only visible when hovering & playing) */}
+                                {isPlaying && showPause && (
+                                    <button
+                                        onClick={handlePause}
+                                        className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/50 transition"
+                                    >
+                                        <Pause className="w-12 h-12 text-white bg-blue-600 rounded-full p-4" />
+                                    </button>
+                                )}
+                            </>
+                        )
                 ) : (
                     <span className="text-gray-500 text-sm flex items-center justify-center h-full">
                         No video available
